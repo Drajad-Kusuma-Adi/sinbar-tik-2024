@@ -1,0 +1,136 @@
+<div class="container subbab5">
+	<h1>5. Teknik Grafis Video Editing</h1>
+	<hr>
+
+	<h2>A. Teknologi Sistem Operasi</h2>
+	
+	<br>
+	<img src="/assets/images/sk/5poina.svg" alt="5poina" />
+
+	<p>
+		Sistem operasi atau operating system (OS) berfungsi menginterupsi dan mengontrol perangkat keras komputer
+		berdasarkan input yang diberikan pengguna.
+	</p>
+
+	<p class="no-indent">Bagian utama sistem operasi :</p>
+	<ol>
+		<li>Kernel, Core atau inti OS yang bertugas untuk mengelola dan memanajemen hardware. Selain itu, menjadi interface
+			terhadap aplikasi dalam OS untuk memberikan instruksi dan menjalankan proses pada setiap hardware yang terhubung.
+		</li>
+		<li>Aplikasi, Aplikasi berperan sebagai interface yang menghubungkan interaksi antara manusia dan mesin. Contoh
+			perintah yang disampaikan manusia melalui aplikasi, seperti mencetak angka dan menampilkan grafik pada layar
+			monitor.</li>
+	</ol>
+
+	<p>
+		Aplikasi dasar dalam sistem operasi biasanya berbasis perintah tunggal atau command line. Contohnya, shell pada
+		Linux atau Unix dan commond prompt pada OS Windows.
+	</p>
+
+	<img src="/assets/images/sk/5poina2.svg" alt="5poina2" class="img-fill" />
+
+	<p>
+		Sistem operasi membutuhkan serangkaian proses sampai akhirnya siap digunakan. Proses ini dimulai sejak komputer
+		dalam keadaan mati, kemudian dilakukan proses booting hingga dapat dioperasikan oleh penggunanya. Tahapan proses
+		booting pada sistem operasi Linux, yaitu sebagai berikut.
+	</p>
+
+	<img src="/assets/images/sk/5poina3.svg" alt="5poina3" />
+
+	<p class="no-indent">Jenis proses booting :</p>
+	<ol>
+		<li>Cold Boot, Cold boot adalah proses booting yang dimulai dari komputer dalam kondisi mati, kemudian, tombol power
+			ditekan dan aliran listrik mengalir ke sistem komputer.</li>
+		<li>Warm Boot, Warm boot adalah proses booting komputer yang dilakukan ketika dalam kondisi hidup. Biasanya dengan
+			menekan tombol reset atau kombinasi tombol keyboard Alt + Del.</li>
+	</ol>
+
+	<h2>B. Master Boot Record (MBR)</h2>
+
+	<p>MBR atau sektor 0 merupakan lokasi media penyimpanan berukuran 512 Byte yang terdiri atas tiga
+		bagian, yaitu :</p>
+	<ol>
+		<li>Bootstrap Code Area (Bootloader), Bagian ini digunakan untuk menyimpan image bootloader yang akan di-load oleh
+			BIOS ke memori utama. Area ini berukuran 446 Byte dan terltak pada alamat offset 0-446.</li>
+		<li>Partition Information, Ukuran tabel informasi partisi setiap media penyimpanan MBR adalah 64 Byte. Fungsi
+			utamanya adalah menyimpan informasi tentang jumlah, ukuran, dan format partisinya.</li>
+		<li>Boot Record Signature (Magic Number), Bagian ini berukuran 2 Byte dengan offset 511 sampai 512 dan digunakan
+			untuk menyimpan Boot Record Signature. Boot Record Signature merupakan kode unik sebagai tanda pengenal sebuah
+			file, yang diletakan pada awal file atau akhir file.</li>
+	</ol>
+
+	<p class="no-indent">Peran penting MBR dalam berjalannya sistem operasi :</p>
+	<ol style="list-style-type: lower-latin;">
+		<li>Sebagai penanda sektor 0 dari partisi disk yang aktif guna menentukan boot sector disk.</li>
+		<li>Memberikan informasi tentang skema partisi yang terbentuk dalam sebuah disk.</li>
+		<li>Me-load salinan boot sector sebuah partisi yang aktif ke dalam memori.</li>
+		<li>Menunjukkan lookasi kode bootloader pada sistem agar dapat dieksekusi ketika sistem operasi melakukan proses
+			booting.</li>
+	</ol>
+
+	<p>Kerusakan pada MBR akan menyebabkan disk tidak dapat menemukan bootloader, yang berakibat sistem operasi tidak
+		dapat booting. Jika kerusakannya permanen, seperti bad sector akan menyebabkan disk tersebut tidak dapat digunakan
+		sebagai partisi aktif tempat menyimpan MBR atau bootloader.</p>
+	<p>Untuk melakukan eksperimen dan penelitian disk penyimpanan, dapat menggunakan aplikasi WinHex Editor. Untuk
+		mempelajari pengaturan bootloader MBR hard disk dengan WinHex Editor, pindai QR code berikut.</p>
+
+	<img src="/assets/images/sk/5poinbqr.svg" alt="5poinbqr" class="img-small" />
+
+
+	<h2>C. Instalasi Windows 10</h2>
+
+	<p>
+		Windows 10 dirilis pada tahun 2014 dengan pengembangan versi terbarunya, yaitu Windows 11 yang dirilis Oktber 2021.
+		Windows memiliki kemampuan yang tinggi untuk mendukung kinerja hardware dan processor, aplikasi perkantoran aplikasi
+		permainan hingga bahasa pemrograman.
+	</p>
+
+	<p class="no-indent">Beberapa versi Windows 10 yang dipilih :</p>
+	<ol style="list-style-type: lower-latin;">
+		<li>Windows 10 Home</li>
+		<li>Windows 10 Pro</li>
+		<li>Windows 10 Enterprise</li>
+		<li>Windows 10 Education</li>
+		<li>Windows 10 Mobile</li>
+		<li>Windows 10 IoT Core</li>
+	</ol>
+
+	<h2>D. Partisi Hard Disk</h2>
+
+	<p>
+		Hard disk adalah media penyimpanan yang sering digunakan untuk mengorganisasikan dan mengalokasikan data yang harus
+		dapat diakses oleh memori komputer setiap saat. Hard disk dapat dikatakan sebagai cakram atau disk yang dapat
+		menyimpan data magnetik yang sudah terpolarisasi.
+	</p>
+
+	<img src="/assets/images/sk/5poind.svg" alt="5poind" />
+
+	<ol>
+		<li>Track, merupakan lintasan data magnetik dalam disk yang dimulai track ke-0 hingga ke-n tergantung jenis hard
+			disk.</li>
+		<li>Sektor, merupakan area pembentuk track dengan kapasitas tertentu tergantung jenis hard disk, mulai dari
+			kapasitas 512 Byte hingga 5.122 Byte.</li>
+		<li>Boot area, merupakan area sektor 0 pada track pertama dalam disk, yang berfungsi sebagai wilayah booting disk
+			yang mengandung bootstrap area.</li>
+		<li>Cluster, merupakan kumpulan 1 hingga 128 sektor yang berperan dalam mengatur penyimpanan data sehingga
+			memudahkan sistem operasi dalam mengakses data tersebut.</li>
+	</ol>
+
+	<h2>E. Mengonfigurasi Driver Hardware</h2>
+
+	<p>
+		Driver merupakan software yang berfungsi menerjemahkan komunikasi data antara perangkat keras (hardware) dengan
+		setiap instruksi yang dikirkan oleh CPU melalui aplikasi dalam setiap operasi. Contoh driver adalah driver printer
+		yang harus diinstal terlebih dahulu, sebelum dapat mencetak dokumen yang dibuat dengan Microsoft Word.
+	</p>
+
+	<h2>F. Software Aplikasi</h2>
+
+	<p>
+		Software atau peranti lunak merupakan kumpulan subrutin yang ditulis berdasarkan aturan penulisan bahasa pemrograman
+		tertentu, agar dapat dimengerti dan mudah dieksekusi oleh processor. File kompilasi tersebut dikemas dalam image
+		dengan bahasa mesin (machine code level) sesuai platform OS yang digunakan. Contohnya, software Microsoft Office
+		yang dibuat berbasis bahasa pemrograman Visual Basic hanya dapat digunakan pada OS Windows.
+	</p>
+
+</div>

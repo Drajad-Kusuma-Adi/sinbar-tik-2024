@@ -1,0 +1,130 @@
+<div class="container">
+
+    <h1>7. Struktur Kontrol Perulangan</h1>
+
+    <hr/>
+
+    <p>
+        Komputer mempunyai kemampuan dalam melakukan proses yang sama berulang-ulang hingga ratusan bahkan jutaan kali, tanpa kesalahan. Proses perulangan (looping) dapat diciptakan dengan membangun logika program menggunakan ekspresi kontrol perulangan, misalnya untuk mencetak string "Mari belajar java" sebanyak 17 baris.
+    </p>
+
+    <h6 style="font-weight: bold;">Expresi Kondisi</h6>
+
+    <p class="no-indent">
+        Ekspresi kondisi adalah pernyataan sebuah kondisi bernilai boolean (true atau false), yang menjadi tolok ukur dimulai atau diakhirinya proses perulangan tersebut.
+    </p>
+
+    <h6 style="font-weight: bold;">Bagian Bodi Perulangan</h6>
+
+    <p class="no-indent">
+        Bagian ini terdiri atas runtunan perintah yang akan diulang hingga mencapai kondisi tertentu.
+    </p>
+
+    <p class="no-indent">
+        Dalam mendeskripsikan sebuah perulangan proses, perlu diperhatikan beberapa hal sebagai berikut.
+    </p>
+
+    <ul>
+        <li>
+            Pernyataan nilai awal sebuah ekspresi kondisi sebagai syarat berjalannya proses pada badan perulangan (bodi).
+        </li>
+        <li>
+            Perintah untuk melakukan proses perulangan seperti for, while, dan do…while.
+        </li>
+        <li>
+            Pernyataan terminasi, sebuah pernyataan untuk mengubah nilai awal menjadi nilai baru.
+        </li>
+    </ul>
+
+    <p class="no-indent">
+        Terdapat dua jenis perulangan yang dikenal, yaitu
+    </p>
+
+    <ol>
+        <li>
+            Unconditional looping atau perulangan yang tidak menyertakan kondisi tertentu sebagai syarat terjadinya perulangan. Contohnya, struktur perulangan dengan for.
+        </li>
+        <li>
+            Conditional looping atau perulangan dengan syarat sebuah kondisi terpenuhi. Contohnya, struktur perulangan while dan do...while.
+        </li>
+    </ol>
+
+    <img src="/assets/images/applb/7sebelumpoin.svg" alt="7sebelumpoin" class="img-fill">
+
+    <h2>A. Perulangan For</h2>
+
+    <p>
+        Perulangan for dilakukan sampai nilai kondisi tertentu terpenuhi, dengan blok inisialisasi awal, ekspresi boolean, dan iterasi berada pada satu baris. Format penulisan perulangan for dalam Java adalah sebagai berikut.
+    </p>
+
+    <pre>
+for (inisialisasi_awal; ekspresi_Boolean; iterasi)
+{
+    //perintah;
+}
+    </pre>
+
+    <h6 style="font-weight: bold;">Penjelasan</h6>
+
+    <ol>
+        <li>
+            Inisialisasi awal adalah nilai variabel awal yang akan dieksekusi oleh perulangan for. Sebagai contoh, int i=1; 
+        </li>
+        <li>
+            Ekspresi boolean adalah bagian dalam perulangan yang akan memeriksa apakah variabel yang diinisialisasi telah memenuhi kondisi bernilai true. Sebagai contoh, i >= 0; Jika i bernilai true (lebih besar atau sama dengan 0), perulangan akan dilakukan.
+        </li>
+        <li>
+            Setelah melakukan perulangan, proses looping akan menambahkan nilai variabel inisialisasi awal pada bagian iterasi. Selanjutnya, nilai itu diperiksa kembali apakah memenuhi kondisi bernilai true atau tidak. Jika bernilai true, looping akan dilanjutkan. Namun, jika tidak, looping akan dihentikan.
+        </li>
+    </ol>
+
+    <img src="/assets/images/applb/7poina.svg" alt="7poina"     >
+
+    <h2>B. Perulangan While</h2>
+
+    <p>
+        Perulangan while akan mengeksekusi blok perulangan selama kondisi bernilai true dan akan berhenti ketika kondisi bernilai false. Format penulisan perulangan while dalam Java adalah sebagai berikut.
+    </p>
+
+    <pre>
+while (kondisi ekspresi Boolean)
+{
+    //perintah
+    //iterasi variabel++;
+}
+    </pre>
+
+    <p class="no-indent">
+        Berikut adalah contoh program yang akan menampilkan string sebanyak 5 kali.
+    </p>
+
+    <img src="/assets/images/applb/7poinb1.svg" alt="7poinb1" >
+    <img src="/assets/images/applb/7poinb2.svg" alt="7poinb2" class="img-small">
+
+    <p>
+        Program tersebut akan mengatur nilai = 1 sebagai inisialisasi awal, kemudian ditambah 1 hingga nilai looping berakhir pada saat nilai = 5. Selama proses looping, program akan menampilkan pesan "Perulangan dengan While ke" serta nilai looping yang dijalankan. Hasil kompilasi kode program tersebut adalah sebagai berikut.
+    </p>
+
+    <img src="/assets/images/applb/7poinb3.svg" alt="7poinb3">
+
+    <h2>C. Perulangan do...While</h2>
+
+    <p>
+        Perulangan while akan mengeksekusi blok perulangan selama kondisi bernilai true dan akan berhenti ketika kondisi bernilai false. Format penulisan perulangan while dalam Java adalah sebagai berikut.
+    </p>
+
+    <pre>
+do 
+{
+    //perintah
+}
+while (kondisi)
+    </pre>
+
+    <p class="no-indent">
+        Contoh program yang akan menampilkan angka dari 1 samapi 9.
+    </p>
+
+    <img src="/assets/images/applb/7poinc.svg" alt="7poinc">
+
+</div>  

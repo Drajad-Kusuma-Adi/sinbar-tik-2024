@@ -1,0 +1,141 @@
+<div class="container">
+	<h1>2. Mikrokontroler</h1>
+	<hr>
+
+	<h2>A. Definisi Mikrokontroler</h2>
+
+	<p>
+		Mikrokontroler adalah miniatur komputer dengan komponen memori, alat pemroses, dan disk penyimpanan data dalam
+		proses pengolahan datanya. Mikrokontroler berasal dari kata micro yang berarti berukuran kecil dan controller yang
+		merupakan alat pengontrol sebuah sistem. Mikrokontroler dapat didefinisikan sebagai alat pengontrol dengan ukuran
+		kecil dan terintegrasi layaknya sebuah sistem computer dalam sebuah chip. Mikrokontroler dikatakan sebagai
+		minicomputer karena memiliki bagian penting layaknya computer seperti Processor (CPU), RAM (Random Access Memory),
+		ROM (Read Only Memory), dan Port I/O (input output).
+	</p>
+
+	<p class="no-indent">Keuntungan Mikrokontroler :</p>
+	<ol>
+		<li>Bentuknya yang kecil dan praktis memudahkan perancangan dan pemasangan pada rangkaian elektronika</li>
+		<li>Kemudahan mengubah fungsi dan alur logika program mikerokontroler</li>
+		<li>Sistem rangkaian elektronika lebih efisien</li>
+		<li>Tidak membutuhkan daya listrik yang besar</li>
+		<li>Proses pencarian kerusakan atau gangguan fungsi rangkaian akan lebih mudah</li>
+	</ol>
+
+	<p class="no-indent">Arsitektur Mikrokontroler :</p>
+	<ol>
+		<li>Arsitektur CISC (Complex Instruction Set Computer) memiliki fitur lengkap dan kompleks dalam memberikan set
+			instruksi pada processor. Arsitektur ini menggunakan Bahasa tingkat rendah seperti Assembler.</li>
+		<li>Arsitektur RISC (Reduce Instruction Set Computer) mempunyai ragam set instruksi yang lebih sederhana
+			dibandingkan dengan CISC. Arsitektur ini sudah mendukung penggunaan bahasa tingkat tinggi, seperti Bahasa
+			pemrograman C.</li>
+	</ol>
+
+	<h2>B. Arsitektur ATmega328P</h2>
+
+	<p>
+		ATmega328P merupakan salah satu mikrokontroler keluaran ATMEL yang menggunakan arsitektur RISC (Reduce Instruction
+		Set Computer) dengan kelebihan eksekusi data yang lebih baik dibandingkan dengan arsitektur CISC.
+	</p>
+	
+	<p class="no-indent">Spesifikasi ATmega328P :</p>
+	<ol>
+		<li>Berkinerja tinggi dengan kebutuhan tegangan kecil</li>
+		<li>Mendukung 131 set instruksi dalam siklus clock</li>
+		<li>Mampu bekerja dengan speed 20 MIPS pada detak clock 20 MHz</li>
+		<li>Memiliki 32×8 General Purpose Working Registers</li>
+		<li>Menggunakan jenis EEPROM berkapasitas 1 kb, dapat menyimpan data meskipun tidak tersuplai arus listrik</li>
+		<li>Memiliki flash memori 32 KB</li>
+		<li>Mempunyai 28 pin input-output, dengan 6 di antaranya pin bertipe pulse width modulation output</li>
+		<li>Memiliki memori bertipe SRAM berkapasitas 2 KB</li>
+		<li>Memiliki interface master/slave SPI Serial</li>
+		<li>8 kanal 10 bit ADC dalam paket TQFP dan QFN/MLF</li>
+		<li>6 kanal 10 bit ADC dalam paket PDIP</li>
+		<li>Memiliki fitur Power-on serta Reset and Programmable Brown-out Detection</li>
+		<li>Bekerja pada tegangan 1,8–5,5 Volt</li>
+		<li>Mampu bertahan pada suhu antara -40 °C sampai 85 °C</li>
+	</ol>
+
+	<p class="no-indent">Kelompok Pin ATmega328P :</p>
+	<ol>
+		<li>VCC berfungsi sebagai pin input sumber tegangan</li>
+		<li>GND (Ground) berfungsi sebagai pin grounding atau massa (negative)</li>
+		<li>Port B adalah port-input tipe 8 bit yang bekerja dua arah. Fungsinya bergantung jenis port.</li>
+		<li>Port C (PC5:0) adalah port-input tipe 7 bit yang bekerja dua arah. Port ini dapat digunakan sebagai ADC Input
+			Channel dan 2-wire Serial Bus Data Input/Output Line.</li>
+		<li>Port D (PD7:0) adalah port-input tipe 8 bit dua arah yang sering digunakan untuk analog comparator, external
+			interruption, dan USART communication.</li>
+		<li>AVCC adalah pin sambungan sumber tegangan menuju A/D Converter, port PC3:0, dan ADC7:6</li>
+		<li>AREF adalah pin input sumber tegangan referensi A/D Converter</li>
+		<li>qADC7:6 (TQFP and QFN/MLF Package Only), pada sistem paket TQFP and QFN/MLF, port ini melayani input analog
+			menuju A/D Converter</li>
+	</ol>
+
+	<h2>C. Arduino</h2>
+
+	<p>
+		Arduino adalah rangkaian elektronika berbasi mikrokontroler Atmega328P keluaran Atmel. Nama lain Arduino adalah
+		development board atau papan pengembangan mikrokontroler yang memudahkan pengguna dalam membangun rangkaian
+		elektronika berbasis mikrokontroler dibandingkan dengan membangun rangkaian mulai dari awal. Arduino Uno R3 adalah
+		jenis Arduino yang bersifat open source hardware yang memungkinkan orang lain mengembangkan sesuai kebutuhan mereka.
+	</p>
+
+	<p class="no-indent">Spesifikasi Hardware Arduino Uno R3 :</p>
+	<ol>
+		<li>Berbasis chip mikrokontroler ATmega328P</li>
+		<li>Beroperasi pada tegangan DC 5 V</li>
+		<li>Input tegangan DC adalah 7–12 V</li>
+		<li>Terdiri atas 14 digital I/O pin, dengan 6 pin di antaranya merupakan sambungan PWM</li>
+		<li>Memiliki 6 pin input analog</li>
+		<li>Besar arus setiap pin I/O adalah 20 mA</li>
+		<li>Kapasitas SRAM adalah 2 KB</li>
+		<li>Ukuran EEPROM adalah 1 KB</li>
+		<li>Mampu bekerja pada clock speed 16 MHz</li>
+		<li>Dijual di pasaran dengan dimensi 68,6 mm × 53,4 mm dengan berat 25 g</li>
+		<li>Besar arus DC pin pada tegangan 3,3 V adalah 50 mA</li>
+		<li>Kapasitas memori flash adalah 32 KB dengan 0,5 KB untuk bootloader program</li>
+	</ol>
+
+	<p class="no-indent">Bagian-Bagian Board Arduino :</p>
+	<ol>
+		<li>Port USB, memberikan catu daya dari komputer ke Arduino Ketika me-load atau memasukkan ke mikrokontroler</li>
+		<li>Jack Adaptor tegangan DC, sambungan input sumber tegangan DC berupa jack, biasanya dari adaptor ataupun baterai
+		</li>
+		<li>Tombol Reset, mereset board Arduino sehingga setiap data program yang pernah di-load ke dalam board dan
+			mikrokontroler akan dihapus atau dikosongkan</li>
+		<li>Pin Digital, sebagai port input atau output yang penggunaannya dapat dilakukan oleh program fungsi
+			digitalWrite(), digitalRead(), dan pinMode(). Macam-macam pin digital antara lain Pin 0 (RX); Pin 2 dan 3; Pin 3,
+			5, 6, 9, 10, dan 11; Pin 10 (SS), 11 (MOSI), 12 (MISO), dan 13 (SCK); serta LED dekat pin 13</li>
+		<li>Ground, sambungan ke ground tegangan</li>
+		<li>AREF, sebagai pin preferensi inout tegangan analog yang dapat diatur melalui fungsi program analogReference()
+		</li>
+		<li>Pin Power, terdiri atas Pin VIN sebagai sumber tegangan peralatan yang akan dikontrol, Pin 5V sebagai keluaran
+			tegangan maksimal 5 volt yang otomatis diatur regulator board Arduino, Pin 3v3 sebagai pin sumber tegangan sebesar
+			3,3 volt yang dikeluarkan regulator board Arduino dengan nilai arus listrik maksimal 50 mA, dan GND sebagai pin
+			untuk jalur sambungan grounding Arduino.</li>
+		<li>Pin Analog, terdiri atas enam pin dengan urutan A0 sampai A5, deretan pin ini digunakan untuk mendeteksi dan
+			mengonversi setiap tegangan yang dihasilkan sensor analog.</li>
+		<li>ICSP atau In-Circuit Serial Programming, deretan pin yang memberikan fasilitas bagi user untuk melakukan
+			pemrograman secara langsung tanpa melalui bootloader Arduino.</li>
+	</ol>
+
+	<h2>D. Pemrograman Mikrokontroler pada Arduino</h2>
+
+	<p>
+		Sebelum melakukan pemrograman mikrokontroler, perlu ditinjau kembali mengenai konsep dan cara kerja penulisan
+		kode program Arduino. Bahasa yang digunakan pada Arduino adalah Bahasa C. Anda dapat memindai kode QR di bawah ini.
+	</p>
+	
+	<img src="/assets/images/sk/2poindqr.svg" alt="2poindqr" class="img-small"/>
+
+	<h2>E. Aplikasi Arduino Sederhana</h2>
+
+	<p>
+		Setelah mempelajari karakteristik mikrokontroler ATmega328P dan bagian-bagian Arduino serta bagaimana
+		melakukan pemrogramannya, tahap selanjutnya adalah menerapkan pengontrolan rangkaian elektronika menggunakan
+		mikrokontroler. Anda dapat memindai kode QR di bawah ini.
+	</p>
+
+	<img src="/assets/images/sk/2poineqr.svg" alt="2poineqr" class="img-small"/>
+
+</div>

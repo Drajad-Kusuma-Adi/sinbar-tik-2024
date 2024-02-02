@@ -1,0 +1,140 @@
+<div class="container">
+	<h1>5. Pengolahan Database</h1>
+	<hr />
+
+	<h2>A. Teknologi Database</h2>
+
+	<p>
+		Database terdiri atas dua kata, yaitu date dan base yang dapat digambarkan
+		sebagai tempat penyimpanan data dengan standardisasi tertentu dengan tujuan
+		memudahkan penempatan dan pencarian data. Contohnya, data kependudukan, data
+		mahasiswa, dan data inventaris barang.
+	</p>
+	<img src="/assets/images/addsi/5poina.svg" alt="5poina" class="img-fill" />
+	<p>Peran sistem database dalam dunia modern meliputi tujuh aspek berikut.</p>
+	<ol>
+		<li>
+			Accuracy atau kemudahan dalam akses dan akurasi data yang ditampilkan.
+		</li>
+		<li>
+			Spaceability atau ketersediaan ruang penyimpanan data untuk meminimalisasi
+			redudansi data.
+		</li>
+		<li>Speed atau peningkatan kecepatan akses data.</li>
+		<li>
+			Availability atau pemilihan data sesuai kebutuhan, agar tidak menghabiskan
+			memori. Tindakan yang dilakukan adalah memilih data yang tidak penting,
+			seperti data lama, histori data, redudansi data, serta menghapus data
+			sampah dari sistem database.
+		</li>
+		<li>Security atau peningkatan keamanan data.</li>
+		<li>
+			Completeness atau kelengkapan data yang memungkinkan untuk menambah dan
+			memodifikasinya.
+		</li>
+		<li>
+			Shareability atau kemampuan untuk berbagi data dalam layanan sistem
+			klien-server.
+		</li>
+	</ol>
+
+	<h2>B. Sistem DBMS</h2>
+
+	<p>
+		Mekanisme penyimpanan dan pengelolaan database memerlukan aplikasi yang
+		dapat digunakan untuk mengatur, mengelola, dan memanajemen database yang
+		disebut DBMS (Database Management System).
+	</p>
+	<p>
+		Dalam operasinya, DBMS memiliki sejumlah komponen fungsional, yaitu sebagai
+		berikut.
+	</p>
+	<ol>
+		<li>
+			File manager berperan untuk mengatur alokasi penyimpanan disk pada server.
+		</li>
+		<li>
+			Database manager bertugas menjembatani komunikasi antara mesin (data pada
+			level terendah) dengan program aplikasi yang dibuat.
+		</li>
+		<li>
+			Query processor berguna mengonversi kueri yang diinstruksikan user menjadi
+			script low level agar dimengerti oleh database manager.
+		</li>
+		<li>
+			DML precompiler bermanfaat mengonversi kueri DML atau Data Manipulation
+			Language dari aplikasi menjadi kueri processor.
+		</li>
+		<li>
+			DDL Compiler bertugas menerjemahkan kuei DDL atau Data Definition Language
+			ke mesin database menjadi bentuk table dalam database.
+		</li>
+	</ol>
+
+	<p>
+		Script yang digunakan untuk mengelola database menggunakan syntax dalam
+		format khusus, yang dikenal dengan SQL (Structured Query Language). Dalam
+		SQL, ada dua kategori bahasa yang diterapkan, yaitu:
+	</p>
+	<ol>
+		<li>
+			DDL (Data Definition Language), DDL digunakan untuk merancang,
+			mendefinisikan, serta mengelola desain dan struktur basis atau data secara
+			keseluruhan. Contoh kegunaan DDL adalah membuat tabel baru, mengindeks,
+			mengubah tabel, serta menentukan struktur data, tipe data, dan media
+			penyimpanan tabel.
+		</li>
+		<li>
+			DML (Data Manipulation Language), DML digunakan untuk memanipulasi,
+			menghapus, menyisipkan, meng-update, dan melakukan pengambilan data pada
+			tabel. Terdapat dua jenis DML, yaitu non-prosedural dan prosedural.
+		</li>
+	</ol>
+
+	<p>Jenis Pengguna dalam interaksi dengan mesin database</p>
+	<ol>
+		<li>
+			End User, Level pengguna yang berinteraksi dengan aplikasi untuk mengakses
+			dan memanipulasi database yang dibuat programmer.
+		</li>
+		<li>
+			Specialized User, Pengguna yang secara khusus mengoperasikan database
+			untuk keperluan tertentu, seperti pencitraan satelit.
+		</li>
+		<li>
+			Casual User, Pengguna yang dapat mengakses dan mengoperasikan database
+			secara langsung menggunakan kueri sehingga responsnya lebih cepat.
+		</li>
+		<li>
+			Programmer, Pengguna yang bertugas merancang dan mendesain aplikasi agar
+			dapat terhubung dan mampu mengoperasikan data dalam database menggunakan
+			bahasa pemrograman.
+		</li>
+	</ol>
+
+	<h2>C. Database Server dan Abstraksi Data</h2>
+
+	<p>
+		Database server adalah mesin yang terinstal pada sistem operasi tertentu,
+		misalnya Windows Server atau Linux, yang telah dikonfigurasi dengan aplikasi
+		database untuk melayani dan menampilkan data pada klien. Dalam
+		mendeskripsikan data, sistem pengolahan database mengenal tiga level
+		abstraksi data, yaitu:
+	</p>
+	<ol style="list-style-type: lower-latin">
+		<li>
+			Physical Level, Mempresentasikan data secara fisik dalam media penyimpanan
+			lengkap dengan strktur dan konten data itu sendiri.
+		</li>
+		<li>
+			Conceptual Level, Menggambarkan struktur secara logis dan konseptual
+			tentang relasi hubungan antardata dalam tabel, misalnya relasi antara
+			tabel siswa, tabel mata pelajaran, dan tabel nilai siswa.
+		</li>
+		<li>
+			View Level, Tingkatan interaksi antara user dengan server dalam
+			pengelolaan database menggunakan metode view.
+		</li>
+	</ol>
+	<img src="/assets/images/addsi/5poinc.svg" alt="5poinc" />
+</div>

@@ -1,0 +1,126 @@
+<div class="container">
+
+    <h1>6. Struktur Kontrol Percabangan </h1>
+
+    <hr/>
+
+    <h2>A. Percabangan if, if else, else if</h2>
+
+    <ol style="list-style-type: lower-latin;">
+        <li>
+            Percabangan if
+        </li>
+        <p class="no-indent">
+            Untuk menyelesaikan sebuah kondisi apakah bernilai true atau false dapat menggunakan fungsi if. Jika kondisi benar, perintah dalam blok seleksi akan dieksekusi. Namun, jika kondisi salah, perintah akan dilewatkan.
+        </p>
+
+        <pre>
+Format dalam Java
+
+if   (kondisi)
+{
+   //Pernyataan1;
+   //Pernyataan2;
+}
+        </pre>
+
+        <p class="no-indent">
+            Contoh : 
+        </p>
+
+        <img src="/assets/images/applb/6poina1.svg" alt="6poina1" class="img-fill">
+
+        <li>
+            Percabangan if else
+        </li>
+
+        <p>
+            Percabangan if…else memiliki dua kemungkinan pernyataan, penentuan bergantung pada nilai kondisi yang diseleksi. Jika kondisi pernyataan yang dieksekusi bernilai true, program akan mengerjakan pernyataan 1. namun jika kondisi bernilai false, program akan langsung mengesekusi pernyataan 2.
+        </p>
+
+        <pre class="">
+Format dalam Java
+if   (kondisi)
+{
+   //Pernyataan1;
+}
+else
+{
+   //Pernyataan2;
+}
+        </pre>
+
+        <p class="no-indent">
+            Contoh :
+        </p>
+
+        <img src="/assets/images/applb/6poina2.svg" alt="6poina2" class="img-fill">        
+
+        <li>
+            Percabangan dengan if…else if …else
+        </li>
+
+        <p class="no-indent">
+            Percabangan if...else if...else memiliki beberapa kondisi yang akan diseleksi. Jika kondisi 1 bernilai true, pernyataan 1 akan dieksekusi. Namun, jika kondisi 1 bernilai false, akan dilanjutkan memeriksa kondisi 2. Jika bernilai true, pernyataan 2 akan dieksekusi dan seterusnya. Jika semua seleksi kondisi bernilai false, program secara otomatis akan mengeksekusi pernyataan terakhir.
+        </p>
+
+        <pre>
+Format dalam Java
+
+if   (kondisi)
+{
+   //Pernyataan1;
+}
+else if (kondisi)
+{
+   //Pernyataan2;
+}
+else
+{
+//Pertanyaan3;
+}
+        </pre>
+
+        <p class="no-indent">
+            Contoh :
+        </p>
+
+        <img src="/assets/images/applb/6poina3.svg" alt="6poina3" class="img-fill">
+    </ol>
+
+    <h2>B. Percabangan Switch</h2>
+
+    <p>
+        Kondisi control percabangan dengan if…else, Java juga mengenal metode percabangan dengan perintah switch, dengan format penulisan sebagai berikut.
+    </p>
+
+    <pre>
+switch (ekspresi) 
+{
+  case nilai_data_ke_1:
+    //perintah 1;
+    break;
+  case nilai_data_ke_2:
+    //perintah 2;
+    break;
+default: //optional
+  //perintah 3;
+}
+    </pre>
+
+    <p class="no-indent">
+        Aturan penulisan Switch perlu memperhatikan hal-hal berikut ini
+    </p>
+
+    <ol>
+        <li>Tipe data yang digunakan hanya boleh berupa byte, short, int, atau char.</li>
+        <li>Penulisan daftar pilihan nilai variabel dalam switch diawali keyword case diikuti dengan nilai yang dibandingkan dan diakhiri tanda titik dua (:). </li>
+        <li>Daftar nilai data variabel dalam case harus memiliki tipe dataC.yang sama dengan variabel dalam switch. </li>
+        <li>Jika data yang dibandingkan dengan nilai data dalam case, akan dilanjutkan ke baris kode break; yang berarti proses eksekusi pembandingan dengan switch akan berhenti.</li>
+        <li>Jika tidak dilengkapi dengan baris kode break; pada setiap pilihan case, proses pembandingan data tetap akan dilakukan meski sudah memiliki nilai true dan perintah dalam cose tersebut dieksekusi.</li>
+    </ol>
+
+    <p class="no-indent">
+        Statement switch mempunyai nilai case default yang ditulis pada akhir baris.
+    </p>
+</div>

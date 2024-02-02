@@ -1,0 +1,41 @@
+body {
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-color {
+    background-color: #f9f9f9;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    100% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+}
+}
+
+.grow {
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+.grow:hover {
+    animation: grow 0.5s forwards;
+    -webkit-animation: grow 0.5s forwards;
+}
