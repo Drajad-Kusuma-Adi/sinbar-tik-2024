@@ -122,37 +122,27 @@
             </li>
             <li class="list-group-item chapter">
               <a class="text-dark" aria-current="page" href="#1">
-                1. Pola Berpikir
+                1. Gerbang Logika
               </a>
             </li>
             <li class="list-group-item chapter">
               <a class="text-dark" aria-current="page" href="#2">
-                2. Pernyataan dan Logika Preposisi
+                2. Mikrokontroler
               </a>
             </li>
             <li class="list-group-item chapter">
               <a class="text-dark" aria-current="page" href="#3">
-                3. Logika Matematika
+                3. Organisasi dan Arsitektur Komputer
               </a>
             </li>
             <li class="list-group-item chapter">
               <a class="text-dark" aria-current="page" href="#4">
-                4. Metode Penalaran
+                4. Perangkat Keras Komputer
               </a>
             </li>
             <li class="list-group-item chapter">
               <a class="text-dark" aria-current="page" href="#5">
-                5. Logika Penalaran Interfensi
-              </a>
-            </li>
-            <li class="list-group-item chapter">
-              <a class="text-dark" aria-current="page" href="#6">
-                6. Logika Konversi Bilangan
-              </a>
-            </li>
-            <li class="list-group-item chapter">
-              <a class="text-dark" aria-current="page" href="#7">
-                7. Berpikir Algoritmik
+                5. Teknik Grafis Video Editing
               </a>
             </li>
             <li class="list-group-item chapter">
@@ -165,6 +155,1045 @@
       </div>
 
       <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sidebar-main">
+        <div class="container" id="1" style="scroll-margin-top: 60px">
+          <h1>1. Gerbang Logika</h1>
+          <hr>
+        
+          <h2>A. Definisi Gerbang Logika</h2>
+        
+          <p>
+            Gerbang logika adalah sebuah blok atau sirkuit (rangkaian dasar
+            digital) yang berfungsi mengolah setiap input dan output data digital
+            yang berupa 0 dan 1 (biner). Umumnya, gerbang logika dalam perencangan
+            dan pembahasannya menggunakan simbol-simbol tertentu. Sebuah gerbang
+            logika dapat menerima satu atau lebih input, tetapi hanya memiliki
+            satu output. Output data yang dihasilkan hanya memiliki dua
+            kemungkinan, yaitu high (1) atau low (0) bergantung pada level digital
+            di terminal masukan.
+          </p>
+        
+          <p>
+            Jenis output data yang dihasilkan sangat tergantung dari jenis input
+            data dan gerbang logika itu sendiri, yang dapat digambarkan dengan
+            “tabel kebenaran” (truth table). Tiga operasi dasar gerbang logika:
+            OR, AND, NOT. Dapat dikembangkan lagi menjadi beberapa operasi,
+            seperti NOT AND (NAND), NOT OR (NOR), Exclusive OR (XOR), dan
+            Exclusive NOT OR (XNOR).
+          </p>
+        
+          <h2>B. Gerbang Logika OR</h2>
+        
+          <p>
+            Gerbang OR dapat menerima dua atau lebih input data dengan satu
+            output. Operasi logika OR akan menghasilkan potensial output tinggi
+            (high) atau bernilai 1, jika ada salah satu dari input data yang
+            berpotensi tinggi (high) atau bernilai 1. Contohnya, jika terdapat 2
+            input data A dan B, dengan X sebagai nilai output-nya, dapat
+            dinyatakan sebagai berikut:
+          </p>
+        
+          <h6 class="title">X = A OR B atau X = A + B</h6>
+          <br>
+        
+          <p>
+            Persamaan aljabar boolen dari gerbang logika OR dengan 2 input data
+            dapat dilihat pada tabel kebenaran berikut.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/1poinb1.svg"
+            alt="1poinb1"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/1poinb1.svg"
+            alt="1poinb1"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <p>
+            Pada pengoperasian gerbang logika OR akan dihasilkan nilai output true
+            jika ada salah satu input data bernilai true atau berpotensial tinggi
+            (high).
+          </p>
+        
+          <p>
+            Jika pada gerbang logika OR terdapat tiga input data A, B, dan C
+            dengan nilai ouput X, tabel kebenarannya yaitu sebagai berikut.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/1poinb2.svg"
+            alt="1poinb2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/1poinb2.svg"
+            alt="1poinb2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          
+          <h2>C. Gerbang Logika AND</h2>
+        
+          <p>
+            Gerbang logika AND dapat menerima dua atau lebih nilai input dengan
+            satu ouput. Nilai output true akan dihasilkan jika kedua nilai input
+            bernilai true. Sebagai contoh, terdapat nilai input A dan B, nilai
+            keluaran (output) X dapat dinyatan dengan rumus berikut.
+          </p>
+        
+          <h6 class="title">X = A AND B atau X = A ∙ B atau X = AB</h6>
+          <br>
+        
+          <p>
+            Persamaan aljabar boolen dari gerbang logika AND dengan 2 input data
+            dapat dilihat pada tabel kebenaran berikut.Simbol gerbang logika AND
+            dengan dua nilai input
+          </p>
+        
+          <img
+            src="../../assets/images/sk/1poinc.svg"
+            alt="1poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/1poinc.svg"
+            alt="1poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>D. Gerbang Logika NOT</h2>
+        
+          <p>
+            Gerbang logika NOT atau inverter merupakan gerbang yang hanya bisa
+            menerima satu nilai input dan menghasilkan satu output dengan nilai
+            berlawanan dari nilai input-nya. Jika terdapat sebuah nilai input data
+            A memasuki gerbang NOT, akan dihasilkan output X yang merupakan
+            kebalikan dari A. Persamaannya dapat ditulis sebagai berikut.
+          </p>
+        
+          <h6 class="title">X = NOT A atau X = Ā</h6>
+          <br>
+        
+          <p>
+            Tabel kebenaran dari gerbang logika NOT. Simbol gerbang logika NOT
+          </p>
+        
+          <img
+            src="../../assets/images/sk/1poind.svg"
+            alt="1poind"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/1poind.svg"
+            alt="1poind"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          
+          <p>
+            Lakukan praktik untuk mendesain rangkaian gerbang logika NOT menggunakan
+            aplikasi Logic Circuit Designer. Untuk penjelasan lebih lanjut mengenai
+            operasi-operasi NOT AND (NAND), NOT OR (NOR), Exclusive OR (XOR), dan
+            Exclusive NOT OR (XNOR), pindai QR code berikut.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/1poindqr.svg"
+            alt="1poindqr"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/1poindqr.svg"
+            alt="1poindqr"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+        </div>
+        <div class="container" id="2" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>2. Mikrokontroler</h1>
+          <hr>
+        
+          <h2>A. Definisi Mikrokontroler</h2>
+        
+          <p>
+            Mikrokontroler adalah miniatur komputer dengan komponen memori, alat pemroses, dan disk penyimpanan data dalam
+            proses pengolahan datanya. Mikrokontroler berasal dari kata micro yang berarti berukuran kecil dan controller yang
+            merupakan alat pengontrol sebuah sistem. Mikrokontroler dapat didefinisikan sebagai alat pengontrol dengan ukuran
+            kecil dan terintegrasi layaknya sebuah sistem computer dalam sebuah chip. Mikrokontroler dikatakan sebagai
+            minicomputer karena memiliki bagian penting layaknya computer seperti Processor (CPU), RAM (Random Access Memory),
+            ROM (Read Only Memory), dan Port I/O (input output).
+          </p>
+        
+          <p class="no-indent">Keuntungan Mikrokontroler :</p>
+          <ol>
+            <li>Bentuknya yang kecil dan praktis memudahkan perancangan dan pemasangan pada rangkaian elektronika</li>
+            <li>Kemudahan mengubah fungsi dan alur logika program mikerokontroler</li>
+            <li>Sistem rangkaian elektronika lebih efisien</li>
+            <li>Tidak membutuhkan daya listrik yang besar</li>
+            <li>Proses pencarian kerusakan atau gangguan fungsi rangkaian akan lebih mudah</li>
+          </ol>
+        
+          <p class="no-indent">Arsitektur Mikrokontroler :</p>
+          <ol>
+            <li>Arsitektur CISC (Complex Instruction Set Computer) memiliki fitur lengkap dan kompleks dalam memberikan set
+              instruksi pada processor. Arsitektur ini menggunakan Bahasa tingkat rendah seperti Assembler.</li>
+            <li>Arsitektur RISC (Reduce Instruction Set Computer) mempunyai ragam set instruksi yang lebih sederhana
+              dibandingkan dengan CISC. Arsitektur ini sudah mendukung penggunaan bahasa tingkat tinggi, seperti Bahasa
+              pemrograman C.</li>
+          </ol>
+        
+          <h2>B. Arsitektur ATmega328P</h2>
+        
+          <p>
+            ATmega328P merupakan salah satu mikrokontroler keluaran ATMEL yang menggunakan arsitektur RISC (Reduce Instruction
+            Set Computer) dengan kelebihan eksekusi data yang lebih baik dibandingkan dengan arsitektur CISC.
+          </p>
+          
+          <p class="no-indent">Spesifikasi ATmega328P :</p>
+          <ol>
+            <li>Berkinerja tinggi dengan kebutuhan tegangan kecil</li>
+            <li>Mendukung 131 set instruksi dalam siklus clock</li>
+            <li>Mampu bekerja dengan speed 20 MIPS pada detak clock 20 MHz</li>
+            <li>Memiliki 32×8 General Purpose Working Registers</li>
+            <li>Menggunakan jenis EEPROM berkapasitas 1 kb, dapat menyimpan data meskipun tidak tersuplai arus listrik</li>
+            <li>Memiliki flash memori 32 KB</li>
+            <li>Mempunyai 28 pin input-output, dengan 6 di antaranya pin bertipe pulse width modulation output</li>
+            <li>Memiliki memori bertipe SRAM berkapasitas 2 KB</li>
+            <li>Memiliki interface master/slave SPI Serial</li>
+            <li>8 kanal 10 bit ADC dalam paket TQFP dan QFN/MLF</li>
+            <li>6 kanal 10 bit ADC dalam paket PDIP</li>
+            <li>Memiliki fitur Power-on serta Reset and Programmable Brown-out Detection</li>
+            <li>Bekerja pada tegangan 1,8–5,5 Volt</li>
+            <li>Mampu bertahan pada suhu antara -40 °C sampai 85 °C</li>
+          </ol>
+        
+          <p class="no-indent">Kelompok Pin ATmega328P :</p>
+          <ol>
+            <li>VCC berfungsi sebagai pin input sumber tegangan</li>
+            <li>GND (Ground) berfungsi sebagai pin grounding atau massa (negative)</li>
+            <li>Port B adalah port-input tipe 8 bit yang bekerja dua arah. Fungsinya bergantung jenis port.</li>
+            <li>Port C (PC5:0) adalah port-input tipe 7 bit yang bekerja dua arah. Port ini dapat digunakan sebagai ADC Input
+              Channel dan 2-wire Serial Bus Data Input/Output Line.</li>
+            <li>Port D (PD7:0) adalah port-input tipe 8 bit dua arah yang sering digunakan untuk analog comparator, external
+              interruption, dan USART communication.</li>
+            <li>AVCC adalah pin sambungan sumber tegangan menuju A/D Converter, port PC3:0, dan ADC7:6</li>
+            <li>AREF adalah pin input sumber tegangan referensi A/D Converter</li>
+            <li>qADC7:6 (TQFP and QFN/MLF Package Only), pada sistem paket TQFP and QFN/MLF, port ini melayani input analog
+              menuju A/D Converter</li>
+          </ol>
+        
+          <h2>C. Arduino</h2>
+        
+          <p>
+            Arduino adalah rangkaian elektronika berbasi mikrokontroler Atmega328P keluaran Atmel. Nama lain Arduino adalah
+            development board atau papan pengembangan mikrokontroler yang memudahkan pengguna dalam membangun rangkaian
+            elektronika berbasis mikrokontroler dibandingkan dengan membangun rangkaian mulai dari awal. Arduino Uno R3 adalah
+            jenis Arduino yang bersifat open source hardware yang memungkinkan orang lain mengembangkan sesuai kebutuhan mereka.
+          </p>
+        
+          <p class="no-indent">Spesifikasi Hardware Arduino Uno R3 :</p>
+          <ol>
+            <li>Berbasis chip mikrokontroler ATmega328P</li>
+            <li>Beroperasi pada tegangan DC 5 V</li>
+            <li>Input tegangan DC adalah 7–12 V</li>
+            <li>Terdiri atas 14 digital I/O pin, dengan 6 pin di antaranya merupakan sambungan PWM</li>
+            <li>Memiliki 6 pin input analog</li>
+            <li>Besar arus setiap pin I/O adalah 20 mA</li>
+            <li>Kapasitas SRAM adalah 2 KB</li>
+            <li>Ukuran EEPROM adalah 1 KB</li>
+            <li>Mampu bekerja pada clock speed 16 MHz</li>
+            <li>Dijual di pasaran dengan dimensi 68,6 mm × 53,4 mm dengan berat 25 g</li>
+            <li>Besar arus DC pin pada tegangan 3,3 V adalah 50 mA</li>
+            <li>Kapasitas memori flash adalah 32 KB dengan 0,5 KB untuk bootloader program</li>
+          </ol>
+        
+          <p class="no-indent">Bagian-Bagian Board Arduino :</p>
+          <ol>
+            <li>Port USB, memberikan catu daya dari komputer ke Arduino Ketika me-load atau memasukkan ke mikrokontroler</li>
+            <li>Jack Adaptor tegangan DC, sambungan input sumber tegangan DC berupa jack, biasanya dari adaptor ataupun baterai
+            </li>
+            <li>Tombol Reset, mereset board Arduino sehingga setiap data program yang pernah di-load ke dalam board dan
+              mikrokontroler akan dihapus atau dikosongkan</li>
+            <li>Pin Digital, sebagai port input atau output yang penggunaannya dapat dilakukan oleh program fungsi
+              digitalWrite(), digitalRead(), dan pinMode(). Macam-macam pin digital antara lain Pin 0 (RX); Pin 2 dan 3; Pin 3,
+              5, 6, 9, 10, dan 11; Pin 10 (SS), 11 (MOSI), 12 (MISO), dan 13 (SCK); serta LED dekat pin 13</li>
+            <li>Ground, sambungan ke ground tegangan</li>
+            <li>AREF, sebagai pin preferensi inout tegangan analog yang dapat diatur melalui fungsi program analogReference()
+            </li>
+            <li>Pin Power, terdiri atas Pin VIN sebagai sumber tegangan peralatan yang akan dikontrol, Pin 5V sebagai keluaran
+              tegangan maksimal 5 volt yang otomatis diatur regulator board Arduino, Pin 3v3 sebagai pin sumber tegangan sebesar
+              3,3 volt yang dikeluarkan regulator board Arduino dengan nilai arus listrik maksimal 50 mA, dan GND sebagai pin
+              untuk jalur sambungan grounding Arduino.</li>
+            <li>Pin Analog, terdiri atas enam pin dengan urutan A0 sampai A5, deretan pin ini digunakan untuk mendeteksi dan
+              mengonversi setiap tegangan yang dihasilkan sensor analog.</li>
+            <li>ICSP atau In-Circuit Serial Programming, deretan pin yang memberikan fasilitas bagi user untuk melakukan
+              pemrograman secara langsung tanpa melalui bootloader Arduino.</li>
+          </ol>
+        
+          <h2>D. Pemrograman Mikrokontroler pada Arduino</h2>
+        
+          <p>
+            Sebelum melakukan pemrograman mikrokontroler, perlu ditinjau kembali mengenai konsep dan cara kerja penulisan
+            kode program Arduino. Bahasa yang digunakan pada Arduino adalah Bahasa C. Anda dapat memindai kode QR di bawah ini.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/2poindqr.svg"
+            alt="2poindqr"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/2poindqr.svg"
+            alt="2poindqr"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>E. Aplikasi Arduino Sederhana</h2>
+        
+          <p>
+            Setelah mempelajari karakteristik mikrokontroler ATmega328P dan bagian-bagian Arduino serta bagaimana
+            melakukan pemrogramannya, tahap selanjutnya adalah menerapkan pengontrolan rangkaian elektronika menggunakan
+            mikrokontroler. Anda dapat memindai kode QR di bawah ini.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/2poineqr.svg"
+            alt="2poineqr"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/2poineqr.svg"
+            alt="2poineqr"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+        </div>
+        <div class="container" id="3" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>3. Organisasi dan Arsitektur Komputer</h1>
+          <hr>
+        
+          <h2>A. Konsep Organisasi Komputer</h2>
+        
+          <p>
+            Organisasi komputer yaitu sebagai keterkaitan setiap bagian-bagian dalam komputer, baik unit-unit operasional yang
+            mendukung proses compute maupun proses interkoneksi antarkomponen penyusun sistem komputer dalam menjalan fungsinya.
+            Jadi, konsep cara komponen-komponen hardware dalam komputer itu bekerja secara terintegrasi sebagai kesatuan
+            komputer.
+          </p>
+        
+          <p>
+            Sebuah sistem komputer dapat bekerja dengan baik jika memiliki tiga komponen penting, yaitu hardware, software, dan
+            brainware. Hardware berfungi sebagai peranti keras (elektronika) yang melakukan proses digital, software berfungsi
+            sebagai piranti lunak untuk mengatur dan mengelola hardware, sedangkan brainware berperan dalam memberikan dan
+            mengendalikan setiap input dan output dari hardware melalui software yang terpasang.
+          </p>
+        
+          <h2>B. Fungsi dan sistem Komputer</h2>
+        
+          <p class="no-indent">Beberapa dari fungsi komputer :</p>
+          <ol>
+            <li>Melakukan pengolahan data (data processing)</li>
+            <li>Melakukan penyimpanan data (data storage)</li>
+            <li>Melakukan pemindahan data (data movement)</li>
+            <li>Melakukan operasi kontrol</li>
+          </ol>
+        
+          <p class="no-indent">Hardware komputer dalam melakukan prosesnya terdiri atas beberapa bagian, yaitu :</p>
+          <ol style="list-style-type: lower-latin;">
+            <li>CPU, berfungsi sebagai pusat pengolah data.</li>
+            <li>Memori, bertugas melakukan penyimpanan data.</li>
+            <li>Perangkat input dan output, berfungsi menjembatani proses masukan dan keluarkan data.</li>
+          </ol>
+        
+          <h2>C. Arsitektur Komputer</h2>
+        
+          <img
+            src="../../assets/images/sk/3poinb.svg"
+            alt="3poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        
+          <p>
+            Arsitektur Komputer, Ilmu yang membahas atribut sistem yang dirancang oleh programmer untuk mendapatkan hasil
+            kerja yang optimal terhadap kinerja sebuah komputer. Sebagai contoh, dalam melakukan beberapa set instruksi,
+            metode pengalamatan, teknik input-output, dan operasi matematika. Sebagai sebuah mesin multilevel, arsitektur
+            komputer dapat diartikan sebagai sebuah komunikasi antara user (programmer) dan mesin melalui bahasa
+            pemograman dengan mesin komputer.
+          </p>
+        
+          <p class="no-indent">Level logika mesin komputer :</p>
+          <ol>
+            <li>Level ke-0, Pada level ke-0, struktur mesin komputer dianggap sebagai dasar yang berhubungan dengan
+              rekayasa digital. Pada level ini digunakan bahasa tingkat mesin yang dapat dijalankan secara langsung tanpa
+              memerlukan penerjemah.</li>
+            <li>Level ke-1, Pada level ke-1, bahasa mesin yang dijalankan oleh pengguna memerlukan interpreter untuk
+              menerjemahkannya ke dalam bahasa yang dimengerti mesin.</li>
+            <li>Level ke-2 hingga ke-n, Pada level ke-2 hingga ke-n, bahasa pemrograman yang dijalankan pada mesin
+              memerlukan interpreter untuk mengubah perintah ke dalam bahasan mesin agar dapat dieksekusi oleh mesin
+              komputer.</li>
+          </ol>
+        
+          <p class="no-indent">Pembagian arsitektur komputer berdasarkan level diawali pada era tahun 1940 yang dibagi menjadi
+            dua level :</p>
+          <ol>
+            <li>Level ISA (Instruction Set Architecture)</li>
+            <li>Level Digital Logic</li>
+          </ol>
+        
+          <p class="no-indent">Kemudian diperbaiki menjadi tiga level pada tahun 1951 oleh Maurice Wilkes:</p>
+          <ol>
+            <li>Level ISA (Instruction Set Architecture)</li>
+            <li>Level Interpreter</li>
+            <li>Level Digital Logic</li>
+          </ol>
+        
+          <p class="no-indent">Tiga level arsitektur yang diuraikan lebih lanjut akan membagi komputer menjadi mesin enam level:
+          </p>
+          <ol>
+            <li>Level 0 atau Level Logika Digital</li>
+            <li>Level 1 atau Level Arsitektur Mikro</li>
+            <li>Level 2 atau Level Arsitektur Perangkat Instruksi</li>
+            <li>Level 3 atau Level Sistem Operasi</li>
+            <li>Level 4 atau Level Bahasa Assembler (bahasa rakitan)</li>
+            <li>Level 5 atau Level Bahasa Tingkat Tinggi</li>
+          </ol>
+        
+        </div>
+        <div class="container" id="4" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>4. Perangkat Keras Komputer</h1>
+          <hr>
+        
+          <h2>A. Definisi Perangkat Keras</h2>
+          <p>
+            Perangkat keras adalah semua jenis peranti atau perangkat pada
+            komputer yang dapat dilihat secara fisik oleh pengguna. Perangkat ini
+            berfungsi menghubungkan interaksi pengguna dengan sistem komputer.
+            Perangkat keras terbagi menjadi dua yakni, peangkat keras internal dan
+            perangkat keras eksternal.
+          </p>
+        
+          <h2>B. Perangkat Keras Internal</h2>
+          
+          <img
+            src="../../assets/images/sk/4poinb.svg"
+            alt="4poinb"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/4poinb.svg"
+            alt="4poinb"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <p>
+            Perangkat keras internal adalah perangkat keras yang dipasangkan di
+            dalam koneksi internal mainboard. Berikut adalah contoh dari beberapa 
+            perangkat keras internal.
+          </p>
+        
+          <ol>
+            <li>MainBoard, Mainboard atau papan utama komputermerupakan rangkaian elektronik yang bertugas sebagai penyedia
+              jalur data bagi setiap komponen yang terhubung pada komputer, seperti CPU, hard disk, DVD drive, port USB, dan
+              port VGA.</li>
+            <li>CPU (Central Processing Unit), CPU atau processor adalah komponen inti dalam komputer. Komponen ini merupakan
+              tempat semua proses pengolahan data akan dikerjakan.</li>
+            <li>Memori, Memori bertugas untuk menyimpan semua instruksi sebelum dikerjakan dalam CPU dan setiap data yang akan
+              diproses atau yang dihasilkan oleh CPU. Ada dua jenis memori utama, yaitu ROM dan RAM.</li>
+            <li>Power Supply, Power supply berfungsi menyuplai aliran listrik ke mainboard dan beberapa perangkat keras lainnya
+              yang terpasang pada mainboard. Komponen ini bekerja dengan cara mengonversi tegangan AC menjadi DC yang sekaligus
+              menjadi pembangkit tegangan dan pengatur kestabilan arus listrik yang dialirkan ke komponen komponen.</li>
+          </ol>
+        
+          <h2>C. Perangkat Keras Eksternal</h2>
+        
+          <p>
+            Perangkat keras eksternal adalah perangkat keras yang dipasangkan di luar koneksi internal mainboard. Perangkat ini
+            terhubung melalui interkoneksi bus sebagai pengolah data keluaran dari CPU. Tipe perangkat eksternal dapat dibagi
+            menjadi tiga, yaitu sebagai berikut.
+          </p>
+        
+          <ol>
+            <li>Machine Readable, Machine Readable merupakan perangkat eksternal yang berperan sebagai perangkat input/output
+              yang menghubungkan perangkat lain dengan komputer dan sebaliknya.</li>
+            <li>Human Readable, Human Readable merupakan perangkat eksternal yang bertugas sebagai interface atau antarmuka yang
+              menghubungkan interaksi antara manusia dan komputer.</li>
+            <li>Communications, Communications merupakan perangkat eksternal yang berfungsi sebagai pendukung dan sistem
+              komunikasi jarak jauh.</li>
+          </ol>
+        
+          <p>
+            Perangkat eksternal dapat diklasifikasikan dalam tiga jenis berdasarkan dari cara kerjanya, yaitu perangkat input
+            (input device), perangkat output (output device), dan perangkat input/output (input/output device).
+          </p>
+          
+          <ol>
+            <li>
+              <p class="no-indent">
+                Port Input/Output, Agar dapat bekerja sesuai fungsinya, perangkat eksternal harus dihubungkan dengan processor.
+                Perangkat eksternal akan dihubungkan melalui port-port input/ouput yang berada pada bagian mainboard.
+              </p>
+        
+              <p class="no-indent">Jenis Port :</p>
+              <ul style="list-style-type: lower-latin;">
+                <li>Port secara fisik</li>
+                <li>Port secara logika sebagai layanan service</li>
+              </ul>
+        
+              <p class="no-indent">Tipe Port :</p>
+              <ul style="list-style-type: lower-latin;">
+                <li>Port USB (Universal Serial Bus)</li>
+                <li>Port serial</li>
+                <li>Port Ethernet atau modem</li>
+              </ul>
+        
+            </li>
+            <li>
+              <p class="no-indent">
+                Perangkat Masukan (Input Device), Perangkat yang berfungsi menerima masukan atau instruksi dari luar komputer.
+                Instruksi tersebut kemudia diteruskan ke CPU untuk diproses lebih lanjut. Data yang menjadi masukan tersebut
+                berupa karakter, gambar, audio, dan video.
+              </p>
+        
+              <p class="no-indent">Jenis Perangkat Masukan :</p>
+              <ol style="list-style-type: lower-latin;">
+                <li>Perangkat masukan pengetikan, contoh: keyboard.</li>
+                <li>Perangkat masukan penunjuk (pointer), contoh: mouse, trackball, touchpad.</li>
+              </ol>
+        
+            </li>
+            <li>
+              Perangkat Keluaran (Output Device), Perangkat keras keluaran adalah perangkat yang berfungsi menampilkan data
+              dalam bentuk audio, tampilan grafis, dan hasil cetak. Beberapa perangkat keluara yang sering digunakan, antara
+              lain monitor,, speaker, printer, dan plotter.
+            </li>
+          </ol>
+          
+          <img
+            src="../../assets/images/sk/4poinc1.svg"
+            alt="4poinc1"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/4poinc1.svg"
+            alt="4poinc1"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <ol>
+            <li>Monitor adalah perangkat yang berfungsi menampilkan hasil pemrosesan data atau informasi dalam bentuk teks,
+              gambar, dan video. CRT: generasi monitor awal yang memiliki bentuk besar, berat, dan bercirikan tabung besar pada
+              bagian belakangnya. LCD: monitor dengan layar tipis dan bentuk yang ramping.</li>
+            <li>Perangkat yang berfungsi mengubah sinyal digital menjadi sinyal analog dalam bentuk suara.</li>
+            <li>Perangkat yang menghasilkan keluaran berupa cetakan pada media tertentu, seperti kertas, film, dan kain.
+              Berdasarkan teknologi cetaknya, printer dapat dibedakan menjadi printer dot matrix, printer inkjet, dan printer
+              laser jet.</li>
+            <li>Salah satu jenis printer yang dapat mencetak pada media berukuran besar. Perangkat ini banyak digunakan pada
+              bidang periklanan untuk mencetak baliho atau spanduk.</li>
+          </ol>
+        
+          <p>
+            4. Perangkat Penyimpanan (Storage Device), Perangkat penyimpanan adalah perangkat yang digunakan untuk menyimpan
+            data.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/4poinc2.svg"
+            alt="4poinc2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/4poinc2.svg"
+            alt="4poinc2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <ol>
+            <li>Hard disk, Perangkat penyimpanan yang memanfaatkan piringan magnetis sebagai sarana penyimpanan data. Komponen
+              penyusun hard disk adalah platter, spindle, head, dan logic board.</li>
+            <li>USB flash disk, Media penyimpanan data berukuran mini dengan inti memori flash dan port antarmuka USB (Universal
+              Serial Bus). Perangkat ini mampu melakukan proses read and write data hingga ribuan kali dan memiliki kapasitas
+              penyimpanan yang tinggi. Dengan ukurannya yang kecil dan ringan, perangkat ini mudah dibawa. Seiring berkembangnya
+              waktu, flash disk mengalami perkembangannya.</li>
+            <li>Disk Drive, Perangkat yang dapat membaca data dalam piringan data (disk), seperti CD dan DVD. Terdapat dua jenis
+              drive yang dapat digunakan, yaitu ROM dan RW. ROM (Read Only Memory) merupakan jenis disk drive yang hanya dapat
+              membaca data yang tersimpan pada piringan disk data. Adapun RW (Read Write) adalah jenis disk drive yang mampu
+              membaca dan menulis data pada disk.</li>
+          </ol>
+        
+          <p>
+            Perangkat Input/Output, Perangkat input/output adalah perangkat yang dapat menerima masukan data dari perangkat
+            lain untuk diteruskan ke CPU, serta meneruskan data dari CPU menuju perangkat lain dalam jaringan, yang dilakukan
+            secara bersamaan dalam satu waktu secara dua arah (bolak-balik/full duplex).
+          </p>
+        
+          <p class="no-indent">Contoh Perangkat Input/Output :</p>
+          <ol style="list-style-type: lower-latin;">
+            <li>NIC (Network Interface Card)</li>
+            <li>Modem atau Modulator Demodulator</li>
+          </ol>
+          
+          <br>
+          <h5>NIC (Network Interface Card)</h5>
+        
+          <p>
+            NIC adalah kartu jaringan internal yang dipasang pada slot bus mainboard dengan tip slot tertentu, seperti ISA,
+            PCI, Mini PCI, atau PCI Express. Perangkat ini berfungsi mengoneksi komputer dengan komputer lainnya yang tersambung
+            dalam jaringan yang sama menggunakan media transmisi tertentu.
+          </p>
+        
+          <img
+            src="../../assets/images/sk/4poinc3.svg"
+            alt="4poinc3"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/4poinc3.svg"
+            alt="4poinc3"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <br>
+          <h5>Modem atau Modulator Demodulator</h5>
+        
+          <p>
+            Berdasarkan model koneksinya, modem dibedakan menjadi dua jenis, yaitu model internal dan modek eksternal. Fungsi
+            utama modem adlah menghubungkan komputer dengan jaringan internet. Modem internal umumnya hanya dapat melayani
+            sambungan internet dengan media kabel, sedangkan modem eksternal lebih bervariasi dalam hal media transmisinya.
+          </p>
+        
+          <img
+            src="../../assets/images/sk/4poinc4.svg"
+            alt="4poinc4"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/4poinc4.svg"
+            alt="4poinc4"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+        </div>
+        <div class="container" id="5" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>5. Teknik Grafis Video Editing</h1>
+          <hr>
+        
+          <h2>A. Teknologi Sistem Operasi</h2>
+          
+          <br>
+          <img
+            src="../../assets/images/sk/5poina.svg"
+            alt="5poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/5poina.svg"
+            alt="5poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <p>
+            Sistem operasi atau operating system (OS) berfungsi menginterupsi dan mengontrol perangkat keras komputer
+            berdasarkan input yang diberikan pengguna.
+          </p>
+        
+          <p class="no-indent">Bagian utama sistem operasi :</p>
+          <ol>
+            <li>Kernel, Core atau inti OS yang bertugas untuk mengelola dan memanajemen hardware. Selain itu, menjadi interface
+              terhadap aplikasi dalam OS untuk memberikan instruksi dan menjalankan proses pada setiap hardware yang terhubung.
+            </li>
+            <li>Aplikasi, Aplikasi berperan sebagai interface yang menghubungkan interaksi antara manusia dan mesin. Contoh
+              perintah yang disampaikan manusia melalui aplikasi, seperti mencetak angka dan menampilkan grafik pada layar
+              monitor.</li>
+          </ol>
+        
+          <p>
+            Aplikasi dasar dalam sistem operasi biasanya berbasis perintah tunggal atau command line. Contohnya, shell pada
+            Linux atau Unix dan commond prompt pada OS Windows.
+          </p>
+        
+          <img
+            src="../../assets/images/sk/5poina2.svg"
+            alt="5poina2"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        
+          <p>
+            Sistem operasi membutuhkan serangkaian proses sampai akhirnya siap digunakan. Proses ini dimulai sejak komputer
+            dalam keadaan mati, kemudian dilakukan proses booting hingga dapat dioperasikan oleh penggunanya. Tahapan proses
+            booting pada sistem operasi Linux, yaitu sebagai berikut.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/5poina3.svg"
+            alt="5poina3"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/5poina3.svg"
+            alt="5poina3"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <p class="no-indent">Jenis proses booting :</p>
+          <ol>
+            <li>Cold Boot, Cold boot adalah proses booting yang dimulai dari komputer dalam kondisi mati, kemudian, tombol power
+              ditekan dan aliran listrik mengalir ke sistem komputer.</li>
+            <li>Warm Boot, Warm boot adalah proses booting komputer yang dilakukan ketika dalam kondisi hidup. Biasanya dengan
+              menekan tombol reset atau kombinasi tombol keyboard Alt + Del.</li>
+          </ol>
+        
+          <h2>B. Master Boot Record (MBR)</h2>
+        
+          <p>MBR atau sektor 0 merupakan lokasi media penyimpanan berukuran 512 Byte yang terdiri atas tiga
+            bagian, yaitu :</p>
+          <ol>
+            <li>Bootstrap Code Area (Bootloader), Bagian ini digunakan untuk menyimpan image bootloader yang akan di-load oleh
+              BIOS ke memori utama. Area ini berukuran 446 Byte dan terltak pada alamat offset 0-446.</li>
+            <li>Partition Information, Ukuran tabel informasi partisi setiap media penyimpanan MBR adalah 64 Byte. Fungsi
+              utamanya adalah menyimpan informasi tentang jumlah, ukuran, dan format partisinya.</li>
+            <li>Boot Record Signature (Magic Number), Bagian ini berukuran 2 Byte dengan offset 511 sampai 512 dan digunakan
+              untuk menyimpan Boot Record Signature. Boot Record Signature merupakan kode unik sebagai tanda pengenal sebuah
+              file, yang diletakan pada awal file atau akhir file.</li>
+          </ol>
+        
+          <p class="no-indent">Peran penting MBR dalam berjalannya sistem operasi :</p>
+          <ol style="list-style-type: lower-latin;">
+            <li>Sebagai penanda sektor 0 dari partisi disk yang aktif guna menentukan boot sector disk.</li>
+            <li>Memberikan informasi tentang skema partisi yang terbentuk dalam sebuah disk.</li>
+            <li>Me-load salinan boot sector sebuah partisi yang aktif ke dalam memori.</li>
+            <li>Menunjukkan lookasi kode bootloader pada sistem agar dapat dieksekusi ketika sistem operasi melakukan proses
+              booting.</li>
+          </ol>
+        
+          <p>Kerusakan pada MBR akan menyebabkan disk tidak dapat menemukan bootloader, yang berakibat sistem operasi tidak
+            dapat booting. Jika kerusakannya permanen, seperti bad sector akan menyebabkan disk tersebut tidak dapat digunakan
+            sebagai partisi aktif tempat menyimpan MBR atau bootloader.</p>
+          <p>Untuk melakukan eksperimen dan penelitian disk penyimpanan, dapat menggunakan aplikasi WinHex Editor. Untuk
+            mempelajari pengaturan bootloader MBR hard disk dengan WinHex Editor, pindai QR code berikut.</p>
+          
+          <img
+            src="../../assets/images/sk/5poinbqr.svg"
+            alt="5poinbqr"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/5poinbqr.svg"
+            alt="5poinbqr"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>C. Instalasi Windows 10</h2>
+        
+          <p>
+            Windows 10 dirilis pada tahun 2014 dengan pengembangan versi terbarunya, yaitu Windows 11 yang dirilis Oktber 2021.
+            Windows memiliki kemampuan yang tinggi untuk mendukung kinerja hardware dan processor, aplikasi perkantoran aplikasi
+            permainan hingga bahasa pemrograman.
+          </p>
+        
+          <p class="no-indent">Beberapa versi Windows 10 yang dipilih :</p>
+          <ol style="list-style-type: lower-latin;">
+            <li>Windows 10 Home</li>
+            <li>Windows 10 Pro</li>
+            <li>Windows 10 Enterprise</li>
+            <li>Windows 10 Education</li>
+            <li>Windows 10 Mobile</li>
+            <li>Windows 10 IoT Core</li>
+          </ol>
+        
+          <h2>D. Partisi Hard Disk</h2>
+        
+          <p>
+            Hard disk adalah media penyimpanan yang sering digunakan untuk mengorganisasikan dan mengalokasikan data yang harus
+            dapat diakses oleh memori komputer setiap saat. Hard disk dapat dikatakan sebagai cakram atau disk yang dapat
+            menyimpan data magnetik yang sudah terpolarisasi.
+          </p>
+          
+          <img
+            src="../../assets/images/sk/5poind.svg"
+            alt="5poind"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/sk/5poind.svg"
+            alt="5poind"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <ol>
+            <li>Track, merupakan lintasan data magnetik dalam disk yang dimulai track ke-0 hingga ke-n tergantung jenis hard
+              disk.</li>
+            <li>Sektor, merupakan area pembentuk track dengan kapasitas tertentu tergantung jenis hard disk, mulai dari
+              kapasitas 512 Byte hingga 5.122 Byte.</li>
+            <li>Boot area, merupakan area sektor 0 pada track pertama dalam disk, yang berfungsi sebagai wilayah booting disk
+              yang mengandung bootstrap area.</li>
+            <li>Cluster, merupakan kumpulan 1 hingga 128 sektor yang berperan dalam mengatur penyimpanan data sehingga
+              memudahkan sistem operasi dalam mengakses data tersebut.</li>
+          </ol>
+        
+          <h2>E. Mengonfigurasi Driver Hardware</h2>
+        
+          <p>
+            Driver merupakan software yang berfungsi menerjemahkan komunikasi data antara perangkat keras (hardware) dengan
+            setiap instruksi yang dikirkan oleh CPU melalui aplikasi dalam setiap operasi. Contoh driver adalah driver printer
+            yang harus diinstal terlebih dahulu, sebelum dapat mencetak dokumen yang dibuat dengan Microsoft Word.
+          </p>
+        
+          <h2>F. Software Aplikasi</h2>
+        
+          <p>
+            Software atau peranti lunak merupakan kumpulan subrutin yang ditulis berdasarkan aturan penulisan bahasa pemrograman
+            tertentu, agar dapat dimengerti dan mudah dieksekusi oleh processor. File kompilasi tersebut dikemas dalam image
+            dengan bahasa mesin (machine code level) sesuai platform OS yang digunakan. Contohnya, software Microsoft Office
+            yang dibuat berbasis bahasa pemrograman Visual Basic hanya dapat digunakan pada OS Windows.
+          </p>
+        
+        </div>
+        <div class="container" id="v" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1 class="text-center">Video Materi</h1>
+          <hr />
+          <div class="text-center">
+            <iframe
+              width="100%"
+              height="50%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hWkMetsTXMHAU95E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
         <!-- FOOTER -->
         <footer class="container footer py-3 px-5">
           <div
