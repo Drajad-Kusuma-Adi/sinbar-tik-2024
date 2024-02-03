@@ -97,35 +97,1989 @@
     <!-- END NAV -->
 
     <!-- MAIN CONTENT -->
-    <main></main>
-    <!-- END MAIN CONTENT -->
-
-    <!-- FOOTER -->
-    <footer class="container-fluid footer py-3">
-      <div
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <p class="col-md-4 mb-0 text-white">© 2024</p>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a
-              href="https://wa.me/+6282143322393"
-              target="_blank"
-              class="text-white my-auto"
-            >
-              <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
-            </a>
-          </li>
-        </ul>
+    <main>
+      <div class="sidebar collapsed">
+        <button class="toggle-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="black"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <hr />
+        <div class="sidebar-content">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3 style="text-align: center">Subbab</h3>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#1">
+                1. Teknologi Jaringan Komputer
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#2">
+                2. Komponen Jaringan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#3">
+                3. Protokol Jaringan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#4">
+                4. IP Address
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#5">
+                5. Topologi Jaringan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#6">
+                6. Menggunakan Layanan Jaringan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#v">
+                Video Materi
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
-    <!-- END FOOTER -->
+
+      <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sidebar-main">
+        <div class="container" id="1" style="scroll-margin-top: 60px">
+          <h1>1. Teknologi Jaringan Komputer</h1>
+          <hr />
+
+          <img
+            src="../../assets/images/jki/1poina.svg"
+            alt="1poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/1poina.svg"
+            alt="1poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>A. Definisi Komputer</h2>
+        
+          <p>
+            Komputer adalah perangkat digital yang dilengkapi dengan komponen masukan,
+            pemrosesan, dan keluaran. Beberapa perangkat digital yang dapat dikatakan
+            sebagai komputer, antara lain PC, laptop, tablet, dan smartphone.
+            Perangkat-perangkat tersebut memiliki kemampuan melakukan pemrosesan data
+            sendiri (independen), seperti menyimpan dokumen, memutar video, dan
+            melakukan penghitungan sesuai dengan perintah user. Konsep kerja perangkat
+            ini disebut dengan stand alone.
+          </p>
+        
+          <h2>B. Prinsip Kerja dan Manfaat Jaringan Komputer</h2>
+        
+          <p>
+            Prinsip jaringan komputer dapat dikatakan sebagai proses pengiriman data
+            dari pengirim (sender) ke penerima (receiver) melalui media komunikasi
+            tertentu.
+          </p>
+        
+          <p class="text-center fw-bold">
+            Sender --(Media Transmisi)--> Protocol --(Media Transmisi)-->Receiver
+          </p>
+          <p class="text-center">transmisi data jaringan</p>
+        
+          <p>
+            Komunikasi data adalah proses pertukaran data antara pengirim dengan
+            penerima atau sebaliknya. Dua jenis data yang ditransmisikan dalam jaringan,
+            yaitu berupa sinyal digital dan sinyal analog.
+          </p>
+        
+          <ol>
+            <li>
+              Sinyal Digital, Gelombang data yang ditransmisikan dalam bentuk pulsa
+              tegangan yang mereferensikan tinggi rendahnya sinyal. Ada dua jenis pulsa
+              tegangan, yaitu 0 untuk tegangan rendah dan 1 untuk tegangan tinggi. Jenis
+              sinyal ini rentan terhadap gangguan (data loss) jika ditransmisikan pada
+              area yang luas.
+            </li>
+            <img
+              src="../../assets/images/jki/1poinb1.svg"
+              alt="1poinb1"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/jki/1poinb1.svg"
+              alt="1poinb1"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <li>
+              Sinyal Analog, Data yang ditransmisikan dalam bentuk gelombang sinusoidal
+              secara kontinu, yang dipengaruhi oleh faktor amplitudo dan frekuensi.
+              Amplitudo merupakan tinggi rendahnya sebuah gelombang dalam aliran sinyal
+              analog. Adapun frekuensi adalah banyaknya getaran atau gelombang per detik
+              dalam sinyal analog.
+            </li>
+            <img
+              src="../../assets/images/jki/1poinb2.svg"
+              alt="1poinb2"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/jki/1poinb2.svg"
+              alt="1poinb2"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+          </ol>
+        
+          <p>Manfaat teknologi jaringan komputer dalam memudahkan pekerjaan manusia.</p>
+          <ol>
+            <li>Berbagi pakai informasi dan sumber daya.</li>
+            <li>
+              Memungkinkan pertukaran data dan informasi antarpengguna, seperti chat dan
+              e-mail.
+            </li>
+            <li>
+              Data terintegrasi sehingga dapat diakses dari lokasi yang berbeda-beda.
+            </li>
+            <li>
+              Membagi dan mendistribusikan pekerjaan pada komputer lain sehingga jika
+              terjadi masalah pada salah satu komputer, pekerjaan masih bisa diakses
+              melalui komputer lainnya.
+            </li>
+            <li>Data dan informasi dapat diatur dan diolah sesuai kebutuhan.</li>
+            <li>
+              Meningkatkan dan memperbaiki sistem keamanan data dengan cara membatasi
+              user yang dapat mengakses data.
+            </li>
+          </ol>
+        
+          <h2>C. Transmisi Data</h2>
+        
+          <p>
+            Proses transmisi data dalam jaringan atau disebut juga komunikasi data dapat
+            dibedakan menjadi tiga jenis, yaitu:
+          </p>
+          <ol>
+            <li>
+              Simplex atau Sistem Komunikasi Satu Arah, Simplex adalah sistem komunikasi
+              yang hanya memungkinkan perangkat yang terlibat berfungsi sebagai
+              peralatan penerima data (receiver device) atau sebaliknya. Contoh
+              perangkat yang menerapkan sistem ini adalah radio dan televisi. Stasiun
+              televisi menyalurkan sistem komunikasi ke televisi.
+            </li>
+            <li>
+              Half Duplex atau Sistem Komunikasi Setengah Dua Arah, Half duplex
+              merupakan sistem komunikasi dua arah yang memungkinkan perangkat jaringan
+              untuk mengirim dan menerima data ke perangkat lainnya. Contoh perangkat
+              yang menerapkan sistem ini adalah radiogram dan walkie-talkie.
+            </li>
+            <li>
+              Full duplex atau sistem komunikasi dua arah sekaligus, Full duplex
+              merupakan sistem komunikasi dua arah yang mampu mengirim dan menerima data
+              secara bersamaan. Contoh perangkat yang menerapkan sistem ini adalah
+              telepon, handphone, laptop dan internet.
+            </li>
+          </ol>
+        
+          <h2>D. Metode Transmisi Data</h2>
+        
+          <p>Metode transmisi data dibedakan menjadi dua, yaitu:</p>
+          <ol>
+            <li>
+              Transmisi Paralel, Pada transmisi paralel, bit-bit data dalam sinyal
+              digital akan ditransmisikan secara bersamaan melalui media yang terbagi
+              dalam 8 bit saluran. Transmisi ini relatif cepat pada media dengan jarak
+              yang dekat, seperti transfer data dari hard disk ke mainboard, DVD drive,
+              dan sinyal data komputer ke printer atau sebaliknya. Akan tetapi, jika ada
+              salah satu saluran yang terputus, data bisa rusak atau tidak dapat
+              terbaca.
+            </li>
+            <img
+              src="../../assets/images/jki/1poind1.svg"
+              alt="1poind1"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/jki/1poind1.svg"
+              alt="1poind1"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <li>
+              Transmisi Serial, Pada transmisi serial, bit-bit data dikirimkan secara
+              berurutan dan beruntun dari perangkat pengirim (sender) ke perangkat
+              penerima (receiver). Transmisi serial sangat efektif untuk transmisi
+              dengan jarak jangkauan yang lebih jauh. Contohnya, dalam jaringan
+              komputer, sistem telepon, dan VSAT.
+            </li>
+            <img
+              src="../../assets/images/jki/1poind2.svg"
+              alt="1poind2"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/jki/1poind2.svg"
+              alt="1poind2"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+          </ol>
+        
+          <h2>E. Teknik Pengiriman Data</h2>
+        
+          <p class="no-indent">
+            Untuk mengirim data, terdapat dua teknik pengiriman yang dilakukan, yaitu
+            baseband dan broadband. Teknik ini dibedakan berdasarkan perlunya konversi
+            data terlebih dahulu atau dapat langsung dikirimkan dari pengirim ke
+            penerima.
+          </p>
+          <ol>
+            <li>
+              Teknik Pengiriman Baseband, Pada teknik pengiriman baseband, data digital
+              dikirimkan secara langsung dari sender ke receiver tanpa melakukan.
+              perubahan apa pun.
+        
+              <p>Keuntungan metode baseband:</p>
+              <ol>
+                <li>Lebih sederhana topologinya.</li>
+                <li>
+                  Murah dalam penerapan dan konfigurasinya karena tidak memerlukan
+                  modem.
+                </li>
+                <li>Lebih mudah dalam instalasi dan perawatannya.</li>
+              </ol>
+        
+              <p>Kekurangan metode baseband:</p>
+              <ol>
+                <li>
+                  Jangkauan transmisi data menjadi terbatas (butuh perangkat tambahan
+                  untuk area yang luas).
+                </li>
+                <li>Instalasi sambungan grounding cukup sulit.</li>
+                <li>Kapasitas transmisi data terbatas.</li>
+              </ol>
+            </li>
+            <li>
+              <p>
+                Teknik Pengiriman Broadband, Pada teknik pengiriman boardband, data
+                digital dikonversi terlebih dahulu menjadi data analog. Setelah diterima
+                receiver, data tersebut kembali dikonversi menjadi data digital.
+              </p>
+              <p>Keuntungan metode baseband:</p>
+              <ol>
+                <li>Daya jangkauan yang lebih luas.</li>
+                <li>Kapasitas besar.</li>
+                <li>Instalasi jaringan lebih murah (untuk koneksi wireless).</li>
+              </ol>
+        
+              <p>Kekurangan metode baseband:</p>
+              <ol>
+                <li>Membutuhkan peranti tambahan berupa modem.</li>
+                <li>Delay transmisi relatif lama.</li>
+                <li>
+                  Mekanisme instalansi dan perbaikan insfrastruktur jaringan relatif
+                  sulit.
+                </li>
+                <li>Membutuhkan biaya yang mahal dalam instalansinya.</li>
+              </ol>
+            </li>
+          </ol>
+        
+          <p>Aspek yang memengaruhi kecepatan transfer data dalam jaringan:</p>
+          <ol>
+            <li>Jenis Modem</li>
+            <li>Jenis Media</li>
+            <li>Kualitas Sambungan Transmisi</li>
+            <li>Jarak Media yang Ditempuh</li>
+            <li>Banyaknya Jumlah Sambungan</li>
+          </ol>
+        
+          <h2>F. Model Layanan Jaringan</h2>
+        
+          <p>
+            Dalam jaringan, komputer dapat berperan sebagai pusat layanan ataupun
+            sebagai penerima layanan. Perbedaan peran komputer tersebut bergantung pada
+            kebutuhan manusia sebagai penggunanya. Untuk melayani kebutuhan pengguna,
+            terdapat dua model layanan jaringan komputer, yaitu model peer-to-peer dan
+            klien-server. Penjelasannya dapat dilihat dengan memindai QR code di
+            samping.
+          </p>
+          <img
+            src="../../assets/images/jki/1poinf.svg"
+            alt="1poinf"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/1poinf.svg"
+            alt="1poinf"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>G. Jenis Jaringan Berdasarkan Area</h2>
+          <p>
+            Berdasarkan jangkauan areanya, jaringan dapat dibedakan menjadi empat, yaitu
+            sebagai berikut.
+          </p>
+          <ol>
+            <li>
+              PAN (Personal Area Network), PAN merupakan jaringan dengan daya jangkau
+              area yang terbatas, biasanya terhubung melalui gelombang radio dengan
+              jarak maksimal 10 m. Contoh penerapan tekonologi PAN adalah pada mouse
+              wireless yang menggunakan jaringan bluetooth sebagai perantara input ke
+              komputer.
+        
+              <p>Keunggulan penggunaan teknologi PAN dalam jaringan:</p>
+              <ol style="list-style-type: lower-latin">
+                <li>Konsumsi daya listrik rendah sehingga perangkat lebih awet.</li>
+                <li>
+                  Fleksibel karena perangkat tidak membutuhkan media sambungan seperti
+                  kabel dan dapat disambungkan di mana saja tanpa terbatas objek seperti
+                  dinding.
+                </li>
+                <li>
+                  Sederhana dalam instalansi dan kecepatan akses data relatif tinggi
+                  untuk data berukuran kecil dalam jarak tertentu.
+                </li>
+                <li>Biaya lebih murah dibandingkan sistem LAN dan WAN.</li>
+                <li>Dapat diterapkan dalam berbagai jenis topologi jaringan.</li>
+                <img
+                  src="../../assets/images/jki/1poing1.svg"
+                  alt="1poing1"
+                  class="d-md-block d-none"
+                  width="60%"
+                  style="
+                    margin-left: 20%;
+                    margin-right: 20%;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                  "
+                />
+                <img
+                  src="../../assets/images/jki/1poing1.svg"
+                  alt="1poing1"
+                  class="d-md-none d-block"
+                  width="80%"
+                  style="
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                  "
+                />
+              </ol>
+            </li>
+            <li>
+              LAN (Local Area Network), LAN atau jaringan lokal merupakan sekempulan
+              peranti jaringan yang terhubung satu sama lain melalui media transmisi
+              dengan jangkauan 100 m–2 km. LAN memiliki kemampuan transfer data antara
+              1–100 Mbps. Jaringan ini biasa diimplementasikan dalam ruangan tertutup
+              atau area terbuka dengan jarak tertentu, seperti kantor, gedung,
+              laboratorium, dan sekolah.
+        
+              <p>Karakteristik LAN:</p>
+              <ol>
+                <li>Kecepatan transfer data tinggi, antara 100 Mbps hingga 1 Gbps.</li>
+                <li>Jangkauan lebih luas dibandingkan PAN.</li>
+                <li>
+                  Biaya instalansi lebih murah ketika diterapkan pada banyak perangkat
+                  jaringan.
+                </li>
+                <li>
+                  Tidak membutuhkan jasa provider untuk menghubungkan
+                  perangkat-perangkat dalam jaringan.
+                </li>
+                <img
+                  src="../../assets/images/jki/1poing2.svg"
+                  alt="1poing2"
+                  class="d-md-block d-none"
+                  width="60%"
+                  style="
+                    margin-left: 20%;
+                    margin-right: 20%;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                  "
+                />
+                <img
+                  src="../../assets/images/jki/1poing2.svg"
+                  alt="1poing2"
+                  class="d-md-none d-block"
+                  width="80%"
+                  style="
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                  "
+                />
+              </ol>
+            </li>
+            <li>
+              MAN (Metropolitan Area Network), MAN merupakan jaringan komputer dengan
+              jarak atau radius media transmisi antara 10 hingga 50 km. Secara struktur,
+              MAN terdiri atas beberapa LAN yang saling terhubung. Teknologi MAN sering
+              digunakan untuk sambungan jarak jauh. antarkantor antarkantor atau
+              organisasi yang masih dalam satu sistem manajemen, dengan tujuan untuk
+              menyinkronkan sistem informasi, memudahkan pengontrolan, dan membuat
+              sistem yang terpusat.
+              <img
+                src="../../assets/images/jki/1poing3.svg"
+                alt="1poing3"
+                class="d-md-block d-none"
+                width="60%"
+                style="
+                  margin-left: 20%;
+                  margin-right: 20%;
+                  margin-top: 3%;
+                  margin-bottom: 3%;
+                "
+              />
+              <img
+                src="../../assets/images/jki/1poing3.svg"
+                alt="1poing3"
+                class="d-md-none d-block"
+                width="80%"
+                style="
+                  margin-left: 10%;
+                  margin-right: 10%;
+                  margin-top: 3%;
+                  margin-bottom: 3%;
+                "
+              />
+            </li>
+            <li>
+              WAN (Wide Area Network), WAN merupakan jaringan dalam skala besar dengan
+              jangkauan mencakup seluruh dunia. Suatu jaringan dikatakan sebagai WAN,
+              jika mempunyai panjang media transmisi lebih dari 100 km.
+              <img
+                src="../../assets/images/jki/1poing4.svg"
+                alt="1poing4"
+                class="d-md-block d-none"
+                width="60%"
+                style="
+                  margin-left: 20%;
+                  margin-right: 20%;
+                  margin-top: 3%;
+                  margin-bottom: 3%;
+                "
+              />
+              <img
+                src="../../assets/images/jki/1poing4.svg"
+                alt="1poing4"
+                class="d-md-none d-block"
+                width="80%"
+                style="
+                  margin-left: 10%;
+                  margin-right: 10%;
+                  margin-top: 3%;
+                  margin-bottom: 3%;
+                "
+              />
+            </li>
+        
+            <p class="no-indent">
+              Berdasarkan jangkauan areanya, media transmisi yang digunakan dalam
+              jaringan dapat dilihat pada tabel berikut.
+            </p>
+            <ol>
+              <li>
+                Lan, Jarak 1–10 m, Ruangan, media transmisi Kabel UTP/wireless LAN
+              </li>
+              <li>
+                Lan, Jarak 100 m–1 km, Gedung perkantoran, media transmisi Kabel
+                UTP/kabel telepon
+              </li>
+              <li>
+                MAN, Jarak 1–10 km, Kota, media transmisi Kabel fiber optic/kabel
+                telepon/gelombang radio
+              </li>
+              <li>
+                MAN, Jarak 10–100 km, Kebupaten, provinsi, media transmisi Kabel fiber
+                optic/gelombang radio
+              </li>
+              <li>
+                WAN, Jarak >= 100 km, Negara, media transmisi Kabel fiber optic/satelit
+              </li>
+              <li>WAN, Jarak >= 1.000 km, Benua, media transmisi Satelit</li>
+              <li>Internet, Jarak >= 10.000 km, Planet, media transmisi Satelit</li>
+            </ol>
+          </ol>
+        
+          <h2>H. Klasifikasi Jaringan Berdasarkan Kecepatan</h2>
+          <p class="no-indent">
+            Jika dilihat dari kecepatannya jaringan komputer dapat dibagi menjadi empat,
+            yaitu sebagai berikut.
+          </p>
+          <ol>
+            <li>
+              Low Speed Network, Kecepatan transfer data antarperangkat kurang dari 1
+              Mbps dan biasa diterapkan di rumah atau sarana percobaan di laboratorium.
+            </li>
+            <li>
+              Medium Speed Network, Kecepatan transfer data antarperangkat kurang dari 1
+              Mbps dan biasa diterapkan di rumah atau sarana percobaan di laboratorium.
+            </li>
+            <li>
+              High Speed Network, Kecepatan transfer data antarperangkat mulai dari 20
+              Mbps bahkan 100 Mbps. Saat ini, umumnya komponen pendukung jaringan yang
+              tersedia di pasaran telah mendukung kecepatan ini.
+            </li>
+            <li>
+              Super High Speed Network, Kecepatan transfer data antarperangkat bisa
+              mencapai 1 Gbps atau lebih. Contohnya, perangkat dengan teknologi Giga
+              Ethernet.
+            </li>
+          </ol>
+        </div>
+        <div class="container" id="2" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>2. Komponen Jaringan</h1>
+          <hr />
+        
+          <p>
+            Beberapa komponen yang digunakan dalam jaringan komputer, antara lain
+            Server, NIC (Network Interface Card), Kartu Wi-fi, Hub, Switch, Router,
+            Access Point, Modem, Media transmisi.
+          </p>
+        
+          <h2>A. Server</h2>
+        
+          <p>
+            Sever merupakan komputer berspesifikasi tinggi yang memiliki peran utama
+            memberikan layanan pada klien dalam jaringan. Beberapa layanan yang
+            disediakan server, antara lain sebagai berikut.
+          </p>
+          <ol style="list-style-type: lower-latin">
+            <li>Berbagi data dengan perangkat klien.</li>
+            <li>Melayani permintaan layanan dari komputer klien.</li>
+            <li>
+              Mengatur pengguna yang memiliki hak akses terhadap server dan jaringan
+              secara umum.
+            </li>
+            <li>
+              Menjaga keamanan data yang tersimpanan dan serangan yang berkaitan dengan
+              pencurian data atau penggunaan secara ilegal.
+            </li>
+          </ol>
+        
+          <h2>B. NIC (Network Interface Card)</h2>
+        
+          <p>
+            NIC atau kartu jaringan atau kartu LAN berfungsi sebagai penghubung satu
+            komputer dengan komputer lain dalam jaringan, yang tersambung media
+            transmisi tertentu, seperti nirkabel atau kabel. Kartu LAN biasanya
+            menggunakan slot PCI, ISA, Mini PCI, dan PCI Express serta ditancapkan pada
+            slot bus mainboard.
+          </p>
+          <img
+            src="../../assets/images/jki/2poinb.svg"
+            alt="2poinb"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/2poinb.svg"
+            alt="2poinb"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>C. Kartu Wi-fi</h2>
+        
+          <p>
+            Kartu Wi-fi adalah versi dari NIC yang menghubungkan komputer-komputer yang
+            tersambung dengan media transmisi nirkabel, seperti melalui jaringan wi-fi.
+          </p>
+        
+          <p class="no-indent">
+            Ada dua tipe kartu wi-fi, yaitu kartu wi-fi internal dan kartu wi-fi
+            eksternal.
+          </p>
+          <ol>
+            <li>
+              Kartu wi-fi internal adalah kartu jaringan dengan tipe slot PCI atau PCI
+              Express yang dapat ditancapkan pada bus mainboard.
+            </li>
+            <li>
+              Kartu wi-fi eksternal adalah kartu jaringan yang dapat dipasangkan di luar
+              perangkat komputer menggunakan port USB.
+            </li>
+            <img
+              src="../../assets/images/jki/2poinc.svg"
+              alt="2poinc"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/jki/2poinc.svg"
+              alt="2poinc"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+          </ol>
+        
+          <h2>D. Hub</h2>
+          <p>
+            Hub atau Konsentrator adalah perangkat yang berfungsi sebagai pusat
+            sambungan yang menghubungkan beberapa perangkat dalam jaringan yang sama.
+            Hub bersifat distributor pasif yang akan membagikan setiap data yang
+            diterimanya ke semua perangkat yang terkoneksi.
+          </p>
+        
+          <h2>E. Switch</h2>
+          <p>
+            Switch memiliki fungsi yang sama dengan hub, namun switch bersifat
+            distributor aktif. Selain mendistribusikan data, switch juga menyimpan MAC
+            adress setiap perangkat yang terhubung sehingga setiap data yang ditransfer
+            akan diteruskan ke port yang menjadi tujuannya.
+          </p>
+          <img
+            src="../../assets/images/jki/2poine.svg"
+            alt="2poine"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/2poine.svg"
+            alt="2poine"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <h2>F. Router</h2>
+          <p>
+            Router adalah perangkat jaringan yang bertugas mengirimkan paket data
+            melalui jaringan internet dari sumber data ke tujuannya. Proses pengiriman
+            paket data tersebut disebut dengan routing.
+          </p>
+          <img
+            src="../../assets/images/jki/2poinf.svg"
+            alt="2poinf"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/2poinf.svg"
+            alt="2poinf"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>G. Access Point</h2>
+          <p>
+            Access point merupakan perangkat yang berfungsi menerima dan
+            mendistribusikan data. Berbeda dengan router, access point hanya berperan
+            untuk mengoneksikan perangkat yang ingin terhubung dalam jaringan. Oleh
+            karena itu, perangkat access point dan router saling berhubungan dalam
+            menjalankan fungsinya.
+          </p>
+          <img
+            src="../../assets/images/jki/2poing.svg"
+            alt="2poing"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/2poing.svg"
+            alt="2poing"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <h2>H. Modem</h2>
+          <p>
+            Modem adalah perangkat yang berfungsi melakukan modulasi dan demodulasi.
+            Modulasi adalah proses pengubahan sinyal informasi ke dalam sinyal pembawa,
+            sedangkan demodulasi adalah proses penyaringan sinyal informasi dari sinyal
+            pembawa.
+          </p>
+          <img
+            src="../../assets/images/jki/2poinh.svg"
+            alt="2poinh"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/2poinh.svg"
+            alt="2poinh"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>I. Media Transmisi</h2>
+          <p>
+            Secara umum media transmisi dibedakan menjadi dua, yaitu sebagai berikut.
+          </p>
+          <ul>
+            <li>
+              Guided media merupakan media yang dapat menghantarkan data melalui
+              konduktor fisik, seperti tembaga dan serat kaca. Contohnya, kabel coaxial,
+              UTP, STP, dan fiber optic.
+            </li>
+            <li>
+              Unguided media adalah jenis media tidak terpandu yang tidak memiliki
+              bentuk secara fisik sehingga dalam pemancarannya memebutuhakn gelombang
+              elektromagnetik untuk mentransfer data. Contohnya, gelombang radio,
+              infrared, bluetooth, dan satelit.
+            </li>
+          </ul>
+        
+          <ol>
+            <li>
+              Media Transmisi Kabel, Ketika memilih kabel sebagai media transmisi dalam
+              membangun jaringan, ada tiga aspek yang harus dipertimbangkan, yaitu
+              banyaknya perangkat yang terhubung, jangkauan dan area jaringan, serta
+              kecepatan dan lebat bandwidth yang akan digunakan.
+            </li>
+            <li>
+              Media Transmisi Nirkabel atau Wireless, Media transimisi nirkabel
+              dikategorikan sebagai unguided media karena tidak dapat diukur secara
+              visual ataupun dinyatakan dalam satuan metrik sehingga tidak memerlukan
+              konduktor fisik seperti kabel. Media transmisi yang digunakan adalah
+              radiasi elektromagnetik (listrik dan medan magnet yang terinterferensi)
+              yang dipancarkan melalui udara terbuka.
+            </li>
+          </ol>
+        
+          <p>Faktor Yang Perlu Dipahami Dalam Membangun Jaringan Nirkabel:</p>
+          <ol>
+            <li>
+              Dalam instalansi dan konfigurasi, perangkat nirkabel membutuhkan antena
+              untuk memperkuat pancaran sinyal dan sistem penerimaan.
+            </li>
+            <li>
+              Berdasarkan jenis frekuensi gelombang, jaringan nirkabel dibedakan menjadi
+              tiga jenis, yaitu gelombang mikro (frekuensi 2–40 Ghz), gelombang dengan
+              frekuensi 30 Mhz–1 Ghz, dan gelombang inframerah.
+            </li>
+            <li>
+              Terdapat dua model koneksi gelombang radio, yaitu poin-to-point dan
+              broadcast.
+            </li>
+            <li>
+              Media transmisi tidak terpadu terdiri atas empat bagian, yaitu gelombang
+              mikro atmosfer Bumi, gelombang mikro pada satelit, radio broadcast, dan
+              inframerah.
+            </li>
+          </ol>
+        </div>
+        <div class="container" id="3" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>3. Protokol Jaringan</h1>
+          <hr />
+          <p>
+            Protokol jaringan adalah sekumpulan aturan baku yang ditetapkan oleh badan
+            standarisasi dunia tentang jaringan dan teknologi informasi yang mengatur
+            mekanisme komunikasi data antarmesin komputer. Ada dua model protokol
+            jaringan yang dapat digunakan, yaitu Model DoD dan Model OSI.
+          </p>
+        
+          <h2>A. Model DoD</h2>
+        
+          <p>
+            Model layer DoD dikeluarkan oleh Departemen Pertahanan Amerika Serikat atau
+            Departement of Defence (DoD) sebagai upaya meningkatkan strategi pertahanan.
+            Berikut perbandingan layer model DoD dan OSI.
+          </p>
+        
+          <p>Layer DoD :</p>
+          <ol>
+            <li>Process/ Application</li>
+            <li>Host-to-Host</li>
+            <li>Internet</li>
+            <li>Network Access</li>
+          </ol>
+        
+          <p>Layer OSI :</p>
+          <ol>
+            <li>Application Presentation Session</li>
+            <li>Transport</li>
+            <li>Network</li>
+            <li>Data Link Physical</li>
+          </ol>
+        
+          <p>Contoh Protokol :</p>
+          <ol>
+            <li>Telnet, FTP, Kerberos, SMTP, DNS, TFTP, SNMP, NFS, dan Xwindows</li>
+            <li>UDP dan TCP</li>
+            <li>ARP, IP, ICMP, BOOTP, dan RARP</li>
+            <li>Token ring, Ethernet, dan FDDI</li>
+          </ol>
+        
+          <h2>B. Model OSI</h2>
+          <p>
+            Model OSI (open standard interconnection) yang dikeluarkan oleh ISO
+            (International Standard Organization) membagi proseskomunikasi dalam tujuh
+            layer. Prinsip-prinsip yang digunakan bagi ketujuh layer tersebut adalah
+            sebagai berikut.
+          </p>
+          <ol style="list-style-type: lower-latin">
+            <li>
+              Jenis layer harus diselesaikan dengan tingkat abstraksi dan fungsi yang
+              berbeda-beda dalam servisnya.
+            </li>
+            <li>
+              Layer yang dibentuk harus bermanfaat sesuai kebutuhan serta saling
+              berhubungan dan saling mendukung satu sama lain.
+            </li>
+            <li>
+              Kegunaan setiap layer ditentukan melalui mekanisme yang logis dan rumit
+              dengan ketelitian tinggi sesuai standard protokol internasional.
+            </li>
+            <li>
+              Batasan dan area operasi layer bertujuan meminimalisasi aliran informasi
+              yang melewati interface.
+            </li>
+            <li>
+              Jumlah layer harus cukup banyak disesuaikan spesifikasi, proses kerja, dan
+              kegunaannya sehingga fungsi-fungsi yang berbeda tidak perlu digabung dalam
+              satu layer.
+            </li>
+          </ol>
+        
+          <p>
+            Model OSI memiliki tujuh layer yang dibagi menjadi application,
+            presentation, session, transport, network, data link, dan physical layer.
+          </p>
+        
+          <ol style="list-style-type: lower-latin">
+            <li>
+              Application (aplikasi), Fungsi Utamanya yakni Menyediakan interface yang
+              memberikan pelayanan bagi pengguna dalam berinteraksi dengan sistem
+              jaringan melalui komputer.
+              <p>Contoh Protokol:</p>
+              <ol>
+                <li>
+                  DHCP (dynamic host configuration protocol), Protokol untuk distribusi
+                  IP pada jaringan dengan jumlah IP terbatas.
+                </li>
+                <li>
+                  DNS (domain name server), Basis data berisis nama domain mesin dan IP
+                  address
+                </li>
+                <li>FTP (file transfer protocol), Protokol untuk transfer file</li>
+                <li>
+                  HTTP (hypertext transfer protocol), Protokol untuk transfer file HTML
+                  dan Web
+                </li>
+                <li>
+                  MIME (multipupose internet mail extention), Protokol untuk mengirim
+                  file biner dalam bentuk teks
+                </li>
+                <li>
+                  NNTP (network news transfer protocol), Protokol untuk menerima dan
+                  mengirim newsgroup
+                </li>
+                <li>
+                  POP (post office protocol), Protokol untuk mengambil mail dari server
+                </li>
+                <li>
+                  SMB (server message block), Protokol untuk transfer berbagai server
+                  file DOS dan Windows
+                </li>
+                <li>
+                  SMTP (simple mail transfer protocol), Protokol untuk penukaran mail
+                </li>
+                <li>
+                  SNMP (simple network management protocol), Protokol untuk manajemen
+                  jaringan
+                </li>
+                <li>Telnet, Protokol untuk akses dari jarak jauh</li>
+                <li>TFTP (Trivial FTP), Protokol untuk transfer file</li>
+              </ol>
+            </li>
+            <li>
+              Presentation (presentasi), Fungsi Utamanya yakni Melakukan enkripsi
+              kompresi, serta deskripsi data.
+              <p>Contoh Protokol (Bentuk format kompresi paket data):</p>
+              <ol>
+                <li>ASCII,</li>
+                <li>EBCDIC</li>
+                <li>MIDI</li>
+                <li>MPEG</li>
+                <li>TIFF</li>
+                <li>JPEG</li>
+                <li>PICT</li>
+                <li>qiuck time</li>
+              </ol>
+            </li>
+            <li>
+              Session, Fungsi Utamanya yakni Mengasosiasikan setiap komunikasi
+              antar-layer sebelum session, dengan layer setelah session.
+              <p>Contoh Protokol:</p>
+              <ol>
+                <li>
+                  NETBIOS (network basic input ouput system), BIOS jaringan standar
+                </li>
+                <li>RPC (remote procedure call), Prosedur pemanggilan jarak jauh</li>
+                <li>SOCKET, Input output untuk network jenis BSD-UNIX</li>
+                <li>
+                  (SQL, NETBEUI, dan XWINDOWS), Protokol untuk database, mesin IBM, dan
+                  pengaturan GUI OS berbasis Unix
+                </li>
+              </ol>
+            </li>
+            <li>
+              Transport (transpor), Fungsi Utamanya yakni Memastikan setiap paket data
+              dikirm tanpa terjadi kesalahan dan tidak terjadi duplikasi.
+              <p>Contoh Protokol:</p>
+              <ol>
+                <li>
+                  TCP (transmission control protocol), Protokol petukuran data
+                  berorientasi (connection-oriented)
+                </li>
+                <li>
+                  UDP (user datagram protocol), Protokol pertukaran data non-orientasi
+                  (connectionless)
+                </li>
+              </ol>
+            </li>
+            <li>
+              Network (jaringan), Fungsi Utamanya yakni Menentukan letak jalur
+              pengiriman data yang akan ditransmisikan serta meneruskan paket tersebut
+              ke alamat jaringan tertentu.
+              <p>Contoh Protokol:</p>
+              <ol>
+                <li>IP (internet protocol), Protokol untuk menetapkan routing</li>
+                <li>
+                  RIP (routing information protocol), Protokol untuk memilih routing
+                </li>
+                <li>
+                  ARP (adress resolution protocol), Protokol untuk mendapatkan informasi
+                  hardware dari nomor IP
+                </li>
+                <li>
+                  RARP (reverse ARP), Protokol untuk mendapatkan informasi nomor IP dari
+                  hardware
+                </li>
+              </ol>
+            </li>
+            <li>
+              Data link, Fungsi Utamanya yakni Mengatur nilai data biner (true and
+              false) yang bernilai ) dan 1 menjadi logical group.
+              <p>Contoh Protokol:</p>
+              <ol>
+                <li>
+                  PPP (point-to-point), Protokol untuk akses point-to-point (biasanya
+                  dial-up)
+                </li>
+                <li>
+                  SLIP (serial line internet protocol), Protokol dengan menggunakan
+                  sambungan serial
+                </li>
+              </ol>
+            </li>
+            <li>
+              Physical (fisik), Fungsi Utamanya yakni Sebagai interface fisik yang
+              melewatkan transmisi data biner (digital) melalui jalur komunikasi.
+              <p>
+                Contoh Protokol Ethernet, FDDI, ISDN, ATM, 10BaseT, 100BaseTX, HSSI,
+                V.35, dan X.21 yang kegunaannya sebagai Contoh bentuk standar penggunaan
+                media transmisi yang berpengaruh terhadap besaran data dan kecepatan
+                transmisi data.
+              </p>
+            </li>
+        
+            <p>
+              Berdasarkan fungsinya, ketujuh layer dalam model OSI dapat dikategorikan
+              menajdi dua lapisan, yaitu lapisan atas dan lapisan bawah.
+            </p>
+            <ol>
+              <li>
+                Lapisan atas dari model OSI terkait dengan persoalan aplikasi. Umumnya,
+                lapisan ini hanya diimplementasikan pada aplikasi yang digunakan oleh
+                pengguna komputer. Lapisan paling atas, yaitu lapisan aplikasi adalah
+                lapisan penutup sebelum terhubung ke pengguna.
+              </li>
+              <li>
+                Lapisan bawah dari model OSI mengendalikan persoalan transpor data.
+                Lapisan fisik dan lapisan data link diimplementasikan ke dalam hardware
+                dan software. Lapisan-lapisan bawah yang lain umumnya hanya
+                diimplementasikan dalam software. Lapisan terbawah, yaitu lapisan fisik
+                adalah penuutp bagi media jaringan fisik dan sebagai penanggung jawab
+                bagi penempatan infomarsi pada media jaringan.
+              </li>
+            </ol>
+          </ol>
+        
+          <h2>C. Menambahkan Efek Suara dan animasi Antar-slide.</h2>
+          <ol>
+            <li>Buka kembali file presentasi sebelumnya.</li>
+            <li>
+              Pada slide pertama, untuk menambahkan animasi pada slide klik menu
+              Animations – kemudia pilih komponen teks judul presentasi (blok komponen
+              tersebut) baru klik menu Add Animation – Swivel.
+            </li>
+            <li>
+              Untuk melihat efeknya, jalankan animasi dengan mengklik ikon Animation
+              Pane dan muncul jedela Animation Pane di sebelah kiri – pilih tombol Play.
+            </li>
+            <img
+              src="../../assets/images/tik/3poinc1.svg"
+              alt="3poinc1"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/tik/3poinc1.svg"
+              alt="3poinc1"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <li>
+              Lakukan hal serupa pada slide-slide berikutnya dengan corak animasi yang
+              berbeda-beda.
+            </li>
+            <li>
+              Untuk menambahkan suara dalam presentasi, persiapkan dahulu file .mp3 yang
+              akan disisipkan. Klik Insert – Audio – Audio on My PC.
+            </li>
+            <li>Tentukan lokasi file audio yang akan disisipkan.</li>
+            <li>Hasilnya adalah sebagai berikut.</li>
+            <img
+              src="../../assets/images/tik/3poinc2.svg"
+              alt="3poinc2"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/tik/3poinc2.svg"
+              alt="3poinc2"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+          </ol>
+        </div>
+        <div class="container" id="4" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>4. IP Address</h1>
+          <hr />
+        
+          <h2>A. Definisi IP Adress</h2>
+        
+          <p>
+            IP Adress merupakan metode pengalamatan yang diterapkan sebagai identitas
+            pengenal mesin dalam jaringan yang terdiri atas bagisan angka berbasis
+            desimal atau heksadesimal dengan standar aturan tertentu. Saat ini, terdapat
+            dua versi IP address yang digunakan, yaitu IP address versi 4 dan IP address
+            versi 6.
+          </p>
+        
+          <h6 class="fw-bold">IP Address versi 4</h6>
+          <p class="no-indent">
+            IP address dalam penggunaannya terdiri atas dua bagian, yaitu network ID dan
+            host ID. Network ID memperlihatkan alamat network atau jaringan, sedangkan
+            host ID mengidentifikasikan alamat host dalam satu network. Syarat
+            terbentuknya sebuah jaringan lokal adalah jaringan harus dalam satu kelas IP
+            yang sama, memiliki network IP dan broadcast IP yang sama, dan mempunyai IP
+            host yang berbeda. Untuk menghubungkan dua jaringan dengan network ID yang
+            berbeda, dibutuhkan router sebagai jembatan penghubungnya.
+          </p>
+          <p>
+            Dalam menentukan network ID dan host ID yang akan digunakan dalam jaringan,
+            terdapat beberapa aturan sebagai berikut. a.Network ID 127.0.0.1 tidak dapat
+            digunakan untuk pengalamatan IP address. Hal ini karena IP address ini
+            secara default digunakan untuk keperluan loopback. b.Host ID tidak boleh
+            diset pada bit 1 semua (contoh kelas C: 192.168.11.255) karena akan
+            diartikan sebagai alamat broadcast pada subnet mask 255.255.255.0. Broadcast
+            ID merupakan alamat yang mewakili seluruh anggota jaringan. c.Sebuah network
+            ID dan host ID tidak boleh dikonfigurasikan pada bit 0 semua (seluruh bit
+            diset 0 seperti 0.0.0.0). Hal ini karena IP address dengan host ID 0
+            diartikan sebagai alamat network.
+          </p>
+        
+          <h2>B. Range IP Adress</h2>
+        
+          <p class="no-indent">
+            Berikut adalah pembagian range kelas IP address berdasarkan aturan standar
+            internasional.
+          </p>
+          <img
+            src="../../assets/images/jki/4poinb.svg"
+            alt="4poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        
+          <p>
+            Metode classess addressing atau dalam bahasa tekniknya adalah menyediakan
+            rentang IP address dalam notasi classess inter-domain routing (CIDR),
+            bertujuan untuk mengatur sistem pengalamatan IP address yang yang merujuk
+            pada jaringan secara lebih spesifik atau disebut juga dengan network prefix.
+          </p>
+        
+          <p>Pengelompokan subnet mask :</p>
+          <img
+            src="../../assets/images/jki/4poinb2.svg"
+            alt="4poinb2"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        
+          <p>
+            Menurut penggunaannya, terdapat dua tipe IP address, yaitu sebagai berikut.
+          </p>
+          <ol>
+            <li>
+              IP Publik, IP publik adalah IP yang digunakan dalam jaringan internet di
+              seluruh dunia.
+            </li>
+            <li>
+              IP Privat, IP privat adalah IP address yang tidak digunakan dalam
+              penomoran alamat komputer karena dicadangkan untuk penggunaan jaringan
+              lokal yang mencakup tiga segmen terakhir dari IP address untuk internet.
+            </li>
+          </ol>
+        
+          <p>
+            Daftar IP address yang dicadangkan untuk digunakan sebagai IP privat dapat
+            dilihat pada tabel berikut.
+          </p>
+          <img
+            src="../../assets/images/jki/4poinb3.svg"
+            alt="4poinb3"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+          <p>
+            Diketahui bahwa semua range pengalamatan IP address kelas D dan E juga dapat
+            digunakan untuk IP address jaringan lokal. IP tersebut tidak digunakan
+            sebagai IP publik di internet.
+          </p>
+        </div>
+        <div class="container" id="5" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>5. Topologi Jaringan</h1>
+          <hr />
+        
+          <img
+            src="../../assets/images/tik/5thumb.svg"
+            alt="thumb"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/tik/5thumb.svg"
+            alt="thumb"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>A. Definisi Topologi</h2>
+        
+          <p>
+            Topologi merupakan pola hubungan antarterminal atau antarkomputer dalam
+            jaringan. Pola ini berhubungan dengan metode akses dan media pengirim yang
+            digunakan. Namun dalam membangun sebuah jaringan, ada beberapa hal yang
+            harus diperhatikan, antara lain ukuran organisasi, tingkat keamanan data,
+            ketersediaan sistem pendukung, beban traffic jaringan, ketersediaan biaya,
+            dan banyaknya pengguna.
+          </p>
+        
+          <p>
+            Topologi dapat diklasifikasikan menjadi dua jenis ditinjau dari segi
+            keberadaannya:
+          </p>
+          <ol>
+            <li>
+              Physical topology, Bentuk topologi secara fisik yang menekankan teknik
+              koneksi media transmisi antar-nodle atau workstation.
+            </li>
+            <li>
+              Logical topology, Bentuk topologi secara logika yang menggambarkan model
+              aliran data antar-user dalam jaringan.
+            </li>
+          </ol>
+        
+          <p>
+            Beberapa hal yang perlu dijadikan pertimbangan dalam memilih jenis topologi
+            jaringan, yaitu sebagai berikut.
+          </p>
+          <ol>
+            <li>
+              Biaya, besar biaya yang dikeluarkan harus seefisien mungkin sesuai dengan
+              kebutuhan organisasi.
+            </li>
+            <li>Kecepatan, sejauh mana kecepatan yang dibutuhkan dalam sistem.</li>
+            <li>
+              Lingkungan, faktor-faktor lingkungan (listrik, angin, cuaca) yang
+              berpengaruh terhadap perangkat keras yang dibutuhkan.
+            </li>
+            <li>
+              Ukuran, seberapa besar ukuran jaringan, semakin besar jaringan akan
+              memerlukan perangkat tambahan, seperti file server atau sejumlah server
+              khusus.
+            </li>
+            <li>Konektivitas, kemudahan akses jaringan dari berbagai lokasi.</li>
+          </ol>
+        
+          <p>
+            Jenis topologi yang dapat dipilih untuk membangun jaringan komputer yakni
+            Topologi Bus, Topologi Ring, Topologi Star, dan Topologi Lainnya.
+          </p>
+        
+          <h2>B. Topologi Bus</h2>
+        
+          <p>
+            Pada topologi bus, terminal atau komputer disusun secara serial dalam sebuah
+            media transmisi utama.
+          </p>
+          <p>Karektiristik topologi bus</p>
+          <ol>
+            <li>Sederhana dan mudah dalam instalansi.</li>
+            <li>
+              Transfer data lebih cepat karena menggunakan satu jalur umum yang
+              terhubung dengan node-node.
+            </li>
+            <li>
+              Potensi terjadi tabrakan data atau collision lebih besar karena sinyal
+              mengalir dalam dua arah.
+            </li>
+            <li>Jika salah satu segmen kabel putus, seluruh jaringan akan terhenti.</li>
+            <li>Penambahan segmen tidak mengubah model jalur.</li>
+            <li>
+              Berupa bentangan satu kabel yang kedua ujungnya ditutup oleh terminator
+              dan terdapat node-node sepanjang kabel.
+            </li>
+          </ol>
+          <img
+            src="../../assets/images/jki/5poinb.svg"
+            alt="5poinb"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/5poinb.svg"
+            alt="5poinb"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>C. Topologi Ring</h2>
+        
+          <p>
+            Secara fisik, topologi ring mirip dengan topologi bus, tetapi kedua terminal
+            di bagian ujung saling terhubung sehingga membentuk lingkaran. Pada topologi
+            ring, setiap terminal akan memeriksa informasi yang melewatinya.
+          </p>
+          <img
+            src="../../assets/images/jki/5poinc.svg"
+            alt="5poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/5poinc.svg"
+            alt="5poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>D. Topologi Star</h2>
+        
+          <p>
+            Pada topologi star, terdapat terminal pusat atau hub sebagai pengatur dan
+            pengendali semua komunikasi data yang terjadi dalam jaringan. Setiap
+            transmisi data akan dilewatkan dan didistribusikan oleh konsentrator.
+          </p>
+          <img
+            src="../../assets/images/jki/5poind.svg"
+            alt="5poind"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/5poind.svg"
+            alt="5poind"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>E. Topologi Lainnya</h2>
+          <p>
+            Sering dengan perkembangan teknologi dan kebutuhan pengguna, telah banyak
+            digunakan modifikasi pada topologi yang sudah ada. Berikut beberapa topologi
+            yang dihasilkan dari kombinasi topologi bus, ring, dan star.
+          </p>
+          <ol>
+            <li>
+              Topologi Mesh, Pada topolgi mesh, setiap komputer dalam jaringan memiliki
+              media penghubung ke komputer lain secara langsung sehingga membuat
+              kecepatan transfer data lebih baik. Namun, kebutuhan media transmisi kabel
+              dibutuhkan lebih banyak.
+            </li>
+            <li>
+              Topologi Tree, Topologi tree merupakan kombinasu topolgi star dan bus.
+              Umumnya, hub diletakkan di paling depan dan diikuti beberap terminal yang
+              dihubungjan secara serial.
+            </li>
+            <li>
+              Topologi hybrid, Topologi hybrid merupakan rangkaian beberapa jenis
+              topologi star, ring, dan bus. Biasanya, topologi ini diterapkan dalam
+              perusahaan yang menggunakan beberapa jenis topologi jaringan.
+            </li>
+          </ol>
+        </div>
+        <div class="container" id="6" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>6. Menggunakan Layanan Jaringan</h1>
+          <hr />
+        
+          <h2>A. Mengonfigurasi IP Address Komputer</h2>
+        
+          <p class="no-indent">
+            Langkah-langkah mengonfigurasi IP address pada kartu jaringan (NIC) komputer
+            yang terhubung dengan switch jaringan lokal.
+          </p>
+        
+          <ol>
+            <li>
+              Pastikan kartu jaringan telah terpasang dan driver telah terinstal dengan
+              baik.
+            </li>
+            <li>
+              Sistem operasi yang digunakan adalah Windows 8 (disarankan Windows 10).
+              Pastikan komputer telah tersambung dengan switch atau hub jaringan
+              laboratorium yang telah memiliki akses internet dengan IP address yang
+              telah ditentukan.
+            </li>
+            <li>
+              Klik start – Control Panel – Network and Internet – Network and Sharing
+              Center – Change adapter settings.
+            </li>
+            <img
+              src="../../assets/images/jki/6poina.svg"
+              alt="6poina"
+              width="100%"
+              style="margin-top: 3%; margin-bottom: 3%"
+            />
+            <li>
+              Klik kanan ikon Ethernet – pilih Properties. Jika ikon tersebut
+              menampilkan tanda silang merah seperti gambar, berarti interface kartu
+              jaringan belum terhubung dengan jaringan.
+            </li>
+            <li>
+              Pilih Internet Protocol Version 4 (TCP/IPv4) – Properties atau dobel klik
+              untuk menampilkan menu konfigurasi IP address versi 4.
+            </li>
+            <li>
+              Selanjutnya, lakukan pengaturan IP address sesuai dengan ketentuan IP
+              dalam laboratorium komputer sekolah. Dalam contoh ini, menggunakan
+              ketentuan sebagai berikut:
+              <ul>
+                <li>IP address : 10.10.10.53</li>
+                <li>Subnet Mask : 255.255.255.192</li>
+                <li>Gateway : 10.10.10.62</li>
+                <li>DNS Server : 8.8.8.8</li>
+              </ul>
+            </li>
+            <li>
+              Setelah itu, klik OK dan tutup kotak dialog Local Area Connection
+              Properties.
+            </li>
+            <li>
+              Buka command prompt Windows. Periksa bahwa konfigurasi IP address versi 4
+              sudah benar dengan mengetikkan perintah iponfig.
+            </li>
+            <li>
+              Langkah selanjutnya adalah melakukan uji konektivitas jaringan dengan
+              memasukkan perintah berikut.
+              <ul>
+                <li>ping 127.0.0.1</li>
+                <p>
+                  Jika ditampilkan pesan “Reply from 127.0.0.1 ....”, hal tersebut
+                  menunjukkan bahwa loopback adapter dalam kondisi baik.
+                </p>
+                <li>ping 10.10.10.53</li>
+                <p>
+                  Jika ditampilkan pesan “Reply from 127.0.0.53 ....”, hal tersebut
+                  menunjukkan bahwa kartu jaringan lokal dengan IP address 10.10.10.53
+                  dalam kondisi baik.
+                </p>
+                <li>ping 8.8.8.8</li>
+                <p>
+                  Jika ditampilkan pesan “Reply from 8.8.8.8 ....”, hal tersebut
+                  menunjukkan bahwa komputer telah terhubung dengan internet.
+                </p>
+                <li>ping google.com</li>
+                <p>
+                  Jika pengujian koneksi dengan host 8.8.8.8 yang merupakan DNS server
+                  Google telah berhasil dilakukan, seharusnya akan ditampilkan informasi
+                  bahwa komputer dapat terkoneksi dengan server.
+                </p>
+              </ul>
+            </li>
+          </ol>
+        
+          <h2>B. Mengoneksikan Laptop dengan Hotspot</h2>
+          <p>
+            Hotspot merupakan area atau wilayah tertentu yang terdapat sinyal pemancar
+            gelombang radio yang memungkinkan pengguna dengan perangkat yang mampu
+            menangkap wi-fi, seperti komputer, laptop, PDA, notebook, dan smartphone
+            dapat terhubung dengan internet.
+          </p>
+          <ol>
+            <li>
+              Memiliki SSID yang di-broadcast dan dapat dijangkau oleh perangkat klien.
+            </li>
+            <li>Biasanya menggunakan gelombang radio dengan frekuensi 2,4 GHz.</li>
+            <li>
+              Biasanya wi-fi hotspot memiliki autentikasi seperti harus memasukkan
+              password tertentu ketika terkoneksi dengan SSID wi-fi.
+            </li>
+            <li>
+              Terkadang ada beberapa layanan hotspot yang mewajibkan pengguna untuk
+              login melalui web browser untuk mengakses internet.
+            </li>
+          </ol>
+        
+          <h2>C. Mengakses Internet dengan Web Browser</h2>
+        
+          <p>
+            Web browser merupakan aplikasi yang dapat digunakan untuk mengakses konten
+            informasi, seperti gambar, teks, audio, dan video dari berbagai situs yang
+            ada di internet. Contoh browser adalah Google Chrome, Mozilla Firefox,
+            Opera, dan Microsoft Edge. Sebelum dapat mengakses informasi di internet,
+            harus menginstal web browser pada komputer terlebih dahulu.
+          </p>
+          <img
+            src="../../assets/images/jki/6poinc.svg"
+            alt="6poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poinc.svg"
+            alt="6poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>D. Mengaktifkan Proxy pada Web Browser</h2>
+        
+          <p>
+            Proxy bekerja di antara komputer pengguna dengan server website tujuan.
+            Setiap request komputer akan dirutekan terlebih dahulu menuju proxy server,
+            kemudian akan diarahkan kembali menuju server website tujuan.
+          </p>
+          <p>Tipe web proxy</p>
+          <ol>
+            <li>
+              Transparent, merupakan jenis proxy server yang dilengkapi konfigurasi
+              firewall pengaturan port proxy sehingga klien tidak perlu melakukan
+              konfigurasi proxy pada web browser-nya.
+            </li>
+            <li>
+              Non-transparent, merupakan jenis proxy yang hanya mengharuskan pengguna
+              mengatur konfigurasi port proxy secara manual, yang diarahkan ke server
+              proxy tersebut.
+            </li>
+          </ol>
+        
+          <h2>E. Mengonfigurasi VPN Client</h2>
+          <p>
+            Virtual Private Network atau VPN merupakan teknologi yang memberikan akses
+            ke website secara aman dengan cara membungkus paket komunikasi data dari
+            pengirim ke tujuan. Teknologi ini akan membuat jalur rahasia dalam kanal
+            jaringan sehingga paket data lebih aman, terenkripsi, dan tidak dapat
+            dilacak. Untuk cara melakukan konfigurasi VPN client, pindai QR code
+            berikut.
+          </p>
+          <img
+            src="../../assets/images/jki/6poine.svg"
+            alt="6poine"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poine.svg"
+            alt="6poine"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>F. Chatting dalam Jaringan Lokal</h2>
+          <p>
+            Dalam komunikasi digital, chatting merupakan komunikasi yang memungkinkan
+            pengguna mengirimkan data, baik teks, gambar, audio maupun video dengan
+            menggunakan perangkat digital, seperti komputer dan gadget. Chatting dapat
+            dilakukan menggunakan aplikasi dan website. Untuk cara menginstal dan
+            menjalankan chatting dengan LAN Messenger dalam jaringan lokal, pindai QR
+            code berikut.
+          </p>
+          <img
+            src="../../assets/images/jki/6poinf.svg"
+            alt="6poinf"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poinf.svg"
+            alt="6poinf"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>G. Sharing Data</h2>
+          <p>
+            Share merupakan mekanisme membagi resource pada perangkat lain dalam
+            jaringan, baik berupa data, program, proses, maupun sistem percetakan dalam
+            perangkat komputer agar dapat digunakan secara bersama-sama dengan terminal
+            lainnya dalam jaringan.
+          </p>
+          <p>Langkah-langkah melakukan konfigurasi sharing data dengan Windows 10.</p>
+          <ol>
+            <li>
+              Bentuk kelompok minimal lima anggota dan pastikan komputer dalam kelompok
+              telah tersambung dengan LAN. Lakukan konfigurasi IP address dengan network
+              192.168.100.0/24 kemudian periksa konektivitas jaringan tersebut.
+            </li>
+            <li>
+              Dalam contoh praktik, komputer dengan IP address 192.168.0.9 akan
+              dikonfigurasi sebagai komputer sharing dengan folder D:/Software.
+            </li>
+            <li>
+              Selanjutnya, klik kanan folder Software – pilih Properties – klik tab
+              Sharing – klik tombol Share.
+            </li>
+            <li>
+              Agar folder tersebut dapat diakses oleh semua anggota, tambahkan opsi
+              Everyphone – klik Add – klik Share – klik Done.
+            </li>
+            <li>
+              Untuk membuka folder yang telah di-share sebelumnya pada komputer lain,
+              tekan kombinasi tombol keyboard Windows + R sehingga muncul jendela Run.
+              Setelah itu, ketikan perintah \\192.168.100.66.
+            </li>
+            <li>Berikut merupakan hasil tampilan sharing dokumen dalam jaringan.</li>
+          </ol>
+          <img
+            src="../../assets/images/jki/6poing.svg"
+            alt="6poing"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        
+          <h2>H. Upload dan Download File dalam Server FTP</h2>
+          <p>
+            File transfer protocol (FTP) merupakan protokol transfer data yang
+            memungkinkan pengguna dapat meng-upload dan men-download file dari server
+            tanpa memperhatikan platform mesin dan sistem operasi yang digunakan.
+            Layanan ini sering dimanfaatkan dalam jaringan internet, misalnya untuk
+            pengaturan konten website dan blog. Untuk menjelaskan cara meng-upload data
+            menggunakan server FTP, pindai QR code berikut.
+          </p>
+          <img
+            src="../../assets/images/jki/6poinh.svg"
+            alt="6poinh"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poinh.svg"
+            alt="6poinh"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>I. ICS/Tethering</h2>
+          <p>
+            ICS atau internet connection sharing merupakan fitur berbagi koneksi
+            jaringan internet dalam komputer Windows melalui interface kartu LAN dan
+            kartu wi-fi. Adapun konsep tethering adalah proses berbagi koneksi internet
+            menggunakan perangkat mobile (smartphone) pada perangkat lain dengan
+            menggunakan wi-fi atau kabel data. Untuk cara menggunakan layanan tethering
+            handphone, pindai QR code berikut.
+          </p>
+          <img
+            src="../../assets/images/jki/6poini.svg"
+            alt="6poini"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poini.svg"
+            alt="6poini"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        
+          <h2>J. Melakukan Remote dari Smartphone Android ke PC</h2>
+          <p>
+            Mengakses dan mengoperasikan perangkat komputer bisa dilakukan dari jarak
+            jauh selama terhubung jaringan lokal atau internet. Hal tersebut dapat
+            dilakukan dengan fitur RDP (remote dekstop protocol) yang berfungsi
+            menjembatani pemberian akses ke perangkat komputer dari jarak jauh untuk
+            bertukar data ataupun mengoperasikannya secara langsung. Salah satu contoh
+            pengaplikasiannya yaitu teknik remote smartphone Android ke PC atau
+            sebaliknya menggunakan aplikasi AnyDesk.
+          </p>
+          <img
+            src="../../assets/images/jki/6poinj.svg"
+            alt="6poinj"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/jki/6poinj.svg"
+            alt="6poinj"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        </div>
+        <div class="container" id="v" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1 class="text-center">Video Materi</h1>
+          <hr />
+          <div class="text-center">
+            <iframe
+              width="100%"
+              height="50%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hWkMetsTXMHAU95E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="container footer py-3 px-5">
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-center flex-column flex-lg-row align-items-center py-3 my-4 border-top"
+          >
+            <p class="col-md-4 mb-0 text-dark">© 2024</p>
+
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item">
+                <a
+                  href="https://wa.me/+6282143322393"
+                  target="_blank"
+                  class="text-dark my-auto"
+                >
+                  <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        <!-- END FOOTER -->
+      </div>
+    </main>
+    <!-- END MAIN CONTENT -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../../sidebar.js"></script>
   </body>
 </html>
