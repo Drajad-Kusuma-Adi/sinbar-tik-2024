@@ -97,35 +97,103 @@
     <!-- END NAV -->
 
     <!-- MAIN CONTENT -->
-    <main></main>
-    <!-- END MAIN CONTENT -->
-
-    <!-- FOOTER -->
-    <footer class="container-fluid footer py-3">
-      <div
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <p class="col-md-4 mb-0 text-white">© 2024</p>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a
-              href="https://wa.me/+6282143322393"
-              target="_blank"
-              class="text-white my-auto"
-            >
-              <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
-            </a>
-          </li>
-        </ul>
+    <main>
+      <div class="sidebar collapsed">
+        <button class="toggle-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="black"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <hr />
+        <div class="sidebar-content">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3 style="text-align: center">Subbab</h3>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#1">
+                1. Pola Berpikir
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#2">
+                2. Pernyataan dan Logika Preposisi
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#3">
+                3. Logika Matematika
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#4">
+                4. Metode Penalaran
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#5">
+                5. Logika Penalaran Interfensi
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#6">
+                6. Logika Konversi Bilangan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#7">
+                7. Berpikir Algoritmik
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#v">
+                Video Materi
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
-    <!-- END FOOTER -->
+
+      <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sidebar-main">
+        <!-- FOOTER -->
+        <footer class="container footer py-3 px-5">
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-center flex-column flex-lg-row align-items-center py-3 my-4 border-top"
+          >
+            <p class="col-md-4 mb-0 text-dark">© 2024</p>
+
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item">
+                <a
+                  href="https://wa.me/+6282143322393"
+                  target="_blank"
+                  class="text-dark my-auto"
+                >
+                  <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        <!-- END FOOTER -->
+      </div>
+    </main>
+    <!-- END MAIN CONTENT -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../../sidebar.js"></script>
   </body>
 </html>
