@@ -98,68 +98,101 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <nav
-        id="sidebar"
-        class="col-md-3 col-lg-2 d-md-block bg-light sidebar mx-3"
-      >
-        <div class="position-sticky pt-3">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#sidebarNavDropdown"
-            aria-controls="sidebarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+      <div class="sidebar collapsed">
+        <button class="toggle-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="black"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <ul class="nav flex-column" id="sidebarNavDropdown">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#1">
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <hr />
+        <div class="sidebar-content">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3 style="text-align: center">Subbab</h3>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#1">
                 1. Pola Berpikir
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#2">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#2">
                 2. Pernyataan dan Logika Preposisi
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#3">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#3">
                 3. Logika Matematika
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#4">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#4">
                 4. Metode Penalaran
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#5">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#5">
                 5. Logika Penalaran Interfensi
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#6">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#6">
                 6. Logika Konversi Bilangan
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#7">
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#7">
                 7. Berpikir Algoritmik
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#v">
+                Video Materi
               </a>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
 
-      <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="container" id="1">
+      <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sidebar-main">
+        <div class="container" id="1" style="scroll-margin-top: 60px">
           <h1>1. Pola Berpikir</h1>
           <hr />
 
-          <img src="../../assets/images/bk/poina.svg" alt="poina" />
+          <img
+            src="../../assets/images/bk/poina.svg"
+            alt="poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/poina.svg"
+            alt="poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <h2>A. Konsep Ide atau Gagasan</h2>
 
@@ -181,7 +214,30 @@
 
           <h2>B. Teknik Memetakan Ide</h2>
 
-          <img src="../../assets/images/bk/poinb2.svg" alt="poinb2" />
+          <img
+            src="../../assets/images/bk/poinb2.svg"
+            alt="poinb2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/poinb2.svg"
+            alt="poinb2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <p>
             <b>Teknik Memetakan Ide</b>, Kompleksitas permasalahan harus
@@ -198,7 +254,7 @@
             permasalahan.
           </p>
         </div>
-        <div class="container" id="2">
+        <div class="container" id="2" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>2. Pernyataan dan Logika Preposisi</h1>
           <hr />
@@ -236,22 +292,69 @@
             </li>
           </ol>
 
-          <img src="../../assets/images/bk/2poina.svg" alt="2poina" />
+          <img
+            src="../../assets/images/bk/2poina.svg"
+            alt="2poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/2poina.svg"
+            alt="2poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <h2>B. Aspek Penggunaan dalam Proposisi</h2>
 
           <img
             src="../../assets/images/bk/2poinb.svg"
             alt="2poinb"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
         </div>
-        <div class="container" id="3">
+        <div class="container" id="3" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>3. Logika Matematika</h1>
           <hr />
 
-          <img src="/assets/images/bk/3poina2.svg" alt="3poina2" />
+          <img
+            src="../../assets/images/bk/3poina2.svg"
+            alt="3poina2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/3poina2.svg"
+            alt="3poina2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <h2>A. Negasi</h2>
 
@@ -263,9 +366,10 @@
           </p>
 
           <img
-            src="/assets/images/bk/3poina1.svg"
+            src="../../assets/images/bk/3poina1.svg"
             alt="3poina1"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>B. Konjungsi</h2>
@@ -278,9 +382,10 @@
           </p>
 
           <img
-            src="/assets/images/bk/3poinb.svg"
+            src="../../assets/images/bk/3poinb.svg"
             alt="3poinb"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>C. Disjungsi</h2>
@@ -293,9 +398,10 @@
           </p>
 
           <img
-            src="/assets/images/bk/3poinc.svg"
+            src="../../assets/images/bk/3poinc.svg"
             alt="3poinc"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>D. Implikasi</h2>
@@ -306,9 +412,10 @@
           </p>
 
           <img
-            src="/assets/images/bk/3poind.svg"
+            src="../../assets/images/bk/3poind.svg"
             alt="3poind"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>E. Biimplikasi</h2>
@@ -319,12 +426,13 @@
           </p>
 
           <img
-            src="/assets/images/bk/3poine.svg"
+            src="../../assets/images/bk/3poine.svg"
             alt="3poine"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
         </div>
-        <div class="container" id="4">
+        <div class="container" id="4" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>4. Metode Penalaran</h1>
           <hr />
@@ -338,7 +446,30 @@
             <b>Deduktif</b>, <b>Induktif</b>, dan <b>Abduktif</b>.
           </p>
 
-          <img src="../../assets/images/bk/4poinb2.svg" alt="4poinb2" />
+          <img
+            src="../../assets/images/bk/4poinb2.svg"
+            alt="4poinb2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/4poinb2.svg"
+            alt="4poinb2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <h2>B. Deduktif</h2>
 
@@ -351,12 +482,36 @@
           <img
             src="../../assets/images/bk/4poinb1.svg"
             alt="4poinb1"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>C. Induktif</h2>
 
-          <img src="../../assets/images/bk/4poinc.svg" alt="4poinc" />
+          <img
+            src="../../assets/images/bk/4poinc.svg"
+            alt="4poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/4poinc.svg"
+            alt="4poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <p>
             Metode induktif dilakukan dengan mempelajarai dan menganalisis
@@ -407,10 +562,11 @@
           <img
             src="../../assets/images/bk/4poind.svg"
             alt="4poind"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
         </div>
-        <div class="container" id="5">
+        <div class="container" id="5" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>5. Logika Penalaran Interfensi</h1>
           <hr />
@@ -441,12 +597,36 @@
           <img
             src="../../assets/images/bk/5poinc.svg"
             alt="5poinc"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>D. Metode Inferensi</h2>
 
-          <img src="../../assets/images/bk/5poind.svg" alt="5poind" />
+          <img
+            src="../../assets/images/bk/5poind.svg"
+            alt="5poind"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/5poind.svg"
+            alt="5poind"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
 
           <ol>
             <li>Modus Ponens</li>
@@ -467,7 +647,30 @@
               pernyataan bernilai benar, disjungsi akan bernilai benar.
             </p>
             <p class="no-indent">Notasi dalam modus penambahan disjungtif :</p>
-            <img src="../../assets/images/bk/disjungtif.svg" alt="disjungtif" />
+            <img
+              src="../../assets/images/bk/disjungtif.svg"
+              alt="disjungtif"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/bk/disjungtif.svg"
+              alt="disjungtif"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
             <li>Modus Penyederhanaan Konjungtif</li>
             <p class="no-indent">
               Dalam modus ini, jika beberapa pernyataan dihubungkan dengan
@@ -475,10 +678,33 @@
               khusus.
             </p>
             <p class="no-indent">Notasi dalam modus penambahan konjungtif :</p>
-            <img src="../../assets/images/bk/konjungtif.svg" alt="disjungtif" />
+            <img
+              src="../../assets/images/bk/konjungtif.svg"
+              alt="disjungtif"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/bk/konjungtif.svg"
+              alt="disjungtif"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
           </ol>
         </div>
-        <div class="container" id="6">
+        <div class="container" id="6" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>6. Logika Konversi Bilangan</h1>
           <hr />
@@ -497,13 +723,15 @@
           <img
             src="../../assets/images/bk/6poina1.svg"
             alt="6poina1"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <img
             src="../../assets/images/bk/6poina2.svg"
             alt="6poina2"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>B. Teknik Konversi Bilangan</h2>
@@ -516,8 +744,9 @@
 
           <img
             src="../../assets/images/bk/6poinb.svg"
-            alt="6poinb1"
-            class="img-fill"
+            alt="6poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
 
           <h2>C. Sistem Penyandi Bilangan</h2>
@@ -533,9 +762,32 @@
             kemudian ditampilkan dalam layar monitor.
           </p>
 
-          <img src="../../assets/images/bk/6poinc.svg" alt="6poinc" />
+          <img
+            src="../../assets/images/bk/6poinc.svg"
+            alt="6poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/6poinc.svg"
+            alt="6poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
         </div>
-        <div class="container" id="7">
+        <div class="container" id="7" style="scroll-margin-top: 50px">
           <hr class="mt-5" />
           <h1>7. Berpikir Algoritmik</h1>
           <hr />
@@ -564,39 +816,52 @@
           <img
             src="../../assets/images/bk/7poinc.svg"
             alt="7poinc"
-            class="img-fill"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
           />
         </div>
+        <div class="container" id="v" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1 class="text-center">Video Materi</h1>
+          <hr />
+          <iframe
+            width="100%"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hWkMetsTXMHAU95E"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- FOOTER -->
+        <footer class="container footer py-3 px-5">
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-center flex-column flex-lg-row align-items-center py-3 my-4 border-top"
+          >
+            <p class="col-md-4 mb-0 text-dark">© 2024</p>
+
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item">
+                <a
+                  href="https://wa.me/+6282143322393"
+                  target="_blank"
+                  class="text-dark my-auto"
+                >
+                  <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        <!-- END FOOTER -->
       </div>
     </main>
     <!-- END MAIN CONTENT -->
-
-    <!-- FOOTER -->
-    <footer class="container-fluid footer py-3 px-5">
-      <div
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <p class="col-md-4 mb-0 text-dark">© 2024</p>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a
-              href="https://wa.me/+6282143322393"
-              target="_blank"
-              class="text-dark my-auto"
-            >
-              <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <!-- END FOOTER -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../../sidebar.js"></script>
   </body>
 </html>
