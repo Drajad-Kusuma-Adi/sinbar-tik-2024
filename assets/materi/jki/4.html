@@ -1,0 +1,81 @@
+<div class="container">
+	<h1>4. IP Address</h1>
+	<hr />
+
+	<h2>A. Definisi IP Adress</h2>
+
+	<p>
+		IP Adress merupakan metode pengalamatan yang diterapkan sebagai identitas
+		pengenal mesin dalam jaringan yang terdiri atas bagisan angka berbasis
+		desimal atau heksadesimal dengan standar aturan tertentu. Saat ini, terdapat
+		dua versi IP address yang digunakan, yaitu IP address versi 4 dan IP address
+		versi 6.
+	</p>
+
+	<h6 class="fw-bold">IP Address versi 4</h6>
+	<p class="no-indent">
+		IP address dalam penggunaannya terdiri atas dua bagian, yaitu network ID dan
+		host ID. Network ID memperlihatkan alamat network atau jaringan, sedangkan
+		host ID mengidentifikasikan alamat host dalam satu network. Syarat
+		terbentuknya sebuah jaringan lokal adalah jaringan harus dalam satu kelas IP
+		yang sama, memiliki network IP dan broadcast IP yang sama, dan mempunyai IP
+		host yang berbeda. Untuk menghubungkan dua jaringan dengan network ID yang
+		berbeda, dibutuhkan router sebagai jembatan penghubungnya.
+	</p>
+	<p>
+		Dalam menentukan network ID dan host ID yang akan digunakan dalam jaringan,
+		terdapat beberapa aturan sebagai berikut. a.Network ID 127.0.0.1 tidak dapat
+		digunakan untuk pengalamatan IP address. Hal ini karena IP address ini
+		secara default digunakan untuk keperluan loopback. b.Host ID tidak boleh
+		diset pada bit 1 semua (contoh kelas C: 192.168.11.255) karena akan
+		diartikan sebagai alamat broadcast pada subnet mask 255.255.255.0. Broadcast
+		ID merupakan alamat yang mewakili seluruh anggota jaringan. c.Sebuah network
+		ID dan host ID tidak boleh dikonfigurasikan pada bit 0 semua (seluruh bit
+		diset 0 seperti 0.0.0.0). Hal ini karena IP address dengan host ID 0
+		diartikan sebagai alamat network.
+	</p>
+
+	<h2>B. Range IP Adress</h2>
+
+	<p class="no-indent">
+		Berikut adalah pembagian range kelas IP address berdasarkan aturan standar
+		internasional.
+	</p>
+	<img src="/assets/images/jki/4poinb.svg" alt="4poinb" class="img-fill" />
+
+	<p>
+		Metode classess addressing atau dalam bahasa tekniknya adalah menyediakan
+		rentang IP address dalam notasi classess inter-domain routing (CIDR),
+		bertujuan untuk mengatur sistem pengalamatan IP address yang yang merujuk
+		pada jaringan secara lebih spesifik atau disebut juga dengan network prefix.
+	</p>
+
+	<p>Pengelompokan subnet mask :</p>
+	<img src="/assets/images/jki/4poinb2.svg" alt="4poinb2" class="img-fill" />
+
+	<p>
+		Menurut penggunaannya, terdapat dua tipe IP address, yaitu sebagai berikut.
+	</p>
+	<ol>
+		<li>
+			IP Publik, IP publik adalah IP yang digunakan dalam jaringan internet di
+			seluruh dunia.
+		</li>
+		<li>
+			IP Privat, IP privat adalah IP address yang tidak digunakan dalam
+			penomoran alamat komputer karena dicadangkan untuk penggunaan jaringan
+			lokal yang mencakup tiga segmen terakhir dari IP address untuk internet.
+		</li>
+	</ol>
+
+	<p>
+		Daftar IP address yang dicadangkan untuk digunakan sebagai IP privat dapat
+		dilihat pada tabel berikut.
+	</p>
+	<img src="/assets/images/jki/4poinb3.svg" alt="4poinb3" class="img-fill" />
+	<p>
+		Diketahui bahwa semua range pengalamatan IP address kelas D dan E juga dapat
+		digunakan untuk IP address jaringan lokal. IP tersebut tidak digunakan
+		sebagai IP publik di internet.
+	</p>
+</div>

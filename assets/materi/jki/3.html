@@ -1,0 +1,264 @@
+<div class="container">
+	<h1>3. Protokol Jaringan</h1>
+	<hr />
+	<p>
+		Protokol jaringan adalah sekumpulan aturan baku yang ditetapkan oleh badan
+		standarisasi dunia tentang jaringan dan teknologi informasi yang mengatur
+		mekanisme komunikasi data antarmesin komputer. Ada dua model protokol
+		jaringan yang dapat digunakan, yaitu Model DoD dan Model OSI.
+	</p>
+
+	<h2>A. Model DoD</h2>
+
+	<p>
+		Model layer DoD dikeluarkan oleh Departemen Pertahanan Amerika Serikat atau
+		Departement of Defence (DoD) sebagai upaya meningkatkan strategi pertahanan.
+		Berikut perbandingan layer model DoD dan OSI.
+	</p>
+
+	<p>Layer DoD :</p>
+	<ol>
+		<li>Process/ Application</li>
+		<li>Host-to-Host</li>
+		<li>Internet</li>
+		<li>Network Access</li>
+	</ol>
+
+	<p>Layer OSI :</p>
+	<ol>
+		<li>Application Presentation Session</li>
+		<li>Transport</li>
+		<li>Network</li>
+		<li>Data Link Physical</li>
+	</ol>
+
+	<p>Contoh Protokol :</p>
+	<ol>
+		<li>Telnet, FTP, Kerberos, SMTP, DNS, TFTP, SNMP, NFS, dan Xwindows</li>
+		<li>UDP dan TCP</li>
+		<li>ARP, IP, ICMP, BOOTP, dan RARP</li>
+		<li>Token ring, Ethernet, dan FDDI</li>
+	</ol>
+
+	<h2>B. Model OSI</h2>
+	<p>
+		Model OSI (open standard interconnection) yang dikeluarkan oleh ISO
+		(International Standard Organization) membagi proseskomunikasi dalam tujuh
+		layer. Prinsip-prinsip yang digunakan bagi ketujuh layer tersebut adalah
+		sebagai berikut.
+	</p>
+	<ol style="list-style-type: lower-latin">
+		<li>
+			Jenis layer harus diselesaikan dengan tingkat abstraksi dan fungsi yang
+			berbeda-beda dalam servisnya.
+		</li>
+		<li>
+			Layer yang dibentuk harus bermanfaat sesuai kebutuhan serta saling
+			berhubungan dan saling mendukung satu sama lain.
+		</li>
+		<li>
+			Kegunaan setiap layer ditentukan melalui mekanisme yang logis dan rumit
+			dengan ketelitian tinggi sesuai standard protokol internasional.
+		</li>
+		<li>
+			Batasan dan area operasi layer bertujuan meminimalisasi aliran informasi
+			yang melewati interface.
+		</li>
+		<li>
+			Jumlah layer harus cukup banyak disesuaikan spesifikasi, proses kerja, dan
+			kegunaannya sehingga fungsi-fungsi yang berbeda tidak perlu digabung dalam
+			satu layer.
+		</li>
+	</ol>
+
+	<p>
+		Model OSI memiliki tujuh layer yang dibagi menjadi application,
+		presentation, session, transport, network, data link, dan physical layer.
+	</p>
+
+	<ol style="list-style-type: lower-latin">
+		<li>
+			Application (aplikasi), Fungsi Utamanya yakni Menyediakan interface yang
+			memberikan pelayanan bagi pengguna dalam berinteraksi dengan sistem
+			jaringan melalui komputer.
+			<p>Contoh Protokol:</p>
+			<ol>
+				<li>
+					DHCP (dynamic host configuration protocol), Protokol untuk distribusi
+					IP pada jaringan dengan jumlah IP terbatas.
+				</li>
+				<li>
+					DNS (domain name server), Basis data berisis nama domain mesin dan IP
+					address
+				</li>
+				<li>FTP (file transfer protocol), Protokol untuk transfer file</li>
+				<li>
+					HTTP (hypertext transfer protocol), Protokol untuk transfer file HTML
+					dan Web
+				</li>
+				<li>
+					MIME (multipupose internet mail extention), Protokol untuk mengirim
+					file biner dalam bentuk teks
+				</li>
+				<li>
+					NNTP (network news transfer protocol), Protokol untuk menerima dan
+					mengirim newsgroup
+				</li>
+				<li>
+					POP (post office protocol), Protokol untuk mengambil mail dari server
+				</li>
+				<li>
+					SMB (server message block), Protokol untuk transfer berbagai server
+					file DOS dan Windows
+				</li>
+				<li>
+					SMTP (simple mail transfer protocol), Protokol untuk penukaran mail
+				</li>
+				<li>
+					SNMP (simple network management protocol), Protokol untuk manajemen
+					jaringan
+				</li>
+				<li>Telnet, Protokol untuk akses dari jarak jauh</li>
+				<li>TFTP (Trivial FTP), Protokol untuk transfer file</li>
+			</ol>
+		</li>
+		<li>
+			Presentation (presentasi), Fungsi Utamanya yakni Melakukan enkripsi
+			kompresi, serta deskripsi data.
+			<p>Contoh Protokol (Bentuk format kompresi paket data):</p>
+			<ol>
+				<li>ASCII,</li>
+				<li>EBCDIC</li>
+				<li>MIDI</li>
+				<li>MPEG</li>
+				<li>TIFF</li>
+				<li>JPEG</li>
+				<li>PICT</li>
+				<li>qiuck time</li>
+			</ol>
+		</li>
+		<li>
+			Session, Fungsi Utamanya yakni Mengasosiasikan setiap komunikasi
+			antar-layer sebelum session, dengan layer setelah session.
+			<p>Contoh Protokol:</p>
+			<ol>
+				<li>
+					NETBIOS (network basic input ouput system), BIOS jaringan standar
+				</li>
+				<li>RPC (remote procedure call), Prosedur pemanggilan jarak jauh</li>
+				<li>SOCKET, Input output untuk network jenis BSD-UNIX</li>
+				<li>
+					(SQL, NETBEUI, dan XWINDOWS), Protokol untuk database, mesin IBM, dan
+					pengaturan GUI OS berbasis Unix
+				</li>
+			</ol>
+		</li>
+		<li>
+			Transport (transpor), Fungsi Utamanya yakni Memastikan setiap paket data
+			dikirm tanpa terjadi kesalahan dan tidak terjadi duplikasi.
+			<p>Contoh Protokol:</p>
+			<ol>
+				<li>
+					TCP (transmission control protocol), Protokol petukuran data
+					berorientasi (connection-oriented)
+				</li>
+				<li>
+					UDP (user datagram protocol), Protokol pertukaran data non-orientasi
+					(connectionless)
+				</li>
+			</ol>
+		</li>
+		<li>
+			Network (jaringan), Fungsi Utamanya yakni Menentukan letak jalur
+			pengiriman data yang akan ditransmisikan serta meneruskan paket tersebut
+			ke alamat jaringan tertentu.
+			<p>Contoh Protokol:</p>
+			<ol>
+				<li>IP (internet protocol), Protokol untuk menetapkan routing</li>
+				<li>
+					RIP (routing information protocol), Protokol untuk memilih routing
+				</li>
+				<li>
+					ARP (adress resolution protocol), Protokol untuk mendapatkan informasi
+					hardware dari nomor IP
+				</li>
+				<li>
+					RARP (reverse ARP), Protokol untuk mendapatkan informasi nomor IP dari
+					hardware
+				</li>
+			</ol>
+		</li>
+		<li>
+			Data link, Fungsi Utamanya yakni Mengatur nilai data biner (true and
+			false) yang bernilai ) dan 1 menjadi logical group.
+			<p>Contoh Protokol:</p>
+			<ol>
+				<li>
+					PPP (point-to-point), Protokol untuk akses point-to-point (biasanya
+					dial-up)
+				</li>
+				<li>
+					SLIP (serial line internet protocol), Protokol dengan menggunakan
+					sambungan serial
+				</li>
+			</ol>
+		</li>
+		<li>
+			Physical (fisik), Fungsi Utamanya yakni Sebagai interface fisik yang
+			melewatkan transmisi data biner (digital) melalui jalur komunikasi.
+			<p>
+				Contoh Protokol Ethernet, FDDI, ISDN, ATM, 10BaseT, 100BaseTX, HSSI,
+				V.35, dan X.21 yang kegunaannya sebagai Contoh bentuk standar penggunaan
+				media transmisi yang berpengaruh terhadap besaran data dan kecepatan
+				transmisi data.
+			</p>
+		</li>
+
+		<p>
+			Berdasarkan fungsinya, ketujuh layer dalam model OSI dapat dikategorikan
+			menajdi dua lapisan, yaitu lapisan atas dan lapisan bawah.
+		</p>
+		<ol>
+			<li>
+				Lapisan atas dari model OSI terkait dengan persoalan aplikasi. Umumnya,
+				lapisan ini hanya diimplementasikan pada aplikasi yang digunakan oleh
+				pengguna komputer. Lapisan paling atas, yaitu lapisan aplikasi adalah
+				lapisan penutup sebelum terhubung ke pengguna.
+			</li>
+			<li>
+				Lapisan bawah dari model OSI mengendalikan persoalan transpor data.
+				Lapisan fisik dan lapisan data link diimplementasikan ke dalam hardware
+				dan software. Lapisan-lapisan bawah yang lain umumnya hanya
+				diimplementasikan dalam software. Lapisan terbawah, yaitu lapisan fisik
+				adalah penuutp bagi media jaringan fisik dan sebagai penanggung jawab
+				bagi penempatan infomarsi pada media jaringan.
+			</li>
+		</ol>
+	</ol>
+
+	<h2>C. Menambahkan Efek Suara dan animasi Antar-slide.</h2>
+	<ol>
+		<li>Buka kembali file presentasi sebelumnya.</li>
+		<li>
+			Pada slide pertama, untuk menambahkan animasi pada slide klik menu
+			Animations – kemudia pilih komponen teks judul presentasi (blok komponen
+			tersebut) baru klik menu Add Animation – Swivel.
+		</li>
+		<li>
+			Untuk melihat efeknya, jalankan animasi dengan mengklik ikon Animation
+			Pane dan muncul jedela Animation Pane di sebelah kiri – pilih tombol Play.
+		</li>
+		<img src="/assets/images/tik/3poinc1.svg" alt="3poinc1" />
+		<li>
+			Lakukan hal serupa pada slide-slide berikutnya dengan corak animasi yang
+			berbeda-beda.
+		</li>
+		<li>
+			Untuk menambahkan suara dalam presentasi, persiapkan dahulu file .mp3 yang
+			akan disisipkan. Klik Insert – Audio – Audio on My PC.
+		</li>
+		<li>Tentukan lokasi file audio yang akan disisipkan.</li>
+		<li>Hasilnya adalah sebagai berikut.</li>
+		<img src="/assets/images/tik/3poinc2.svg" alt="3poinc2" />
+	</ol>
+</div>

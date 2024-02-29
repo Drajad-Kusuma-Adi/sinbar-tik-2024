@@ -1,0 +1,230 @@
+<div class="container subbab6">
+	<h1>6. Menggunakan Layanan Jaringan</h1>
+	<hr />
+
+	<h2>A. Mengonfigurasi IP Address Komputer</h2>
+
+	<p class="no-indent">
+		Langkah-langkah mengonfigurasi IP address pada kartu jaringan (NIC) komputer
+		yang terhubung dengan switch jaringan lokal.
+	</p>
+
+	<ol>
+		<li>
+			Pastikan kartu jaringan telah terpasang dan driver telah terinstal dengan
+			baik.
+		</li>
+		<li>
+			Sistem operasi yang digunakan adalah Windows 8 (disarankan Windows 10).
+			Pastikan komputer telah tersambung dengan switch atau hub jaringan
+			laboratorium yang telah memiliki akses internet dengan IP address yang
+			telah ditentukan.
+		</li>
+		<li>
+			Klik start – Control Panel – Network and Internet – Network and Sharing
+			Center – Change adapter settings.
+		</li>
+		<img src="/assets/images/jki/6poina.svg" alt="6poina" class="img-fill" />
+		<li>
+			Klik kanan ikon Ethernet – pilih Properties. Jika ikon tersebut
+			menampilkan tanda silang merah seperti gambar, berarti interface kartu
+			jaringan belum terhubung dengan jaringan.
+		</li>
+		<li>
+			Pilih Internet Protocol Version 4 (TCP/IPv4) – Properties atau dobel klik
+			untuk menampilkan menu konfigurasi IP address versi 4.
+		</li>
+		<li>
+			Selanjutnya, lakukan pengaturan IP address sesuai dengan ketentuan IP
+			dalam laboratorium komputer sekolah. Dalam contoh ini, menggunakan
+			ketentuan sebagai berikut:
+			<ul>
+				<li>IP address : 10.10.10.53</li>
+				<li>Subnet Mask : 255.255.255.192</li>
+				<li>Gateway : 10.10.10.62</li>
+				<li>DNS Server : 8.8.8.8</li>
+			</ul>
+		</li>
+		<li>
+			Setelah itu, klik OK dan tutup kotak dialog Local Area Connection
+			Properties.
+		</li>
+		<li>
+			Buka command prompt Windows. Periksa bahwa konfigurasi IP address versi 4
+			sudah benar dengan mengetikkan perintah iponfig.
+		</li>
+		<li>
+			Langkah selanjutnya adalah melakukan uji konektivitas jaringan dengan
+			memasukkan perintah berikut.
+			<ul>
+				<li>ping 127.0.0.1</li>
+				<p>
+					Jika ditampilkan pesan “Reply from 127.0.0.1 ....”, hal tersebut
+					menunjukkan bahwa loopback adapter dalam kondisi baik.
+				</p>
+				<li>ping 10.10.10.53</li>
+				<p>
+					Jika ditampilkan pesan “Reply from 127.0.0.53 ....”, hal tersebut
+					menunjukkan bahwa kartu jaringan lokal dengan IP address 10.10.10.53
+					dalam kondisi baik.
+				</p>
+				<li>ping 8.8.8.8</li>
+				<p>
+					Jika ditampilkan pesan “Reply from 8.8.8.8 ....”, hal tersebut
+					menunjukkan bahwa komputer telah terhubung dengan internet.
+				</p>
+				<li>ping google.com</li>
+				<p>
+					Jika pengujian koneksi dengan host 8.8.8.8 yang merupakan DNS server
+					Google telah berhasil dilakukan, seharusnya akan ditampilkan informasi
+					bahwa komputer dapat terkoneksi dengan server.
+				</p>
+			</ul>
+		</li>
+	</ol>
+
+	<h2>B. Mengoneksikan Laptop dengan Hotspot</h2>
+	<p>
+		Hotspot merupakan area atau wilayah tertentu yang terdapat sinyal pemancar
+		gelombang radio yang memungkinkan pengguna dengan perangkat yang mampu
+		menangkap wi-fi, seperti komputer, laptop, PDA, notebook, dan smartphone
+		dapat terhubung dengan internet.
+	</p>
+	<ol>
+		<li>
+			Memiliki SSID yang di-broadcast dan dapat dijangkau oleh perangkat klien.
+		</li>
+		<li>Biasanya menggunakan gelombang radio dengan frekuensi 2,4 GHz.</li>
+		<li>
+			Biasanya wi-fi hotspot memiliki autentikasi seperti harus memasukkan
+			password tertentu ketika terkoneksi dengan SSID wi-fi.
+		</li>
+		<li>
+			Terkadang ada beberapa layanan hotspot yang mewajibkan pengguna untuk
+			login melalui web browser untuk mengakses internet.
+		</li>
+	</ol>
+
+	<h2>C. Mengakses Internet dengan Web Browser</h2>
+
+	<p>
+		Web browser merupakan aplikasi yang dapat digunakan untuk mengakses konten
+		informasi, seperti gambar, teks, audio, dan video dari berbagai situs yang
+		ada di internet. Contoh browser adalah Google Chrome, Mozilla Firefox,
+		Opera, dan Microsoft Edge. Sebelum dapat mengakses informasi di internet,
+		harus menginstal web browser pada komputer terlebih dahulu.
+	</p>
+	<img src="/assets/images/jki/6poinc.svg" alt="6poinc" class="img-small" />
+
+	<h2>D. Mengaktifkan Proxy pada Web Browser</h2>
+
+	<p>
+		Proxy bekerja di antara komputer pengguna dengan server website tujuan.
+		Setiap request komputer akan dirutekan terlebih dahulu menuju proxy server,
+		kemudian akan diarahkan kembali menuju server website tujuan.
+	</p>
+	<p>Tipe web proxy</p>
+	<ol>
+		<li>
+			Transparent, merupakan jenis proxy server yang dilengkapi konfigurasi
+			firewall pengaturan port proxy sehingga klien tidak perlu melakukan
+			konfigurasi proxy pada web browser-nya.
+		</li>
+		<li>
+			Non-transparent, merupakan jenis proxy yang hanya mengharuskan pengguna
+			mengatur konfigurasi port proxy secara manual, yang diarahkan ke server
+			proxy tersebut.
+		</li>
+	</ol>
+
+	<h2>E. Mengonfigurasi VPN Client</h2>
+	<p>
+		Virtual Private Network atau VPN merupakan teknologi yang memberikan akses
+		ke website secara aman dengan cara membungkus paket komunikasi data dari
+		pengirim ke tujuan. Teknologi ini akan membuat jalur rahasia dalam kanal
+		jaringan sehingga paket data lebih aman, terenkripsi, dan tidak dapat
+		dilacak. Untuk cara melakukan konfigurasi VPN client, pindai QR code
+		berikut.
+	</p>
+	<img src="/assets/images/jki/6poine.svg" alt="6poine" class="img-small" />
+
+	<h2>F. Chatting dalam Jaringan Lokal</h2>
+	<p>
+		Dalam komunikasi digital, chatting merupakan komunikasi yang memungkinkan
+		pengguna mengirimkan data, baik teks, gambar, audio maupun video dengan
+		menggunakan perangkat digital, seperti komputer dan gadget. Chatting dapat
+		dilakukan menggunakan aplikasi dan website. Untuk cara menginstal dan
+		menjalankan chatting dengan LAN Messenger dalam jaringan lokal, pindai QR
+		code berikut.
+	</p>
+	<img src="/assets/images/jki/6poinf.svg" alt="6poinf" class="img-small" />
+
+	<h2>G. Sharing Data</h2>
+	<p>
+		Share merupakan mekanisme membagi resource pada perangkat lain dalam
+		jaringan, baik berupa data, program, proses, maupun sistem percetakan dalam
+		perangkat komputer agar dapat digunakan secara bersama-sama dengan terminal
+		lainnya dalam jaringan.
+	</p>
+	<p>Langkah-langkah melakukan konfigurasi sharing data dengan Windows 10.</p>
+	<ol>
+		<li>
+			Bentuk kelompok minimal lima anggota dan pastikan komputer dalam kelompok
+			telah tersambung dengan LAN. Lakukan konfigurasi IP address dengan network
+			192.168.100.0/24 kemudian periksa konektivitas jaringan tersebut.
+		</li>
+		<li>
+			Dalam contoh praktik, komputer dengan IP address 192.168.0.9 akan
+			dikonfigurasi sebagai komputer sharing dengan folder D:/Software.
+		</li>
+		<li>
+			Selanjutnya, klik kanan folder Software – pilih Properties – klik tab
+			Sharing – klik tombol Share.
+		</li>
+		<li>
+			Agar folder tersebut dapat diakses oleh semua anggota, tambahkan opsi
+			Everyphone – klik Add – klik Share – klik Done.
+		</li>
+		<li>
+			Untuk membuka folder yang telah di-share sebelumnya pada komputer lain,
+			tekan kombinasi tombol keyboard Windows + R sehingga muncul jendela Run.
+			Setelah itu, ketikan perintah \\192.168.100.66.
+		</li>
+		<li>Berikut merupakan hasil tampilan sharing dokumen dalam jaringan.</li>
+	</ol>
+	<img src="/assets/images/jki/6poing.svg" alt="6poing" class="img-fill" />
+
+	<h2>H. Upload dan Download File dalam Server FTP</h2>
+	<p>
+		File transfer protocol (FTP) merupakan protokol transfer data yang
+		memungkinkan pengguna dapat meng-upload dan men-download file dari server
+		tanpa memperhatikan platform mesin dan sistem operasi yang digunakan.
+		Layanan ini sering dimanfaatkan dalam jaringan internet, misalnya untuk
+		pengaturan konten website dan blog. Untuk menjelaskan cara meng-upload data
+		menggunakan server FTP, pindai QR code berikut.
+	</p>
+	<img src="/assets/images/jki/6poinh.svg" alt="6poinh" class="img-small" />
+
+	<h2>I. ICS/Tethering</h2>
+	<p>
+		ICS atau internet connection sharing merupakan fitur berbagi koneksi
+		jaringan internet dalam komputer Windows melalui interface kartu LAN dan
+		kartu wi-fi. Adapun konsep tethering adalah proses berbagi koneksi internet
+		menggunakan perangkat mobile (smartphone) pada perangkat lain dengan
+		menggunakan wi-fi atau kabel data. Untuk cara menggunakan layanan tethering
+		handphone, pindai QR code berikut.
+	</p>
+	<img src="/assets/images/jki/6poini.svg" alt="6poini" class="img-small" />
+
+	<h2>J. Melakukan Remote dari Smartphone Android ke PC</h2>
+	<p>
+		Mengakses dan mengoperasikan perangkat komputer bisa dilakukan dari jarak
+		jauh selama terhubung jaringan lokal atau internet. Hal tersebut dapat
+		dilakukan dengan fitur RDP (remote dekstop protocol) yang berfungsi
+		menjembatani pemberian akses ke perangkat komputer dari jarak jauh untuk
+		bertukar data ataupun mengoperasikannya secara langsung. Salah satu contoh
+		pengaplikasiannya yaitu teknik remote smartphone Android ke PC atau
+		sebaliknya menggunakan aplikasi AnyDesk.
+	</p>
+	<img src="/assets/images/jki/6poinj.svg" alt="6poinj" class="img-small" />
+</div>

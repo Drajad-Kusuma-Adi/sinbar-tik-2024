@@ -1,0 +1,133 @@
+<div class="container">
+
+    <h1>8. Method dalam Java</h1>
+
+    <hr/>
+
+    <h2>A. Definisi Method</h2>
+
+    <p>
+        Method merupakan sekumpulan perintah dalam badan program kecil yang dapat dipanggil dalam badan program lainnya. Deklarasi method memiliki kegunaan sebagai berikut.
+    </p>
+
+    <ol>
+        <li>
+            Memudahkan programmer untuk membentuk dan memodifikasi fungsi sesuai kebutuhan tanpa mengganggu kerja fungsi lainnya.
+        </li>
+        <li>
+            Menata dan merapikan struktur kode program agar tidak semua dimasukkan dalam badan program utama.
+        </li>
+        <li>
+            Memudahkan distribusi tugas dalam bentuk modul.
+        </li>
+        <li>
+            Mengurangi penulisan kode menjadi panjang, karena hanya memanggil nama method dalam badan program.
+        </li>
+    </ol>
+
+    <h2>B. Membuat Method di Java</h2>
+
+    <img src="/assets/images/applb/8poinb.svg" alt="8poinb" class="img-fill">
+
+    <p class="no-indent">Contoh :</p>
+
+    <pre>
+public static int cekData(int a, int b)
+{
+    //statement;
+}
+    </pre>
+
+    <h6 style="font-weight: bold;">Penjelasan</h6>
+
+    <ol>
+        <li>
+            <b>public static</b> merupakan jenis modifier yang ditetapkan dalam method. Keyword static akan memudahkan method atau fungsi dipanggil dalam badan program, tanpa harus menginstansiasi objek terlebih dahulu.
+        </li>
+        <li>
+            <b>int</b> merupakan tipe data yang akan dikembalikan ketika method dipanggil dalam program.
+        </li>
+        <li>
+            <b>cekData ()</b> merupakan nama method atau fungsi.
+        </li>
+        <li>
+            <b>int a, int b</b> adalah tipe data parameter method atau fungsi.
+        </li>
+    </ol>
+
+    <p class="no-indent">
+        Sebuah method dapat dideklarasikan dengan parameter masukan atau tanpa parameter masukan. Method tanpa parameter masukan tidak akan menghasilkan return value. Berikut adalah contoh deklarasi method tanpa parameter masukan.
+    </p>
+
+    <pre>
+public static void cetakHalo ()
+{
+    System.out.printin("ini contoh method tanpa
+    parameter masukan");
+}
+    </pre>
+
+    <h2>C. Memanggil Method</h2>
+
+    <p>
+        Setelah mendefinisikan method, Anda dapat memanggilnya dalam badan program utama (main) atau dalam fungsi lainnya. Untuk memanggil atau mengeksekusi method dalam badan program, nama method harus dituliskan beserta parameternya jika ada. Berikut adalah contoh program yang memanggil method tanpa parameter.
+    </p>
+
+    <img src="/assets/images/applb/8poinc.svg" alt="8poinc">
+
+    <p>
+        Program utama class tersebut akan memanggil method <b>tampilkanHello()</b>. Oleh karena method <b>tampilkanHello()</b> tidak memiliki parameter, pemanggilannya di program utama juga tidak perlu disertakan parameternya, cukup nama method-nya saja. Pada badan method <b>tampilkanHello()</b>, terdapat perintah untuk mencetak tulisan "Ini cara memanggil method tanpa parameter". Perintah tersebut akan ikut dieksekusi sebagai akibat pemanggilan method tampilkanHello() pada program utama. Dengan demikian, hasil kompilasi program tersebut adalah sebagai berikut.
+    </p>
+
+    <h2>D. Method dengan Parameter</h2>
+
+    <p>
+        Parameter merupakan variabel dalam method yang digunakan untuk menampung nilai yang dikirimkan oleh badan program, ketika memanggil method tersebut. Variabel tersebut kemudian akan diproses dalam method.
+    </p>
+
+    <img src="/assets/images/applb/8poind.svg" alt="8poind" class="img-fill">
+
+    <p>
+        Program utama class tersebut akan memanggil method <b>tampilkanString()</b>. Method tersebut menampung nilai yang disimpan pada variabel String kalimat. Pada badan method <b>tampilkanString()</b>, terdapat perintah untuk mencetak nilai yang ditampung parameter ke layar. Pada saat program utama memanggil method <b>tampilkanString()</b>, perintah dalam method akan dieksekusi. Dengan demikian, hasil kompilasi program tersebut adalah sebagai berikut. 
+    </p>
+
+    <p>
+        Selain String, parameter pada method dapat menampung tipe data lainnya, seperti int, double, float, dan boolean. 
+    </p>
+
+    <h2>E. Mendeklarasikan dan memanggil Method non-Static</h2>
+
+    <p>
+        Pada kasus sebelumnya, setiap method yang didefinisikanmenggunakan keyword static dapat dieksekusi dengan hanya memanggil nama method-nya saja. Sementara pada method non static (tanpa keyword static), ketika memanggilnya diperlukan instansiasi objek dari class tempat program berada.
+    </p>
+
+    <p class="no-indent">
+        Contoh program menggunakan method static dan method non-static.
+    </p>
+
+    <img src="/assets/images/applb/8poine.svg" alt="8poine" class="img-fill">
+
+    <p>
+        Pada program tersebut, terdapat dua method. Method pertama adalah sayHello() yang bertipe static dan method kedua adalah belajar() yang bertipe non-static. Untuk memanggil method static sayHello(), hanya perlu menuliskan nama method beserta parameter yang ditampungnya. Sementara untuk memanggil method non-static belajar(). Buat objeknya dengan perintah berikut.
+    </p>
+
+    <code>BelajarMethod baru = new BelajarMethod()</code>
+
+    <p class="no-indent">Selanjutnya, panggil method belajar() dengan perintah berikut </p>
+
+    <code>Baru.belajar(ekstra);</code>
+
+    <p class="no-indent">Program akan mengeksekusi perintah yang terdapat di badan method sayHello() dan belajar(). Hasil kompilasi program tersebut adalah sebagai berikut.</p>
+
+    <pre>
+Anak SMK Bisa Pemrograman Java
+Bersama Erlangga
+    </pre>
+    
+    <h2>F. Overload Method</h2>
+
+    <p>
+        Overload method adalah metode yang dilakukan agar sebuah class dapat memiliki lebih dari satu method dengan nama yang sama, tetapi memiliki parameter dan tipe data yang berbeda. Penjelasan mengenai overload method dapat dilihat dengan memindai QR code.
+    </p>
+
+</div>

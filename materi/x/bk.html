@@ -1,0 +1,870 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SinBar TIK</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../../common.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="navbar navbar-expand-lg navbar-dark sticky-top navbar-color">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-lg-5 ms-sm-3 me-auto" href="#">
+          <img
+            src="../../assets/images/logo.png"
+            alt="Logo"
+            width="108"
+            height="45"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="black"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a
+                data-replace="Home"
+                class="nav-link px-4 active text-dark"
+                aria-current="page"
+                href="../../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a
+                data-replace="Materi"
+                class="nav-link px-4 text-dark"
+                href="../../materi.html"
+                >Materi</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a
+                data-replace="Tentang"
+                class="nav-link px-4 text-dark"
+                href="../../tentang.html"
+                >Tentang</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- END NAV -->
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="sidebar collapsed">
+        <button class="toggle-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="black"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <hr />
+        <div class="sidebar-content">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3 style="text-align: center">Subbab</h3>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#1">
+                1. Pola Berpikir
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#2">
+                2. Pernyataan dan Logika Preposisi
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#3">
+                3. Logika Matematika
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#4">
+                4. Metode Penalaran
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#5">
+                5. Logika Penalaran Interfensi
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#6">
+                6. Logika Konversi Bilangan
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#7">
+                7. Berpikir Algoritmik
+              </a>
+            </li>
+            <li class="list-group-item chapter">
+              <a class="text-dark" aria-current="page" href="#v">
+                Video Materi
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sidebar-main">
+        <div class="container" id="1" style="scroll-margin-top: 60px">
+          <h1>1. Pola Berpikir</h1>
+          <hr />
+
+          <img
+            src="../../assets/images/bk/poina.svg"
+            alt="poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/poina.svg"
+            alt="poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <h2>A. Konsep Ide atau Gagasan</h2>
+
+          <p>
+            <b>Ide atau Gagasan Daya</b>, respon berpikir yang melahirkan
+            imajinasi berupa rancangan solusi terhadap masalah yang dihadapi
+            sebagai hasil pemikiran, baik yang bersifat spontan maupun melalui
+            proses pemikiran yang lama.
+          </p>
+          <p>
+            Ide atau gagasan yang dihasilkan dari proses berpikir secara panjang
+            dan matang disebut penalaran. Penalaran dapat memberikan solusi
+            alternatif yang lebih matang. Terkadang ide tidak langsung
+            dituangkan dalam sebuah tindakan nyata, tetapi masih sebatas
+            bayangan yang disimulasikan secara mendalam, berbekal pengetahuan
+            dan keterampilan yang dimiliki. Keberhasilan ide atau gagasan akan
+            diuji setelah dilakukan implementasi.
+          </p>
+
+          <h2>B. Teknik Memetakan Ide</h2>
+
+          <img
+            src="../../assets/images/bk/poinb2.svg"
+            alt="poinb2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/poinb2.svg"
+            alt="poinb2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <p>
+            <b>Teknik Memetakan Ide</b>, Kompleksitas permasalahan harus
+            diimbangi dengan visualisasi penjabaran ide atau gagasan secara
+            detail, jelas dan mudah dibaca. Tahapan mengkategorikan, menjabarkan
+            dan menggambarkan ide ini merupakan sebuah sistem pemetaan ide.
+          </p>
+
+          <h2>C. Konsep Algoritma</h2>
+
+          <p>
+            <b>Algoritma</b>, adalah Serangkaian proses atau aturan yang disusun
+            dan diurutkan secara sistematis dan logis untuk menyelesaikan
+            permasalahan.
+          </p>
+        </div>
+        <div class="container" id="2" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>2. Pernyataan dan Logika Preposisi</h1>
+          <hr />
+
+          <h2>A. Definisi Proposisi</h2>
+
+          <p>
+            <b>Proposisi</b>, adalah metode untuk menyatakan sesuatu secara utuh
+            sehingga dapat dinilai apakah pernyataan tersebut benar, salah,
+            disetujui, ditolak, diterima, atau disangkal validatasnya.
+          </p>
+
+          <p class="no-indent">
+            Logika proposisi dapat diidentifikasi berdasarkan empat elemen,
+            yaitu:
+          </p>
+
+          <ol>
+            <li>
+              <b>Subjek</b>, Konsep yang menjadi aktor utama dalam pernyataan.
+            </li>
+            <li>
+              <b>Kopula</b>, Kata kerja (verba) yang menjadi penghubung antara
+              subjek dan predikat dalam sebuah pernyataan.
+            </li>
+            <li>
+              <b>Predikat</b>, Perlakuan atau tindakan yang dilakukan atau
+              dikenakan pada subjek.
+            </li>
+            <li>
+              <b>Kuantor</b>, Bagian dari pernyataan yang penulisannya
+              disesuaikan dengan kebutuhan, dengan tujuan untuk mengubah frasa
+              pernyataan umum menjadi tertutup dalam mempertegas makna yang
+              disampaikan.
+            </li>
+          </ol>
+
+          <img
+            src="../../assets/images/bk/2poina.svg"
+            alt="2poina"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/2poina.svg"
+            alt="2poina"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <h2>B. Aspek Penggunaan dalam Proposisi</h2>
+
+          <img
+            src="../../assets/images/bk/2poinb.svg"
+            alt="2poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        </div>
+        <div class="container" id="3" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>3. Logika Matematika</h1>
+          <hr />
+
+          <img
+            src="../../assets/images/bk/3poina2.svg"
+            alt="3poina2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/3poina2.svg"
+            alt="3poina2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <h2>A. Negasi</h2>
+
+          <p>
+            Metode membalikan niai sebelumnya, yang semula benar menjadi salah
+            dan salah menjadi benar. Dengan menambahkan negasi (~), dapat
+            membuat penyangkalan atau pengingkaran dari pernyataan yang
+            sebelumnya dibuat.
+          </p>
+
+          <img
+            src="../../assets/images/bk/3poina1.svg"
+            alt="3poina1"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>B. Konjungsi</h2>
+
+          <p>
+            Teknik penggabungan beberapa pernyataan (pernyataan majemuk) dengan
+            karakteristik konjungsi kara “dan” yang dinotasikan dengan simbol
+            “∧”. Konjungsi akan menghasilkan keluaran benar jika kedua masukan
+            bernilai benar.
+          </p>
+
+          <img
+            src="../../assets/images/bk/3poinb.svg"
+            alt="3poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>C. Disjungsi</h2>
+
+          <p>
+            Teknik perbandingan antara dua pernyataan (pernyataan majemuk) yang
+            dihubungkan dengan kata “atau” dinotasikan dengan simbol “∨”.
+            Disjungsi ini akan menghasilkan nilai benar selama ada salah satu
+            pernyataan yang bernilai benar.
+          </p>
+
+          <img
+            src="../../assets/images/bk/3poinc.svg"
+            alt="3poinc"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>D. Implikasi</h2>
+
+          <p>
+            Penerapan pernyataan majemuk yang menggunakan kata penghubung
+            “jika.. maka” dengan notasi simbol “→”.
+          </p>
+
+          <img
+            src="../../assets/images/bk/3poind.svg"
+            alt="3poind"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>E. Biimplikasi</h2>
+
+          <p>
+            Penerapan pernyataan majemuk yang dibentuk dengan menggunakan kata
+            penghubung “…jika dan hanya jika”, dengan notasi simbol “↔”.
+          </p>
+
+          <img
+            src="../../assets/images/bk/3poine.svg"
+            alt="3poine"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        </div>
+        <div class="container" id="4" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>4. Metode Penalaran</h1>
+          <hr />
+
+          <h2>A. Definisi</h2>
+
+          <p>
+            Penalaran adalah proses menyimulasikan ide tersebut dalam otak untuk
+            dianalisis, ditimbang, dan diuji secara mendalam. Metode penalaran
+            manusia dapat dikategorikan menjadi tiga jenis, yaitu:
+            <b>Deduktif</b>, <b>Induktif</b>, dan <b>Abduktif</b>.
+          </p>
+
+          <img
+            src="../../assets/images/bk/4poinb2.svg"
+            alt="4poinb2"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/4poinb2.svg"
+            alt="4poinb2"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <h2>B. Deduktif</h2>
+
+          <p>
+            Metode penalaran yang difokuskan untuk menggali informasi-informasi
+            umum, kemudian dirangkum menjadi simpulan secara khusus. Berikut
+            macam deduktif :
+          </p>
+
+          <img
+            src="../../assets/images/bk/4poinb1.svg"
+            alt="4poinb1"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>C. Induktif</h2>
+
+          <img
+            src="../../assets/images/bk/4poinc.svg"
+            alt="4poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/4poinc.svg"
+            alt="4poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <p>
+            Metode induktif dilakukan dengan mempelajarai dan menganalisis
+            pernyataan-pernyataan secara khusus atau spesifik menjadi bersifat
+            umum.
+          </p>
+
+          <p class="no-indent">
+            Aktivitas yang sering dikerjakan dalam proses penalaran induktif,
+            yaitu :
+          </p>
+          <ol>
+            <li>
+              Analogi, aktivitas pengambilan simpulan dengan mempertimbangkan
+              keseragaman data atau proses.
+            </li>
+            <li>
+              Generalisasi, teknik penetapan simpulan berdasarkan kumpulan data
+              yang telah dianalisis terlebih dulu.
+            </li>
+            <li>
+              Transduktif, metode penarikan poin simpulan terhadap kasus yang
+              bersifat khusus, yang diimplementasikan pada kasus lainnya.
+            </li>
+            <li>
+              Memprediksi kebenaran jawaban terhadap persoalan, solusi pemecahan
+              masalah, ekstrapolasi, dan interpolasi.
+            </li>
+            <li>
+              Menggambarkan model, sifat, kenyataan, fakta, korelasi atau
+              hubungan, dan pattern atau pola.
+            </li>
+            <li>
+              Menerapkan teknik analisis terhadap pola hubungan situasi,
+              kemudian disusun menjadi konjektur.
+            </li>
+          </ol>
+
+          <p>
+            Metode penalaran yang dilakukan dengan mengambil salah satu opsi
+            argumentasi atau alasan yang dianggap mendekati kebenaran dari
+            beberapa pilihan argumentasi. Terdapat 4 solusi yang dapat
+            dilakukan:
+          </p>
+
+          <h2>D. Abduktif</h2>
+
+          <img
+            src="../../assets/images/bk/4poind.svg"
+            alt="4poind"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        </div>
+        <div class="container" id="5" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>5. Logika Penalaran Interfensi</h1>
+          <hr />
+
+          <h2>A. Konsep Inferensi</h2>
+
+          <p>
+            Inferensi atau Inference (dalam Bahasa inggris) = Penyimpulan. Kata
+            kerja penyimpulan memiliki makna tindakan membuat simpulan atau
+            konklusi. Dalam arti luas, inferensi adalah mekanisme pembuatan
+            simpulan atau konklusi berdasarkan satu atau lebih proposisi. Dalam
+            pelaksanaannya, metode inferensi harus mempertimbangkan faktor
+            implikatur atau makna yang tersirat, baik secara langsung maupun
+            tidak langsung.
+          </p>
+
+          <h2>B. Kebenaran Argumen</h2>
+
+          <p>
+            Argumen merupakan kumpulan pernyataan dengan bagian akhir dari
+            pernyataan tersebut dapat dikategorikan sebagai konklusi. Sedangkan
+            pernyataan-pernyataan yang ditulis sebelumnya dikenal dengan istilah
+            premis atau hipotesis.
+          </p>
+
+          <h2>C. Jenis Inferensi Berdasarkan Jumlah Premis</h2>
+
+          <img
+            src="../../assets/images/bk/5poinc.svg"
+            alt="5poinc"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>D. Metode Inferensi</h2>
+
+          <img
+            src="../../assets/images/bk/5poind.svg"
+            alt="5poind"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/5poind.svg"
+            alt="5poind"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+
+          <ol>
+            <li>Modus Ponens</li>
+            <p class="no-indent">
+              Modus ponens dapat dilihat pada contoh penerapan logika implikasi,
+              yaitu agar p "→" q menghasilkan simpulan bernilai benar, maka q
+              harus bernilai benar.
+            </p>
+            <li>Modus Tollens</li>
+            <p class="no-indent">
+              Proses pengambilan simpulan dengan tollens sebenernya mirip dengan
+              modus ponens. Perbedaannya adalaah premis kedua dan simpulan
+              merupakan negasi dari setiap proposisi pada premis awal.
+            </p>
+            <li>Modus Penambahan Disjungtif</li>
+            <p class="no-indent">
+              Dengan penghubung “V” pada aturan disjungtif, jika salah satu
+              pernyataan bernilai benar, disjungsi akan bernilai benar.
+            </p>
+            <p class="no-indent">Notasi dalam modus penambahan disjungtif :</p>
+            <img
+              src="../../assets/images/bk/disjungtif.svg"
+              alt="disjungtif"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/bk/disjungtif.svg"
+              alt="disjungtif"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <li>Modus Penyederhanaan Konjungtif</li>
+            <p class="no-indent">
+              Dalam modus ini, jika beberapa pernyataan dihubungkan dengan
+              pengubung “∧”, maka dapat diambil salah satu pernyataan secara
+              khusus.
+            </p>
+            <p class="no-indent">Notasi dalam modus penambahan konjungtif :</p>
+            <img
+              src="../../assets/images/bk/konjungtif.svg"
+              alt="disjungtif"
+              class="d-md-block d-none"
+              width="60%"
+              style="
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+            <img
+              src="../../assets/images/bk/konjungtif.svg"
+              alt="disjungtif"
+              class="d-md-none d-block"
+              width="80%"
+              style="
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+              "
+            />
+          </ol>
+        </div>
+        <div class="container" id="6" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>6. Logika Konversi Bilangan</h1>
+          <hr />
+
+          <h2>A. Jenis dan Format Bilangan</h2>
+
+          <p>
+            Pada umumnya, bilangan yang dikenal adalah kombinasi dari 0 dan 9.
+            Angka-angka tersebut dapat dikelompokan lagi menjadi beberapa jenis
+            bilangan, mulai dari bilangan biner, ternary, desimal hingga
+            heksadesimal. Dari banyak jenis bilangan tersebut ada empat format
+            bilangan yang sering digunakan yaitu biner, oktal, desimal, dan
+            heksadesimal.
+          </p>
+
+          <img
+            src="../../assets/images/bk/6poina1.svg"
+            alt="6poina1"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <img
+            src="../../assets/images/bk/6poina2.svg"
+            alt="6poina2"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>B. Teknik Konversi Bilangan</h2>
+
+          <p>
+            Konversi adalah mengubah bentuk atau dapat dikatakan teknik mengubah
+            suatu bentuk lainnya, dengan tetap memiliki arti dan nilai yang
+            sama.
+          </p>
+
+          <img
+            src="../../assets/images/bk/6poinb.svg"
+            alt="6poinb"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+
+          <h2>C. Sistem Penyandi Bilangan</h2>
+
+          <p>
+            Ketika seorang user mengetikkan angka 8 dengan dengan keyboard,
+            tombol akan mengubah kode desimal menjadi sebuah angka biner yang
+            dikirim menuju CPU atau processor. Proses tersebut merupakan tahap
+            encoding, yaitu tahap mengubah nilai bilangan desimal 8 menjadi
+            biner sebelum dikirimkan ke CPU. Nilai biner 〖1000〗_2 pada CPU
+            kemudial diolah dan dikirimkan menuju rangkaian decoder untuk
+            mengubah nilai biner 〖1000〗_2 menjadi nilai desimal 8, yang
+            kemudian ditampilkan dalam layar monitor.
+          </p>
+
+          <img
+            src="../../assets/images/bk/6poinc.svg"
+            alt="6poinc"
+            class="d-md-block d-none"
+            width="60%"
+            style="
+              margin-left: 20%;
+              margin-right: 20%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+          <img
+            src="../../assets/images/bk/6poinc.svg"
+            alt="6poinc"
+            class="d-md-none d-block"
+            width="80%"
+            style="
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 3%;
+              margin-bottom: 3%;
+            "
+          />
+        </div>
+        <div class="container" id="7" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1>7. Berpikir Algoritmik</h1>
+          <hr />
+
+          <h2>A. Jenis data dalam bilangan</h2>
+
+          <p>
+            Berpikir komputasional atau computational thinking merupakan metode
+            menyelesaikan masalah-masalah dengan cara menerapkan model ilmu
+            komputer (informatika) yang menuntut berpola pikir runtut, teratur,
+            detail, jelas, memiliki nilai input dan output yang dihasilkan.
+            Nilai yang diinputkan, diolah dan dihasilkan merupakan sebuah data
+            yang dibaca, dihitung dan dianalisis.
+          </p>
+
+          <h2>B. Teknologi Computational Thinking</h2>
+
+          <p>
+            Konsep CT atau Computational Thinking pertama kali diperkenalkan
+            oleh Jeannette Wing pada Maret 2006 sebagai bentuk model dan
+            mekanisme penyelesaian masalah melalui tahapan analisis masalah,
+            desain sistem, dan implementasi menggunakan pendekatan ilmu komputer
+            dengan tujuan efektivitas dan kecepatan pengambilan keputusan.
+          </p>
+
+          <img
+            src="../../assets/images/bk/7poinc.svg"
+            alt="7poinc"
+            width="100%"
+            style="margin-top: 3%; margin-bottom: 3%"
+          />
+        </div>
+        <div class="container" id="v" style="scroll-margin-top: 50px">
+          <hr class="mt-5" />
+          <h1 class="text-center">Video Materi</h1>
+          <hr />
+          <div class="text-center">
+            <iframe
+              width="100%"
+              height="50%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hWkMetsTXMHAU95E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="container footer py-3 px-5">
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-center flex-column flex-lg-row align-items-center py-3 my-4 border-top"
+          >
+            <p class="col-md-4 mb-0 text-dark">© 2024</p>
+
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item">
+                <a
+                  href="https://wa.me/+6282143322393"
+                  target="_blank"
+                  class="text-dark my-auto"
+                >
+                  <i class="bi bi-whatsapp me-2"></i> +62 821-4332-2393
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        <!-- END FOOTER -->
+      </div>
+    </main>
+    <!-- END MAIN CONTENT -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../sidebar.js"></script>
+  </body>
+</html>
