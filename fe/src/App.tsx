@@ -4,7 +4,8 @@ import Router from "./Router";
 export default function App() {
   return (
     <>
-      {localStorage.getItem('userData') ? <Router /> : <Auth />}
+      <Router />
+      {/* {localStorage.getItem('userData') ? <Router /> : <Auth />} */}
     </>
   )
 }

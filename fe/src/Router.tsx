@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Dashboard from "./Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 export default function Router() {
     const page = sessionStorage.getItem('page') || 'dashboard';
