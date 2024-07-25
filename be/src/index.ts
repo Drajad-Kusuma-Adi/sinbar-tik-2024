@@ -1,37 +1,27 @@
+// Core depedencies and type declarations
 import express, { Application, Request, Response, NextFunction } from 'express';
 import { PrismaClient } from '@prisma/client';
+import dotenv from 'dotenv';
 
-require('dotenv').config();
+// Core functionalities
+import { register, verifyToken, login, logout } from './auth';
 
-const app: Application = express();
-const prisma = new PrismaClient()
+dotenv.config(); // Load environment variables from .env file
 
-app.use(express.json()); // parse JSON requests
+const app: Application = express(); // Bootstrap express app
+const prisma: PrismaClient = new PrismaClient(); // Prisma client
 
-app.get('/', async (req: Request, res: Response) => {
-  res.send({ message: 'Hello World!' });
-});
+app.use(express.json()); // Parse JSON requests
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error(err);
-  res.status(500).send({ message: 'Internal Server Error' });
-});
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => res.status(500).send({ message: err.message })); // Middleware to handle errors on the server
 
-async function main() {
-  try {
-    // Write your Prisma Client queries here
-    const result = await prisma.user.findMany();
-    console.log(result);
-  } catch (e) {
-    console.error(e);
-    process.exit(1);
-  } finally {
-    await prisma.$disconnect();
-  }
-}
+// * Auth routes
+app.route("/auth")
+  .post(register)
+  .get(verifyToken)
+  .put(login)
+  .delete(logout);
 
-main().catch((e) => console.error(e)).finally(() => {
-  app.listen(process.env.PORT, () => {
-    console.log('Server is running on port 3000');
-  });
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });

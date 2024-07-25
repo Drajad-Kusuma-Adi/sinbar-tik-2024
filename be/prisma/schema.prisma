@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,37 +7,36 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id             String   @id @default(uuid()) @map("_id")
-  name           String
-  email          String   @unique
+model Users {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  username       String   @unique
   password       String
   xp             Int      @default(0)
   is_admin       Boolean  @default(false)
-  remember_token String
+  remember_token String?  @unique
   created_at     DateTime @default(now())
-  updated_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
 
   @@map("users")
 }
 
 model Materials {
-  id          String   @id @default(uuid()) @map("_id")
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  description String
-  content     Json
+  description String?
+  content     Json[]
   created_at  DateTime @default(now())
-  updated_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
 
   @@map("materials")
 }
 
-model Quiz {
-  id         String   @id @default(uuid()) @map("_id")
+model Quizzes {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
   title      String
   content    Json[]
   created_at DateTime @default(now())
-  updated_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 
   @@map("quizzes")
 }
