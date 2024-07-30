@@ -1,10 +1,31 @@
 // import { api } from "../utils/API";
+import { useState } from 'react';
 
 export default function Auth() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loggedUser, setLoggedUser] = useState(null);
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     // TODO:
+    // fetch PUT {be url}/auth send username&password -> then((res) => {loggedUser = res})
+    // localStorage.setItem('userData', loggedUser)
+
+    const apiUrl = 'http://localhost:3000'; // replace with your API URL
+    const userData = { username, password };
+
+    fetch(apiUrl, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setLoggedUser(data);
+        localStorage.setItem('userData', JSON.stringify(data));
+      })
+      .catch((error) => console.error(error));
   }
 
   return (
@@ -28,7 +49,7 @@ export default function Auth() {
                 <input name="password" type="password" placeholder="Password" className="w-full" />
               </div>
             </div>
-            <button className="button rounded-md w-full bg-[#04364A] text-white p-2">Submit</button>
+            <button type="submit" className="button rounded-md w-full bg-[#04364A] text-white p-2">Submit</button>
           </form>
         </div>
       </div>
