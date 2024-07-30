@@ -1,4 +1,4 @@
-import { api } from "../utils/API";
+// import { api } from "../utils/API";
 
 export default function Auth() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
