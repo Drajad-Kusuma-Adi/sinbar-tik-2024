@@ -11,6 +11,9 @@ dotenv.config(); // Load environment variables from .env file
 const app: Application = express(); // Bootstrap express app
 const prisma: PrismaClient = new PrismaClient(); // Prisma client
 
+import cors from 'cors';
+app.use(cors());
+
 app.use(express.json()); // Parse JSON requests
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => res.status(500).send({ message: err.message })); // Middleware to handle errors on the server
