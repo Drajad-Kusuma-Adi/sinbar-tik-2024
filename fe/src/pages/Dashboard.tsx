@@ -2,6 +2,25 @@ import { useState } from 'react';
 
 export default function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    function handleLogout() {
+
+        const apiUrl = 'http://localhost:3000/auth';
+        const token = localStorage.getItem('userData');
+
+        fetch(apiUrl, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then((response) => response.json())
+        .then(() => {
+            localStorage.removeItem('userData');
+            location.reload();
+        })
+        .catch((error) => console.error(error));
+    }
     return (
         <>
             <div className="w-screen h-screen">
@@ -53,10 +72,10 @@ export default function Dashboard() {
                             </ul>
                         </div>
                         <div className="fixed bottom-0 left-0 p-4 bg-white">
-                            <a href="#" className="text-[#B43535] font-semibold">
+                            <button className="text-[#B43535] font-semibold" onClick={handleLogout}>
                                 <img src="Logout.svg" alt="logout" className="inline-block me-2" />
                                 Log Out
-                            </a>
+                            </button>
                         </div>
                     </div>
 
