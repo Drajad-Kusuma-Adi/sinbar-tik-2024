@@ -37,7 +37,7 @@ export default function Peringkat() {
                             <p className="text-gray-500 mb-8">Menu Utama</p>
                             <ul>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 30 26">
                                             <path d="M1 3.66667C1 2.95942 1.295 2.28115 1.8201 1.78105C2.3452 1.28095 3.05739 1 3.8 1H12.2V25H3.8C3.05739 25 2.3452 24.719 1.8201 24.219C1.295 23.7189 1 23.0406 1 22.3333V3.66667ZM17.8 1H26.2C26.9426 1 27.6548 1.28095 28.1799 1.78105C28.705 2.28115 29 2.95942 29 3.66667V10.3333H17.8V1ZM17.8 15.6667H29V22.3333C29 23.0406 28.705 23.7189 28.1799 24.219C27.6548 24.719 26.9426 25 26.2 25H17.8V15.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -62,7 +62,7 @@ export default function Peringkat() {
                                     </button>
                                 </li>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'peringkat'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'peringkat'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 26 26">
                                             <path d="M9.75032 23.8332V18.4166C9.75032 17.395 9.75032 16.8847 9.43291 16.5673C9.11549 16.2499 8.60524 16.2499 7.58366 16.2499H7.04199C5.50908 16.2499 4.74316 16.2499 4.26866 16.7266C3.79199 17.2021 3.79199 17.9681 3.79199 19.4999V23.8332H9.75032ZM9.75032 23.8332H16.2503M9.75032 23.8332V17.3332C9.75032 15.8014 9.75032 15.0355 10.227 14.5599C10.7015 14.0832 11.4674 14.0832 13.0003 14.0832C14.5332 14.0832 15.2981 14.0832 15.7737 14.5599C16.2503 15.0355 16.2503 15.8014 16.2503 17.3332V23.8332M16.2503 23.8332H22.2087V21.6666C22.2087 20.1347 22.2087 19.3688 21.732 18.8932C21.2564 18.4166 20.4905 18.4166 18.9587 18.4166H18.417C17.3954 18.4166 16.8852 18.4166 16.5677 18.734C16.2503 19.0514 16.2503 19.5616 16.2503 20.5832V23.8332ZM2.16699 23.8332H23.8337M13.7489 2.79272L14.5116 4.33106C14.5763 4.44632 14.6645 4.54668 14.7705 4.62563C14.8765 4.70458 14.9979 4.76034 15.1269 4.78931L16.5092 5.02006C17.3932 5.16847 17.6012 5.81522 16.9642 6.45331L15.8896 7.53664C15.7954 7.64329 15.7262 7.76967 15.6873 7.90651C15.6483 8.04336 15.6404 8.18719 15.6642 8.32747L15.9719 9.66864C16.2146 10.7303 15.6556 11.1409 14.7239 10.5862L13.4282 9.81272C13.2957 9.74397 13.1486 9.70808 12.9992 9.70808C12.8499 9.70808 12.7028 9.74397 12.5702 9.81272L11.2746 10.5862C10.3472 11.1409 9.78391 10.726 10.0266 9.66864L10.3342 8.32747C10.3581 8.18719 10.3502 8.04336 10.3112 7.90651C10.2722 7.76967 10.2031 7.64329 10.1089 7.53664L9.03533 6.45331C8.40266 5.81522 8.60633 5.16847 9.49033 5.02006L10.8716 4.78931C10.9999 4.75967 11.1205 4.70348 11.2257 4.62436C11.331 4.54525 11.4185 4.44497 11.4826 4.32997L12.2452 2.79164C12.6612 1.95747 13.3372 1.95747 13.7489 2.79164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -95,7 +95,134 @@ export default function Peringkat() {
                     {/* Main Content */}
                     <div className="md:w-1/3 lg:w-1/4 xl:w-1/5"></div>
                     <div className="flex-1 p-4 w-full mt-14 md:mt-0 me-4">
-                        <p>Peringkat</p>
+                        <h1 className='font-bold text-lg'>Berikut adalah peringkat siswa</h1>
+                        <p className='opacity-50'>Kembangkan potensimu</p>
+                        <div className='rounded-t-xl border border-gray-300 mt-4 w-full'>
+                            <table className='w-full'>
+                                <tr className='border-b border-gray-300'>
+                                    <td className="p-4 text-xl text-start" colSpan={3}>
+                                        <div className="flex w-2/3 border p-2 rounded-lg">
+                                            <img src="Search.svg" alt="search" className='ms-2 me-4 w-[24px]' />
+                                            <input type="text" className="flex-1 border-0 bg-transparent text-lg" placeholder="Search" />
+                                        </div>
+                                    </td>
+                                    <td className="p-4 float-right flex items-center h-[78px]">Showing 1-50 of 500</td>
+                                </tr>
+                                <tr className='font-bold text-gray-500'>
+                                    <td className='p-4'>Nama Siswa</td>
+                                    <td className='p-4'>Peringkat</td>
+                                    <td className='p-4'>Perolehan XP</td>
+                                    <td className='p-4'>Level saat ini</td>
+                                </tr>
+                                {/* USERS */}
+                                <tr className="border-t border-gray-300">
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        1
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#ECFDF5] rounded-md p-1 px-8 text-[#0BB77E]'>Level 1</button>
+                                    </td>
+                                </tr>
+                                <tr className="border-t border-gray-300">
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        2
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#ECFDF5] rounded-md p-1 px-8 text-[#0BB77E]'>Level 2</button>
+                                    </td>
+                                </tr>
+                                <tr className='border-t border-gray-300'>
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        3
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#ECFDF5] rounded-md p-1 px-8 text-[#0BB77E]'>Level 3</button>
+                                    </td>
+                                </tr>
+                                <tr className='border-t border-gray-300'>
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        4
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#FFFBEB] rounded-md p-1 px-8 text-[#F49F0D]'>Level 1</button>
+                                    </td>
+                                </tr>
+                                <tr className='border-t border-gray-300'>
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        5
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#FFFBEB] rounded-md p-1 px-8 text-[#F49F0D]'>Level 1</button>
+                                    </td>
+                                </tr>
+                                <tr className='border-t border-gray-300'>
+                                    <td className='p-4 text-gray-900'>
+                                        <img src="https://via.placeholder.com/50" alt="profile" className='rounded-full inline-block me-2' />
+                                        Username
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        6
+                                    </td>
+                                    <td className='p-4 text-lg'>
+                                        100000XP
+                                    </td>
+                                    <td className='p-4'>
+                                        <button className='bg-[#FFF1F2] rounded-md p-1 px-8 text-[#E96B6B]'>Level 1</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        {/* Pages */}
+                        <div className='mt-4 flex justify-between'>
+                            <button onClick={() => {}} className='flex border border-[#196C88] rounded-md p-1 ps-6 pe-8 text-[#196C88]'>
+                                <img src="Right.svg" alt="arrow" className='transform scale-x-[-1] inline-block me-4 mt-[2px]' /> Prev
+                            </button>
+                            <div className='flex flex-wrap gap-x-2'>
+                                <button className='rounded-lg border border-[#196C88] px-3 p-1'>1</button>
+                                <button className='rounded-lg px-3 p-1'>2</button>
+                                <button className='rounded-lg px-3 p-1'>3</button>
+                                <button className='rounded-lg px-3 p-1'>4</button>
+                            </div>
+                            <button onClick={() => {}} className='flex border border-[#196C88] rounded-md p-1 ps-8 pe-6 bg-[#196C88] text-white'>
+                                Next <img src="Right.svg" alt="arrow" className='filter invert contrast-200 brightness-0 inline-block ms-4 mt-[2px]' />
+                            </button>
+                        </div>
+                        <hr className='opacity-0 mt-4' />
                     </div>
                 </div>
             </div>

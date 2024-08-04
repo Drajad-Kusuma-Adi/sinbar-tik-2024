@@ -174,38 +174,38 @@ export default function Dashboard() {
                         {/* Kuis */}
                         <h1 className='mt-4 font-bold text-lg'>Semua Kuis</h1>
                         <hr className='border-[#196C88] w-[13%] sm:w-[11%] md:w-[12%] lg:w-[8.5%] xl:w-[7.5%]' />
-                        <div className="flex mt-4">
-                            <div className="w-1/3 bg-[#ECFBFF] p-4 me-4 rounded-xl text-center">
+                        <div className="flex flex-wrap gap-4 mt-4">
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#ECFBFF] p-4 rounded-xl text-center">
                                 <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
                                 <p className='text-xl my-2'>Level 1</p>
                                 <p>30 Soal</p>
-                                <button className='shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                                <button className='shadow-[#CDE1EC] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
                             </div>
-                            <div className="w-1/3 bg-[#EEF2FE] p-4 mx-4 rounded-xl text-center">
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#EEF2FE] p-4 rounded-xl text-center">
                                 <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
                                 <p className='text-xl my-2'>Level 2</p>
                                 <p>30 Soal</p>
-                                <button className='shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                                <button className='shadow-[#CFD6E8] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
                             </div>
-                            <div className="w-1/3 bg-[#FCF8EF] p-4 ms-4 rounded-xl text-center">
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#FCF8EF] p-4 rounded-xl text-center">
                                 <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
                                 <p className='text-xl my-2'>Level 3</p>
                                 <p>30 Soal</p>
-                                <button className='shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                                <button className='shadow-[#F7E0AD] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
                             </div>
                         </div>
                         {/* Pematerian */}
                         <h1 className='mt-4 font-bold text-lg'>Pematerian</h1>
                         <hr className='border-[#196C88] w-[13%] sm:w-[11%] md:w-[12%] lg:w-[8.5%] xl:w-[7.5%]' />
-                        <div className="flex mt-4">
-                            <div className="w-1/2 mx-auto bg-white rounded-xl border me-4">
+                        <div className="flex flex-wrap gap-4 mt-4">
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
                                 <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
                                 <div className="p-4">
                                     <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>
                                     <p className="text-gray-600">Perkembangan teknologi komputer berawal dari kemunculan mesin kalkulator yang ...</p>
                                 </div>
                             </div>
-                            <div className="w-1/2 mx-auto bg-white rounded-xl border ms-4">
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
                                 <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
                                 <div className="p-4">
                                     <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>

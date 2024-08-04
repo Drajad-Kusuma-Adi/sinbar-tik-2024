@@ -37,7 +37,7 @@ export default function Quiz() {
                             <p className="text-gray-500 mb-8">Menu Utama</p>
                             <ul>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 30 26">
                                             <path d="M1 3.66667C1 2.95942 1.295 2.28115 1.8201 1.78105C2.3452 1.28095 3.05739 1 3.8 1H12.2V25H3.8C3.05739 25 2.3452 24.719 1.8201 24.219C1.295 23.7189 1 23.0406 1 22.3333V3.66667ZM17.8 1H26.2C26.9426 1 27.6548 1.28095 28.1799 1.78105C28.705 2.28115 29 2.95942 29 3.66667V10.3333H17.8V1ZM17.8 15.6667H29V22.3333C29 23.0406 28.705 23.7189 28.1799 24.219C27.6548 24.719 26.9426 25 26.2 25H17.8V15.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -53,7 +53,7 @@ export default function Quiz() {
                                     </button>
                                 </li>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'quiz'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'quiz'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 21 22">
                                             <path d="M18 12V8.368C18 4.895 18 3.158 16.975 2.079C15.95 1 14.3 1 11 1H8C4.7 1 3.05 1 2.025 2.08C1 3.157 1 4.894 1 8.367V13.631C1 17.104 1 18.841 2.025 19.92C3.05 20.999 4.7 21 8 21H9.5M12 19C12 19 13 19 14 21C14 21 17.177 16 20 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M5.5 1L5.582 1.493C5.782 2.69 5.882 3.289 6.302 3.645C6.72 4 7.327 4 8.541 4H10.458C11.671 4 12.278 4 12.698 3.645C13.118 3.289 13.218 2.69 13.417 1.493L13.5 1M5.5 15H9.5M5.5 10H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -106,7 +106,46 @@ export default function Quiz() {
                                 <img src="https://via.placeholder.com/50" alt="profile" onClick={() => { sessionStorage.setItem('page', 'profile'); location.reload() }} className='hover:cursor-pointer ms-4 md:ms-8 lg:ms-12 xl:ms-16 rounded-full h-full' />
                             </div>
                         </div>
-                        <p>Quiz</p>
+                        {/* Kuis */}
+                        <div className="flex flex-wrap gap-4">
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#ECFBFF] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 1</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#CDE1EC] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#EEF2FE] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 2</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#CFD6E8] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#FCF8EF] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 3</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#F7E0AD] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#ECFBFF] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 4</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#CDE1EC] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#EEF2FE] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 5</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#CFD6E8] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                            <div className="flex-grow w-1/3 md:w-1/4 bg-[#FCF8EF] p-4 rounded-xl text-center">
+                                <img src="https://via.placeholder.com/100" alt="image" className='mx-auto' />
+                                <p className='text-xl my-2'>Level 6</p>
+                                <p>30 Soal</p>
+                                <button className='shadow-[#F7E0AD] shadow-lg p-4 w-full bg-white font-bold rounded-xl mt-6'>Main</button>
+                            </div>
+                        </div>
+                        <hr className='opacity-0 mt-4' />
                     </div>
                 </div>
             </div>

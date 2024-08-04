@@ -37,7 +37,7 @@ export default function Material() {
                             <p className="text-gray-500 mb-8">Menu Utama</p>
                             <ul>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 30 26">
                                             <path d="M1 3.66667C1 2.95942 1.295 2.28115 1.8201 1.78105C2.3452 1.28095 3.05739 1 3.8 1H12.2V25H3.8C3.05739 25 2.3452 24.719 1.8201 24.219C1.295 23.7189 1 23.0406 1 22.3333V3.66667ZM17.8 1H26.2C26.9426 1 27.6548 1.28095 28.1799 1.78105C28.705 2.28115 29 2.95942 29 3.66667V10.3333H17.8V1ZM17.8 15.6667H29V22.3333C29 23.0406 28.705 23.7189 28.1799 24.219C27.6548 24.719 26.9426 25 26.2 25H17.8V15.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -45,7 +45,7 @@ export default function Material() {
                                     </button>
                                 </li>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'material'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'material'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-none fill-current" width="30" height="30" viewBox="0 0 21 24">
                                             <path d="M3.60937 24C2.625 24 1.77734 23.7123 1.06641 23.1368C0.355469 22.5613 0 21.8491 0 21V5.20755C0 4.49057 0.257031 3.84906 0.771094 3.28302C1.28516 2.71698 1.95781 2.35849 2.78906 2.20755L15.75 0V18.1132L3.31406 20.2642C3.11719 20.3019 2.95312 20.3915 2.82187 20.533C2.69062 20.6745 2.625 20.8302 2.625 21C2.625 21.2075 2.72344 21.3821 2.92031 21.5236C3.11719 21.6651 3.34687 21.7358 3.60937 21.7358H18.375V3.62264H21V24H3.60937ZM6.5625 17.4057L13.125 16.3019V2.77358L6.5625 3.87736V17.4057ZM3.9375 17.8585V4.33019L3.44531 4.41509C3.20469 4.45283 3.00781 4.54245 2.85469 4.68396C2.70156 4.82547 2.625 5 2.625 5.20755V18.1415C2.73438 18.1038 2.84922 18.0708 2.96953 18.0425C3.08984 18.0142 3.20469 17.9906 3.31406 17.9717L3.9375 17.8585Z" />
                                         </svg>
@@ -106,7 +106,38 @@ export default function Material() {
                                 <img src="https://via.placeholder.com/50" alt="profile" onClick={() => { sessionStorage.setItem('page', 'profile'); location.reload() }} className='hover:cursor-pointer ms-4 md:ms-8 lg:ms-12 xl:ms-16 rounded-full h-full' />
                             </div>
                         </div>
-                        <p>Material</p>
+                        {/* Materi */}
+                        <div className="flex flex-wrap gap-4 mt-4">
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
+                                <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
+                                <div className="p-4">
+                                    <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>
+                                    <p className="text-gray-600">Perkembangan teknologi komputer berawal dari kemunculan mesin kalkulator yang ...</p>
+                                </div>
+                            </div>
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
+                                <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
+                                <div className="p-4">
+                                    <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>
+                                    <p className="text-gray-600">Perkembangan teknologi komputer berawal dari kemunculan mesin kalkulator yang ...</p>
+                                </div>
+                            </div>
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
+                                <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
+                                <div className="p-4">
+                                    <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>
+                                    <p className="text-gray-600">Perkembangan teknologi komputer berawal dari kemunculan mesin kalkulator yang ...</p>
+                                </div>
+                            </div>
+                            <div className="flex-grow w-1/3 mx-auto bg-white rounded-xl border">
+                                <img className="w-full h-48 object-cover rounded-t-xl" src="imgPlaceholder.svg" alt="image" />
+                                <div className="p-4">
+                                    <h2 className="text-lg font-bold mb-2">Dampak Sosial Informatika</h2>
+                                    <p className="text-gray-600">Perkembangan teknologi komputer berawal dari kemunculan mesin kalkulator yang ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr className='opacity-0 mt-4' />
                     </div>
                 </div>
             </div>
