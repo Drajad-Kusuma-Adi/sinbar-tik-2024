@@ -1,35 +1,32 @@
-// import { api } from "../utils/API";
-import { useState } from 'react';
+import { api } from "../utils/API";
+import React from "react";
+import {AxiosError} from "axios";
 
 export default function Auth() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [errmessage, setErrmessage] = useState(null);
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [errMessage, setErrMessage] = React.useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    // TODO:
-    // fetch PUT {be url}/auth send username&password -> then((res) => {loggedUser = res})
-    // localStorage.setItem('userData', loggedUser)
+    const formData = new FormData(e.target as HTMLFormElement);
+    const username = formData.get('username') as string;
+    const password = formData.get('password') as string;
 
-    const apiUrl = 'http://localhost:3000/auth';
-    const userData = { username, password };
+    try {
+      const res = await api.post('/auth', { username, password });
+      if (res.status !== 200) {
+        throw new Error('Authentication failed: ' + res.data.message);
+      } else {
+        localStorage.setItem('userData', JSON.stringify(res.data));
+        location.reload();
+      }
+    } catch (err) {
+      console.error(err);
+      if (err instanceof AxiosError) {
+        setErrMessage(err.response?.data.message);
+      }
+    }
 
-    fetch(apiUrl, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if(data.message == null) {
-          localStorage.setItem('userData', JSON.stringify(data));
-          location.reload();
-        } else {
-          setErrmessage(data.message);
-        }
-      })
-      .catch((error) => console.error(error));
   }
 
   return (
@@ -46,16 +43,16 @@ export default function Auth() {
             <div className="mb-8">
               <div className="border rounded-md mb-8 lg:w-[600px] md:w-[400px] flex">
                 <img src="Person.svg" alt="person" className="inline p-2" width="35" />
-                <input name="username" type="text" placeholder="Username" className="w-full" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input name="username" type="text" placeholder="Username" className="w-full p-2 focus:outline-none" />
               </div>
               <div className="border rounded-md mb-8 lg:w-[600px] md:w-[400px] flex">
                 <img src="Lock.svg" alt="lock" className="inline p-2" width="35" />
-                <input name="password" type="password" placeholder="Password" className="w-full" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input name="password" type="password" placeholder="Password" className="w-full p-2 focus:outline-none" />
               </div>
             </div>
             <button type="submit" className="button rounded-md w-full bg-[#04364A] text-white p-2">Submit</button>
           </form>
-          <p className="rounded-md w-full p-2 bg-red-500 border-2 border-red-900 mt-2" style={errmessage == null ? {display: "none"} : {}}>{errmessage}</p>
+          <p className="rounded-md w-full p-2 bg-red-500 text-white text-center mt-2" style={errMessage == null ? {display: "none"} : {}}>⚠ {errMessage}</p>
         </div>
       </div>
     </>
