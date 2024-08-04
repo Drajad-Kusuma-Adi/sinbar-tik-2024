@@ -1,7 +1,8 @@
-// Core depedencies and type declarations
+// Core dependencies and type declarations
 import express, { Application, Request, Response, NextFunction } from 'express';
 import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 // Core functionalities
 import { register, verifyToken, login, logout } from './auth';
@@ -11,7 +12,6 @@ dotenv.config(); // Load environment variables from .env file
 const app: Application = express(); // Bootstrap express app
 const prisma: PrismaClient = new PrismaClient(); // Prisma client
 
-import cors from 'cors';
 app.use(cors());
 
 app.use(express.json()); // Parse JSON requests

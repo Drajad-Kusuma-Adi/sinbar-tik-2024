@@ -1,19 +1,26 @@
 import { api } from "../utils/API";
-import React from "react";
-import {AxiosError} from "axios";
+import React, { useState } from "react";
+import { AxiosError } from "axios";
 
 export default function Auth() {
   const [errMessage, setErrMessage] = React.useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    const formData = new FormData(e.target as HTMLFormElement);
-    const username = formData.get('username') as string;
-    const password = formData.get('password') as string;
-
     try {
-      const res = await api.post('/auth', { username, password });
+      e.preventDefault();
+
+      setLoading(true);
+
+      const formData = new FormData(e.target as HTMLFormElement);
+      const username = formData.get('username') as string;
+      const password = formData.get('password') as string;
+
+      if (!username || !password) {
+        throw new Error("Username and password are required.");
+      }
+
+      const res = await api.put('/auth', { username, password });
       if (res.status !== 200) {
         throw new Error('Authentication failed: ' + res.data.message);
       } else {
@@ -24,7 +31,13 @@ export default function Auth() {
       console.error(err);
       if (err instanceof AxiosError) {
         setErrMessage(err.response?.data.message);
+      } else if (err instanceof Error) {
+        setErrMessage(err.message);
+      } else {
+        setErrMessage("An unknown error occurred.");
       }
+    } finally {
+      setLoading(false);
     }
 
   }
@@ -50,7 +63,7 @@ export default function Auth() {
                 <input name="password" type="password" placeholder="Password" className="w-full p-2 focus:outline-none" />
               </div>
             </div>
-            <button type="submit" className="button rounded-md w-full bg-[#04364A] text-white p-2">Submit</button>
+            <button disabled={loading} type="submit" className={`button rounded-md w-full bg-[#04364A] text-white p-2 ${loading ? "cursor-not-allowed opacity-50" : ""}`}>Submit</button>
           </form>
           <p className="rounded-md w-full p-2 bg-red-500 text-white text-center mt-2" style={errMessage == null ? {display: "none"} : {}}>⚠ {errMessage}</p>
         </div>
