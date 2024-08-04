@@ -55,7 +55,9 @@ export default function Auth() {
             </div>
             <button type="submit" className="button rounded-md w-full bg-[#04364A] text-white p-2">Submit</button>
           </form>
-          <p className="rounded-md w-full p-2 bg-red-500 border-2 border-red-900 mt-2" style={errmessage == null ? {display: "none"} : {}}>{errmessage}</p>
+          <div className='lg:w-[600px] md:w-[400px] w-full text-center'>
+            <p className="rounded-md p-2 bg-red-500 border-2 border-red-900 mt-2 overflow-hidden text-ellipsis whitespace-nowrap" style={errmessage == null ? { display: "none" } : {}}>{errmessage}</p>
+          </div>
         </div>
       </div>
     </>
