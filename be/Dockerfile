@@ -1,0 +1,6 @@
+FROM prismagraphql/mongo-single-replica:5.0.3
+
+EXPOSE 27017
+
+ENV MONGO_INITDB_ROOT_USERNAME=monty
+ENV MONGO_INITDB_ROOT_PASSWORD=pass
