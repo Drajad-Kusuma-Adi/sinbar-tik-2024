@@ -37,7 +37,7 @@ export default function Profile() {
                             <p className="text-gray-500 mb-8">Menu Utama</p>
                             <ul>
                                 <li className="mb-8">
-                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-[#26758F] font-bold text-xl flex">
+                                    <button onClick={() => { sessionStorage.setItem('page', 'dashboard'); location.reload() }} className="text-gray-600 hover:text-gray-900 font-bold text-xl flex">
                                         <svg className="inline-block me-2 stroke-current fill-none" width="30" height="30" viewBox="0 0 30 26">
                                             <path d="M1 3.66667C1 2.95942 1.295 2.28115 1.8201 1.78105C2.3452 1.28095 3.05739 1 3.8 1H12.2V25H3.8C3.05739 25 2.3452 24.719 1.8201 24.219C1.295 23.7189 1 23.0406 1 22.3333V3.66667ZM17.8 1H26.2C26.9426 1 27.6548 1.28095 28.1799 1.78105C28.705 2.28115 29 2.95942 29 3.66667V10.3333H17.8V1ZM17.8 15.6667H29V22.3333C29 23.0406 28.705 23.7189 28.1799 24.219C27.6548 24.719 26.9426 25 26.2 25H17.8V15.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
