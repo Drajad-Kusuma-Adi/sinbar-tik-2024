@@ -1,6 +1,5 @@
 import { api } from "../utils/API";
 import React, { useState } from "react";
-import { AxiosError } from "axios";
 
 export default function Auth() {
   const [errMessage, setErrMessage] = useState<string | null>(null);
@@ -12,30 +11,29 @@ export default function Auth() {
 
       setLoading(true);
 
+      // Create a FormData object from the form
       const formData = new FormData(e.target as HTMLFormElement);
       const username = formData.get('username') as string;
       const password = formData.get('password') as string;
 
+      // Validate that username and password are not empty
       if (!username || !password) {
         throw new Error("Username and password are required.");
       }
 
+      // Send a PUT request (login) to the server with the username and password
       const res = await api.put('/auth', { username, password });
-      if (res.status !== 200) {
-        throw new Error('Authentication failed: ' + res.data.message);
-      } else {
-        localStorage.setItem('userData', JSON.stringify(res.data));
-        location.reload();
+
+      // If the server responds with an error, throw an error
+      if (!res.status.toString().startsWith('2')) {
+        throw new Error(res.data.message || "Terjadi kesalahan yang tidak diketahui.");
       }
+
+      // Save the user data to local storage and reload the page
+      localStorage.setItem('userData', JSON.stringify(res.data));
+      location.reload();
     } catch (err) {
-      console.error(err);
-      if (err instanceof AxiosError) {
-        setErrMessage(err.response?.data.message);
-      } else if (err instanceof Error) {
-        setErrMessage(err.message);
-      } else {
-        setErrMessage("An unknown error occurred.");
-      }
+      setErrMessage(err instanceof Error ? err.message : "Terjadi kesalahan yang tidak diketahui.");
     } finally {
       setLoading(false);
     }
