@@ -29,7 +29,7 @@ export async function register(req: Request, res: Response) {
     // Hide password
     loggedUser.password = "";
 
-    return res.status(201).json(loggedUser);
+    return res.status(200).json(loggedUser);
   } catch (err) {
     return res.status(500).json({ message: (err as Error).message });
   }
@@ -38,7 +38,7 @@ export async function register(req: Request, res: Response) {
 export async function verifyToken(req: Request, res: Response) {
   const rememberToken = (req.headers.authorization as string).replace("Bearer ", "");
 
-  if (!rememberToken || typeof rememberToken !== 'string') {
+  if (!rememberToken) {
     return res.status(422).json({ message: "Remember token is required and must be a string." });
   }
 
@@ -76,7 +76,7 @@ export async function login(req: Request, res: Response) {
 export async function logout(req: Request, res: Response) {
   const rememberToken = (req.headers.authorization as string).replace("Bearer ", "");
 
-  if (!rememberToken || typeof rememberToken !== 'string') {
+  if (!rememberToken) {
     return res.status(422).json({ message: "Remember token is required and must be a string." });
   }
 
