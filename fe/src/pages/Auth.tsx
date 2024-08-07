@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AxiosError } from "axios";
 
 export default function Auth() {
-  const [errMessage, setErrMessage] = React.useState<string | null>(null);
+  const [errMessage, setErrMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
