@@ -3,28 +3,26 @@ import { Sidebar } from 'react-pro-sidebar';
 import { UserData } from '../utils/types/UserData';
 import { api } from '../utils/api';
 import Swipe from 'react-easy-swipe';
+import { AxiosError } from 'axios';
 
 export default function UserLayout({ children }: { children: ReactNode }) {
     const [toggled, setToggled] = useState(false);
 
     async function handleLogout() {
         try {
-            // Get user data
+            // Get user data and make sure it exists
             const userData = JSON.parse(localStorage.getItem('userData') as string) as UserData;
             if (!userData) throw new Error('Tidak ada data user.');
 
             // Logout user on the server
-            const res = await api.delete(`/auth`, { headers: { Authorization: `Bearer ${userData.remember_token}` } });
-
-            // If the server responds with an error, throw an error
-            if (!res.status.toString().startsWith('2')) throw new Error(res.data.message || "Terjadi kesalahan yang tidak diketahui.");
+            await api.delete(`/auth`, { headers: { Authorization: `Bearer ${userData.remember_token}` } });
 
             // Clean up local storage and reload the page
             localStorage.clear();
             sessionStorage.clear();
             location.reload();
-        } catch (error) {
-            alert(error instanceof Error ? error.message : 'Terjadi kesalahan yang tidak diketahui.');
+        } catch (err) {
+            alert(err instanceof AxiosError ? err.response?.data.message : (err as Error).message);
         }
     }
 

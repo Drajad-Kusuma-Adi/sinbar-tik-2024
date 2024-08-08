@@ -46,7 +46,7 @@ export async function verifyToken(req: Request, res: Response) {
     await prisma.users.findUniqueOrThrow({ where: { remember_token: rememberToken as string } });
     return res.status(200).json({ message: "User found" });
   } catch (err) {
-    return res.status(500).json({ message: (err as Error).message });
+    return res.status(500).json({ message: "Invalid token" });
   }
 }
 
