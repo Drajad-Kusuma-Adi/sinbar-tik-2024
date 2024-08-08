@@ -8,12 +8,12 @@ import UserLayout from "./pages/UserLayout";
 import Profile from "./pages/Profile";
 
 export default function Router() {
-    const page = sessionStorage.getItem('page') || 'dashboard';
+    const page = sessionStorage.getItem('page') || 'Beranda';
 
     // Create page session if it doesn't exist
     useEffect(() => {
         if (!sessionStorage.getItem('page')) {
-            sessionStorage.setItem('dashboard', page);
+            sessionStorage.setItem('page', page);
         }
     }, [page]);
 
@@ -21,11 +21,11 @@ export default function Router() {
     return (
         <>
             <UserLayout>
-                {page === 'dashboard' && <Dashboard />}
-                {page === 'material' && <Material />}
-                {page === 'quiz' && <Quiz />}
-                {page === 'peringkat' && <Peringkat />}
-                {page === 'profile' && <Profile />}
+                {page === 'Beranda' && <Dashboard />}
+                {page === 'Material' && <Material />}
+                {page === 'Quiz' && <Quiz />}
+                {page === 'Peringkat' && <Peringkat />}
+                {page === 'Profile' && <Profile />}
             </UserLayout>
         </>
     )

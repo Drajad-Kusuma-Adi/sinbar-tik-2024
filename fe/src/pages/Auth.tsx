@@ -1,4 +1,4 @@
-import { api } from "../utils/API";
+import { api } from "../utils/api";
 import React, { useState } from "react";
 
 export default function Auth() {
