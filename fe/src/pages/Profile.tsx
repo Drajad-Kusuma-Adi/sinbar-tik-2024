@@ -4,7 +4,7 @@ export default function Profile() {
             {/* Profile */}
             <div className="flex flex-nowrap">
                 <img src="https://via.placeholder.com/50" alt="profile" className="rounded-full inline-block w-[2cm] h-[2cm]" />
-                <div className="inline-block ms-4 h-[2cm] w-fit flex flex-col justify-center items-start text-start">
+                <div className="ms-4 h-[2cm] w-fit flex flex-col justify-center items-start text-start">
                     <b>{JSON.parse(localStorage.getItem('userData') || "").username}</b>
                     <a className="text-[#65B8C3] block">Whatever here, not gmail tho</a>
                 </div>

@@ -4,6 +4,7 @@ import { UserData } from '../utils/types/UserData';
 import { api } from '../utils/api';
 import Swipe from 'react-easy-swipe';
 import { AxiosError } from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function UserLayout({ children }: { children: ReactNode }) {
     const [toggled, setToggled] = useState(false);
@@ -45,16 +46,13 @@ export default function UserLayout({ children }: { children: ReactNode }) {
                         <ul>
                             {["Beranda", "Material", "Quiz", "Peringkat"].map((val, i) => (
                                 <li key={i} className="mb-8">
-                                    <button
-                                        onClick={() => {
-                                            sessionStorage.setItem('page', val);
-                                            location.reload();
-                                        }}
+                                    <Link
+                                        to={`/${val}`}
                                         className="text-gray-600 hover:text-gray-900 font-bold text-xl flex items-center"
                                     >
                                         <img src={`${val}.svg`} alt={val} className="inline-block me-2 size-6"/>
                                         {val}
-                                    </button>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -76,10 +74,10 @@ export default function UserLayout({ children }: { children: ReactNode }) {
                             <img src="Search.svg" alt="search" className='me-4' />
                             <input type="text" className="flex-1 border-0 bg-transparent text-lg" placeholder="Pencarian" />
                         </div>
-                        <div className="w-1/3 items-center flex justify-end">
+                        <Link to={`/profile`} className="w-1/3 items-center flex justify-end">
                             <img src="Notification.svg" alt="notification" width="30" />
-                            <img src="https://via.placeholder.com/50" alt="profile" onClick={() => { sessionStorage.setItem('page', 'profile'); location.reload() }} className='hover:cursor-pointer ms-4 md:ms-8 lg:ms-12 xl:ms-16 rounded-full h-full' />
-                        </div>
+                            <img src="https://via.placeholder.com/50" alt="profile" className='hover:cursor-pointer ms-4 md:ms-8 lg:ms-12 xl:ms-16 rounded-full h-full' />
+                        </Link>
                     </div>
 
                     {/* Page content */}
