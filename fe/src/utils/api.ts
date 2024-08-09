@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const api = axios.create({
   baseURL: "http://localhost:3000",
   headers: {
-    'Accept': 'application/json',
-    "Content-Type": "application/json"
-  }
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
 });
 
 // TODO: Look for a better way to optimize tokenizing a request
