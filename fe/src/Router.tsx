@@ -67,7 +67,9 @@ export default function Router() {
           <Routes>
             <Route path="/" Component={Dashboard} />
             <Route path="/beranda" Component={Dashboard} />
+
             <Route path="/material" Component={Material} />
+
             <Route path="/quiz" Component={Quiz} />
             <Route path="/peringkat" Component={Peringkat} />
             <Route path="/profile" Component={Profile} />
