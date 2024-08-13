@@ -5,7 +5,7 @@ import { api } from "../utils/api";
 import Swipe from "react-easy-swipe";
 import { AxiosError } from "axios";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
 
 export default function UserLayout({ children }: { children: ReactNode }) {
   const [toggled, setToggled] = useState(false);
@@ -40,11 +40,11 @@ export default function UserLayout({ children }: { children: ReactNode }) {
     <div className="flex w-screen h-screen">
       {/* Main sidebar */}
       <Sidebar
-        className="h-full"
+        className="h-full shadow-lg"
         toggled={toggled}
         onBackdropClick={() => setToggled(false)}
         breakPoint="md"
-        backgroundColor="#ffffff"
+        backgroundColor="#FCFCFF"
       >
         <div className="flex flex-col justify-between p-8 h-full">
           <img src="Logo-Horizontal.svg" alt="logo" className="w-36" />
@@ -87,26 +87,37 @@ export default function UserLayout({ children }: { children: ReactNode }) {
       <main className="self-start p-4 w-full h-full overflow-y-scroll">
         <Swipe tolerance={100} onSwipeRight={() => setToggled(!toggled)}>
           {/* Search & Notification & Profile */}
-          <div className="flex mb-4">
-            <div className="flex w-2/3 bg-gray-200 p-4 rounded-lg">
-              <img src="Search.svg" alt="search" className="me-4" />
-              <input
-                type="text"
-                className="flex-1 border-0 bg-transparent text-lg"
-                placeholder="Pencarian"
-              />
+          <div className="flex justify-between items-center w-full mb-4">
+            <TextField
+              fullWidth
+              margin="normal"
+              name="search"
+              label="Pencarian"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="opacity-50" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                  </InputAdornment>
+                ),
+              }}
+              placeholder="Cari judul materi atau quiz..."
+              type="text"
+              variant="outlined"
+              autoComplete="new-password"
+              size="small"
+            />
+            <div className="flex items-center ms-24 space-x-2">
+              <IconButton sx={{ width: 48, height: 48 }}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"><path d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z"></path></svg>
+              </IconButton>
+              <Link
+                to={`/profile`}
+              >
+                <IconButton sx={{ width: 48, height: 48 }}>
+                  <img src={`https://api.dicebear.com/9.x/bottts/svg?seed=${Math.random().toString(36).substring(2, 15)}`} alt="Profile" className="rounded-full" />
+                </IconButton>
+              </Link>
             </div>
-            <Link
-              to={`/profile`}
-              className="w-1/3 items-center flex justify-end"
-            >
-              <img src="Notification.svg" alt="notification" width="30" />
-              <img
-                src="https://via.placeholder.com/50"
-                alt="profile"
-                className="hover:cursor-pointer ms-4 md:ms-8 lg:ms-12 xl:ms-16 rounded-full h-full"
-              />
-            </Link>
           </div>
 
           {/* Page content */}

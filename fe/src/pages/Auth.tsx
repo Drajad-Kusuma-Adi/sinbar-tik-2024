@@ -55,43 +55,6 @@ export default function Auth() {
 
           {/* Form */}
           <form onSubmit={handleSubmit}>
-            {/* <div className="mb-8">
-              <div className="border rounded-md mb-8 lg:w-[600px] md:w-[400px] flex">
-                <img
-                  src="Person.svg"
-                  alt="person"
-                  className="inline p-2"
-                  width="35"
-                />
-                <input
-                  name="username"
-                  type="text"
-                  placeholder="Username"
-                  className="w-full p-2 focus:outline-none"
-                />
-              </div>
-              <div className="border rounded-md mb-8 lg:w-[600px] md:w-[400px] flex">
-                <img
-                  src="Lock.svg"
-                  alt="lock"
-                  className="inline p-2"
-                  width="35"
-                />
-                <input
-                  name="password"
-                  type="password"
-                  placeholder="Password"
-                  className="w-full p-2 focus:outline-none"
-                />
-              </div>
-            </div>
-            <button
-              disabled={loading}
-              type="submit"
-              className={`button rounded-md w-full bg-[#04364A] text-white p-2 ${loading ? "cursor-not-allowed opacity-50" : ""}`}
-            >
-              Submit
-            </button> */}
             <Box display={`flex`} flexDirection={`column`} alignItems={`center`}>
                 <TextField
                   required
@@ -146,13 +109,7 @@ export default function Auth() {
 
           <br />
 
-          {/* <p
-            className="rounded-md w-full p-2 bg-red-500 text-white text-center mt-2"
-            style={errMessage == null ? { display: "none" } : {}}
-          >
-            ⚠ {errMessage}
-          </p> */}
-          <Alert severity="error" sx={{ width: '100%', display: errMessage ? `` : `none` }} variant="outlined">{errMessage}</Alert>
+          <Alert severity="error" sx={{ width: '100%', display: errMessage ? `` : `none` }} variant="standard">{errMessage}</Alert>
         </div>
       </div>
     </>
