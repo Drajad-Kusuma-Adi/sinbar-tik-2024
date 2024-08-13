@@ -14,14 +14,16 @@ import { Link } from "react-router-dom";
 import MaterialContent from "./MaterialContent";
 
 export default function Material() {
-  const isContent = !!(new URLSearchParams(window.location.search).get("content"));
+  const isContent = !!new URLSearchParams(window.location.search).get(
+    "content",
+  );
 
   // TODO: Create a secure method to check if the user is an editor or not and showing them the appropriate UI
 
   return isContent ? (
     <MaterialContent />
   ) : (
-<>
+    <>
       {/* Materi */}
       <div className="flex flex-wrap gap-4 mt-4">
         <Link

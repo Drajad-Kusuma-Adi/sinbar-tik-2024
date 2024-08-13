@@ -5,6 +5,7 @@ import { api } from "../utils/api";
 import Swipe from "react-easy-swipe";
 import { AxiosError } from "axios";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function UserLayout({ children }: { children: ReactNode }) {
   const [toggled, setToggled] = useState(false);
@@ -48,30 +49,29 @@ export default function UserLayout({ children }: { children: ReactNode }) {
         <div className="flex flex-col justify-between p-8 h-full">
           <img src="Logo-Horizontal.svg" alt="logo" className="w-36" />
 
-          <div className="">
-            <p className="text-gray-500 mb-8">Menu Utama</p>
-            <ul>
+          <div className="text-gray-600">
+            <Button disabled>Menu Utama</Button>
+            <ul className="mt-2 w-full">
               {["Beranda", "Material", "Quiz", "Peringkat"].map((val, i) => (
-                <li key={i} className="mb-8">
+                <li key={i} className="mb-4 w-full">
                   <Link
                     to={`/${val}`}
-                    className="text-gray-600 hover:text-gray-900 font-bold text-xl flex items-center"
                   >
-                    <img
-                      src={`${val}.svg`}
-                      alt={val}
-                      className="inline-block me-2 size-6"
-                    />
-                    {val}
+                    <Button color="inherit" fullWidth sx={{ justifyContent: `flex-start` }}>
+                      <img
+                        src={`${val}.svg`}
+                        alt={val}
+                        className="inline-block me-2 size-6"
+                      />
+                      {val}
+                    </Button>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <button
-            className="text-[#B43535] self-start font-semibold"
-            onClick={handleLogout}
+          <Button color="error" sx={{ justifyContent: `flex-start` }} onClick={handleLogout}
           >
             <img
               src="Logout.svg"
@@ -79,7 +79,7 @@ export default function UserLayout({ children }: { children: ReactNode }) {
               className="inline-block size-6 me-2"
             />
             Log Out
-          </button>
+          </Button>
         </div>
       </Sidebar>
 
