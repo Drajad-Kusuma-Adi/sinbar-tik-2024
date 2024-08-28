@@ -3,6 +3,7 @@ import { register, verifyToken, login, logout } from '../src/auth';
 import { Request, Response } from 'express';
 import { prisma } from '../src/prisma';
 import crypto from 'crypto';
+import bcrypt from 'bcrypt';
 
 // Mock Express Request
 function createMockRequest(body: any, headers: any = {}): Request {
@@ -33,8 +34,8 @@ describe('Auth Functions', () => {
     await prisma.users.deleteMany({});
 
     // DEMO (REMOVE ON PROD): Add example user and admin user
-    await prisma.users.create({ data: { username: 'user', password: 'pwd' } });
-    await prisma.users.create({ data: { username: 'user', password: 'pwd', is_admin: true } });
+    await prisma.users.create({ data: { username: 'user', password: bcrypt.hashSync('pwd', 10) } });
+    await prisma.users.create({ data: { username: 'admin', password: bcrypt.hashSync('pwd', 10), is_admin: true } });
 
     await prisma.$disconnect();
   });
@@ -65,7 +66,7 @@ describe('Auth Functions', () => {
 
   it('should verify a valid remember token', async () => {
     let token = crypto.randomBytes(16).toString('hex');
-    await prisma.users.create({ data: { username: 'testuser', password: 'testpassword', remember_token: token } });
+    await prisma.users.create({ data: { username: 'testuser', password: bcrypt.hashSync('testpassword', 10), remember_token: token } });
 
     const req = createMockRequest({}, { authorization: `Bearer ${token}` });
     const res = createMockResponse();
@@ -118,7 +119,7 @@ describe('Auth Functions', () => {
 
   it('should logout a user by invalidating the remember token', async () => {
     let token = crypto.randomBytes(16).toString('hex');
-    await prisma.users.create({ data: { username: 'testuser', password: 'testpassword', remember_token: token } });
+    await prisma.users.create({ data: { username: 'testuser', password: bcrypt.hashSync('testpassword', 10), remember_token: token } });
 
     const req = createMockRequest({}, { authorization: `Bearer ${token}` });
     const res = createMockResponse();

@@ -59,7 +59,7 @@ export async function login(req: Request, res: Response) {
       return res.status(401).json({ message: "Incorrect password" });
     }
 
-    const token = crypto.randomBytes(32).toString("hex");
+    const token = crypto.randomBytes(16).toString("hex");
     const loggedUser = await prisma.users.update({ where: { id: user.id }, data: { remember_token: token } });
 
     // Hide password
