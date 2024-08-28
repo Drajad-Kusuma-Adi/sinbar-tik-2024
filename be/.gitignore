@@ -3,3 +3,4 @@ node_modules
 dist
 mongodb_data
 uploads
+coverage

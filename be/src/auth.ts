@@ -1,9 +1,7 @@
 import { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcrypt';
 import crypto from 'crypto';
-
-const prisma: PrismaClient = new PrismaClient();
+import { prisma } from './prisma';
 
 export async function register(req: Request, res: Response) {
   if (!req.body.username || !req.body.password) {
@@ -74,6 +72,10 @@ export async function login(req: Request, res: Response) {
 }
 
 export async function logout(req: Request, res: Response) {
+  if (!req.headers.authorization || req.headers.authorization == undefined) {
+    return res.status(422).json({message: "Authorization is required."});
+  }
+
   const rememberToken = (req.headers.authorization as string).replace("Bearer ", "");
 
   if (!rememberToken) {

@@ -26,6 +26,7 @@ model Materials {
   description String?
   content     Json[]
   level       Int
+  uploaded    Boolean  @default(false)
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
 
@@ -37,8 +38,18 @@ model Quizzes {
   title      String
   content    Json[]
   level      Int
+  uploaded   Boolean  @default(false)
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
   @@map("quizzes")
+}
+
+// Note: For uploaded to be true in Materials and Quizzes, all users must be notified and all files must be uploaded
+model Notifications {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  user_id    String   @map("user_id")
+  content    String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }

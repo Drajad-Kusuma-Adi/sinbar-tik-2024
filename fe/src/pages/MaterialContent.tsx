@@ -1,39 +1,42 @@
-// This is using react-quill, use blocknote below instead
-// import { useState } from 'react';
-// import ReactQuill from 'react-quill';
-// import 'react-quill/dist/quill.snow.css';
-
-// export default function MaterialContent() {
-//   const [value, setValue] = useState('');
-
-//   return <ReactQuill theme="snow" value={value} onChange={setValue} defaultValue='Tulis materi di sini...' />
-// }
-
 import "@blocknote/core/fonts/inter.css";
 import { useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
-import axios from "axios";
 import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Block } from "@blocknote/core";
+import { api } from "../utils/api";
 
 export default function App() {
-  // Creates a new editor instance.
+  // Store BlockNote's data blocks
+  const [dataBlocks, setDataBlocks] = useState<Block[]>();
+  const [files, setFiles] = useState<string[]>([]);
+
+  // Get and set saved document from localStorage
+  useEffect(() => {
+    const dataBlocks = localStorage.getItem(`dataBlocks`);
+    if (dataBlocks) {
+      setDataBlocks(JSON.parse(dataBlocks));
+    }
+  }, [])
+
+  // Creates a new BlockNote editor instance.
   const editor = useCreateBlockNote({
     uploadFile: async (file) => {
       try {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await axios.post("https://tmpfiles.org/api/v1/upload", formData, {
+        const res = await api.post(`/tempfile`, formData, {
           headers: {
-            'Content-Type': 'multipart/form-data'
+            'Content-Type': 'multipart/form-data',
           }
         });
 
-        return res.data.data.url.replace(
-          "tmpfiles.org/",
-          "tmpfiles.org/dl/"
-        );
+        setFiles([...files, res.data.id]);
+
+        return res.data.url;
       } catch (err) {
         console.error(err);
         alert("Error uploading file");
@@ -41,65 +44,52 @@ export default function App() {
     },
   });
 
-  // Renders the editor instance using a React component.
+  // Post data to server
+  async function handleSubmit() {
+    try {
+      const formData = new FormData();
+      formData.append(`dataBlocks`, JSON.stringify(dataBlocks));
+    } catch (err) {
+      console.error(err);
+      alert("Error posting");
+    }
+  }
+
   return (
     <>
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        className={`flex items-center justify-between`}
-      >
-        {/* Left: title, description, level */}
-        <div>
-          <input
-            type="text"
-            name="title"
-            className={`font-bold text-2xl`}
-            placeholder="Judul"
-          />
-
-          <textarea
-            name="description"
-            placeholder="Deskripsi"
-            className={``}
-          ></textarea>
-
-          <label htmlFor="level">Level</label>
-          <select name="level" className={`text-opacity-50`}>
-            <option selected value="1">
-              1
-            </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-
-        {/* Right: publish, update, delete button */}
-        <div className={`flex space-x-2`}>
-          {/* <button className={`text-white bg-red-500 p-2 rounded`}>
-            Publish
-          </button> */}
-          
-          {/* blud diskriminasi semua animation terhadap ripple */}
-          {/* transform: scale(1.05) is better, harder, stronger */}
-
-          <Button>Publish</Button>
-
-          {/* if new content -> hidden */}
-          <button className={`text-white bg-red-500 p-2 rounded hidden`}>
-            Update
-          </button>
-          <button className={`text-white bg-red-500 p-2 rounded hidden`}>
-            Delete
-          </button>
-        </div>
-      </form>
-
-      <hr className={`w-full`} />
-      
+    {/* TODO: modal for uploading files, with input for description and level */}
       {/* Content */}
-      <BlockNoteView theme={`light`} editor={editor} />
+      <BlockNoteView
+      theme={`light`}
+      editor={editor}
+      onChange={() => {
+        setDataBlocks(editor.document);
+        localStorage.setItem(`dataBlocks`, JSON.stringify(editor.document));
+      }}
+      />
+
+      {/* Submit button */}
+      <div className="w-full flex justify-center">
+        <Button
+          onClick={handleSubmit}
+          variant="contained"
+          color="primary"
+          sx={{ margin: 2 }}
+        >
+          Posting
+        </Button>
+        <Link
+          to={`../Material`}
+        >
+          <Button
+            variant="outlined"
+            color="error"
+            sx={{ margin: 2 }}
+            >
+            Simpan dan Keluar
+          </Button>
+        </Link>
+      </div>
     </>
   );
 }
