@@ -6,6 +6,7 @@ import fs from 'fs';
 
 // Core functionalities
 import { register, verifyToken, login, logout } from './auth';
+import { create, read, update, destroy } from './user';
 import multer from 'multer';
 import { Dropbox } from 'dropbox';
 
@@ -44,6 +45,13 @@ app.route("/auth")
   .get(verifyToken)
   .put(login)
   .delete(logout);
+
+// * User routes
+app.route("/user")
+  .post(create)
+  .get(read)
+  .put(update)
+  .delete(destroy);
 
 // * Material routes
 app.route("/material")
