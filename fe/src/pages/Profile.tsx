@@ -1,4 +1,5 @@
 export default function Profile() {
+  const formattedDate = new Date(JSON.parse(localStorage.getItem("userData") || "").created_at).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
   return (
     <>
       {/* Profile */}
@@ -10,7 +11,7 @@ export default function Profile() {
         />
         <div className="ms-4 h-[2cm] w-fit flex flex-col justify-center items-start text-start">
           <b>{JSON.parse(localStorage.getItem("userData") || "").username}</b>
-          <a className="text-[#65B8C3] block">Whatever here, not gmail tho</a>
+          <a className="text-[#65B8C3] block">Masuk sejak {formattedDate}</a>
         </div>
       </div>
       {/* Statistik */}
@@ -18,24 +19,22 @@ export default function Profile() {
       <hr className="border-[#196C88] w-[13%] sm:w-[11%] md:w-[12%] lg:w-[8.5%] xl:w-[7.5%]" />
       <div className="flex mt-4">
         <div className="w-1/2 mx-auto bg-white rounded-xl border me-4 p-4">
-          {/* idk, the design aint tellin me */}
+          <h1 className="text-lg">XP</h1>
+          {JSON.parse(localStorage.getItem("userData") || "").xp}
         </div>
         <div className="w-1/2 mx-auto bg-white rounded-xl border me-4 p-4">
-          {/* idk, the design aint tellin me */}
+          <h1 className="text-lg">Level</h1>
+          {Math.floor(JSON.parse(localStorage.getItem("userData") || "").xp / 10)}
         </div>
       </div>
-      {/* Riwayat */}
-      <h1 className="mt-4 font-bold text-lg">Riwayat</h1>
-      {/* new feature? aight designer */}
+      {/* <h1 className="mt-4 font-bold text-lg">Riwayat</h1>
       <hr className="border-[#196C88] w-[13%] sm:w-[11%] md:w-[12%] lg:w-[8.5%] xl:w-[7.5%]" />
       <div className="flex mt-4">
         <div className="w-1/2 mx-auto bg-white rounded-xl border me-4 p-4">
-          {/* idk, the design aint tellin me */}
         </div>
         <div className="w-1/2 mx-auto bg-white rounded-xl border me-4 p-4">
-          {/* idk, the design aint tellin me */}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -1,9 +1,9 @@
 import { describe, expect, beforeEach, afterAll, it, jest } from '@jest/globals';
 import { register, verifyToken, login, logout } from '../src/auth';
-import { Request, Response } from 'express';
 import { prisma } from '../src/prisma';
 import crypto from 'crypto';
 import bcrypt from 'bcrypt';
+import { Request, Response } from 'express';
 
 // Mock Express Request
 function createMockRequest(body: any, headers: any = {}): Request {
@@ -24,12 +24,10 @@ function createMockResponse(): Response {
 }
 
 describe('Auth Functions', () => {
-  // Clean up database before each test
   beforeEach(async () => {
     await prisma.users.deleteMany({});
   });
 
-  // Clean up database after all tests
   afterAll(async () => {
     await prisma.users.deleteMany({});
 
@@ -128,5 +126,57 @@ describe('Auth Functions', () => {
 
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({ message: 'User logged out' });
+  });
+});
+
+describe('User Functions', () => {
+  afterAll(async () => {
+    await prisma.users.delete({ where: { username: 'testuser' } });
+
+    await prisma.$disconnect();
+  });
+
+  // !TODO: Must add token for admin authorization, return error if not admin
+
+  // HAPPY PATH TESTS
+  it('should create a new user', async () => {
+    const req = createMockRequest({ username: 'testuser', password: 'testpwd' });
+    const res = createMockResponse();
+
+    await create(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ username: 'testuser' }));
+  });
+  it('should index all users', async () => {
+    const req = createMockRequest({});
+    const res = createMockResponse();
+
+    await index(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ username: 'testuser' }));
+  })
+  it('should read a user by id', async () => {
+    const user = await prisma.users.findUnique({ where: { username: 'testuser' } });
+
+    if (!user) throw new Error('TESTERR: User not found');
+
+    const req = createMockRequest({ id: user.id });
+    const res = createMockResponse();
+
+    await read(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ username: 'testuser' }));
+  });
+  it('should search user by fuzzy username', async () => {
+    const req = createMockRequest({ q: "test" });
+    const res = createMockResponse();
+
+    await search(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ username: 'testuser' }));
   });
 });

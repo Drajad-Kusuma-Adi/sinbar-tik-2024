@@ -5,6 +5,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function createData(
   nama: string,
@@ -31,36 +33,35 @@ export default function Dashboard() {
       {/* Tabel Peringkat */}
       <div className="border border-gray-300 mt-4 w-full">
         <TableContainer component={Paper}>
-          <Table sx={{minWidth: 650}} aria-label="simple table">
+          <Table sx={{minWidth: 650}}>
             <TableHead>
               <TableRow className="border-b border-gray-300">
                 <TableCell className="p-4 text-xl text-start" colSpan={3}>
                   Daftar Peringkat Siswa
                 </TableCell>
                 <TableCell className="p-4 float-right">
-                  <button
-                    onClick={() => {
-                      sessionStorage.setItem("page", "peringkat");
-                      location.reload();
-                    }}
-                    className="flex border border-[#196C88] rounded-md p-1 ps-8 pe-6 text-[#196C88]"
-                  >
-                    <div className="flex justify-center items-center">
-                      <div>Semua</div>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.70697 16.9496L15.414 11.2426L9.70697 5.53564L8.29297 6.94964L12.586 11.2426L8.29297 15.5356L9.70697 16.9496Z"
-                          fill="#196C88"
-                        />
-                      </svg>
-                    </div>
-                  </button>
+                  <Link to="/peringkat">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                    >
+                    <div className="flex justify-center items-start">
+                        <p className="text-sm">Semua</p>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.70697 16.9496L15.414 11.2426L9.70697 5.53564L8.29297 6.94964L12.586 11.2426L8.29297 15.5356L9.70697 16.9496Z"
+                            fill="#196C88"
+                          />
+                        </svg>
+                      </div>
+                    </Button>
+                  </Link>
                 </TableCell>
               </TableRow>
             </TableHead>

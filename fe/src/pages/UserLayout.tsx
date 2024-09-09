@@ -12,9 +12,9 @@ export default function UserLayout({ children }: { children: ReactNode }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(!isMobile);
-    };
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
 
     window.addEventListener('resize', handleResize);
 
@@ -47,6 +47,8 @@ export default function UserLayout({ children }: { children: ReactNode }) {
           ? err.response?.data.message
           : (err as Error).message,
       );
+      localStorage.clear();
+      location.reload();
     }
   }
 
@@ -82,6 +84,22 @@ export default function UserLayout({ children }: { children: ReactNode }) {
                   </Link>
                 </li>
               ))}
+              {JSON.parse(localStorage.getItem("userData") || "").is_admin && (
+                <li className="mb-4 w-full">
+                  <Link
+                    to={`/manageuser`}
+                  >
+                    <Button color="inherit" fullWidth sx={{ justifyContent: `flex-start` }}>
+                      <img
+                        src={`ManageUser.svg`}
+                        alt="ManageUser"
+                        className="inline-block me-2 size-6"
+                      />
+                      Manage User
+                    </Button>
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 

@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Material from "./pages/Material";
 import Quiz from "./pages/Quiz";
 import Peringkat from "./pages/Peringkat";
+import ManageUser from "./pages/ManageUser";
 import UserLayout from "./pages/UserLayout";
 
 import Profile from "./pages/Profile";
@@ -73,6 +74,7 @@ export default function Router() {
             <Route path="/quiz" Component={Quiz} />
             <Route path="/peringkat" Component={Peringkat} />
             <Route path="/profile" Component={Profile} />
+            <Route path="/manageuser" Component={ManageUser} />
           </Routes>
           {/* {page === 'Beranda' && <Dashboard />}
                     {page === 'Material' && <Material />}

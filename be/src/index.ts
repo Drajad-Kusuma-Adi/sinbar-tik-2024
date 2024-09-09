@@ -8,6 +8,7 @@ import fs from 'fs';
 import { register, verifyToken, login, logout } from './auth';
 import multer from 'multer';
 import { Dropbox } from 'dropbox';
+import { searchUser, paginateUser, createUser, readUser, updateUser, destroyUser } from './user';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -39,14 +40,18 @@ const fileUploadMiddleware = multer({ dest: 'uploads/' }).single('file');
 const tempFileUploadMiddleware = multer({ dest: 'temp/' }).single('file');
 
 // * Auth routes
-app.route("/auth")
-  .post(register)
-  .get(verifyToken)
-  .put(login)
-  .delete(logout);
+app.post("/auth", register);
+app.get("/auth", verifyToken);
+app.put("/auth", login);
+app.delete("/auth", logout);
 
-// * Material routes
-app.route("/material")
+// * User management routes
+app.get("/user/search/:q", searchUser);
+app.get("/user/paginate/:page", paginateUser);
+app.get("/user/:id", readUser);
+app.post("/user", createUser);
+app.put("/user", updateUser);
+app.delete("/user/:id", destroyUser);
 
 // * Misc routes
 // Post tempfile route

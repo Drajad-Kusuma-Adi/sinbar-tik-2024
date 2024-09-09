@@ -29,7 +29,7 @@ export async function register(req: Request, res: Response) {
 
     return res.status(200).json(loggedUser);
   } catch (err) {
-    return res.status(500).json({ message: (err as Error).message, error: err });
+    return res.status(500).json({ error: (err as Error).message || 'Internal Server Error' });
   }
 }
 
@@ -67,7 +67,7 @@ export async function login(req: Request, res: Response) {
 
     return res.status(200).json(loggedUser);
   } catch (err) {
-    return res.status(500).json({ message: (err as Error).message, error: err });
+    return res.status(500).json({ error: (err as Error).message || 'Internal Server Error' });
   }
 }
 
@@ -86,6 +86,6 @@ export async function logout(req: Request, res: Response) {
     await prisma.users.update({ where: { remember_token: rememberToken as string }, data: { remember_token: null } });
     return res.status(200).json({ message: "User logged out" });
   } catch (err) {
-    return res.status(500).json({ message: (err as Error).message, error: err });
+    return res.status(500).json({ error: (err as Error).message || 'Internal Server Error' });
   }
 }

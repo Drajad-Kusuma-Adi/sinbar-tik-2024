@@ -44,7 +44,7 @@ export default function Peringkat() {
         <p className="opacity-50">Kembangkan potensimu</p>
         <div className="border border-gray-300 mt-4 w-full">
           <TableContainer component={Paper}>
-            <Table sx={{minWidth: 650}} aria-label="simple table">
+            <Table sx={{ minWidth: 650 }}>
               <TableHead>
                 <TableRow className="border-b border-gray-300">
                   <TableCell
