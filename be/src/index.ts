@@ -8,7 +8,12 @@ import fs from 'fs';
 import { register, verifyToken, login, logout } from './auth';
 import multer from 'multer';
 import { Dropbox } from 'dropbox';
-import { searchUser, paginateUser, createUser, readUser, updateUser, destroyUser } from './user';
+
+// Controllers Methods
+import { searchUser, paginateUser, createUser, readUser, updateUser, destroyUser } from './controller/user';
+import { searchMaterial, paginateMaterial, createMaterial, readMaterial, updateMaterial, destroyMaterial } from './controller/material';
+import { searchQuiz, paginateQuiz, createQuiz, readQuiz, updateQuiz, destroyQuiz } from './controller/quiz';
+import { searchNotification, paginateNotification, createNotification, readNotification, updateNotification, destroyNotification } from './controller/notification';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -52,6 +57,30 @@ app.get("/user/:id", readUser);
 app.post("/user", createUser);
 app.put("/user", updateUser);
 app.delete("/user/:id", destroyUser);
+
+// * Material management routes
+app.get("/material/search/:q", searchMaterial);
+app.get("/material/paginate/:page", paginateMaterial);
+app.get("/material/:id", readMaterial);
+app.post("/material", createMaterial);
+app.put("/material", updateMaterial);
+app.delete("/material/:id", destroyMaterial);
+
+// * Quiz management routes
+app.get("/quiz/search/:q", searchQuiz);
+app.get("/quiz/paginate/:page", paginateQuiz);
+app.get("/quiz/:id", readQuiz);
+app.post("/quiz", createQuiz);
+app.put("/quiz", updateQuiz);
+app.delete("/quiz/:id", destroyQuiz);
+
+// * Notification management routes
+app.get("/notification/search/:q", searchNotification);
+app.get("/notification/paginate/:page", paginateNotification);
+app.get("/notification/:id", readNotification);
+app.post("/notification", createNotification);
+app.put("/notification", updateNotification);
+app.delete("/notification/:id", destroyNotification);
 
 // * Misc routes
 // Post tempfile route
